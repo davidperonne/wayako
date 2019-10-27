@@ -1,4 +1,4 @@
-# understrap-child
+# Wayako understrap-child
 Basic Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
 
 ## How it works

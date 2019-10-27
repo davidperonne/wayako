@@ -3,6 +3,7 @@
     -moz-border-radius: 10rem;
     border-radius: 10rem;
 }
+
 .btn-primary {
     background: rgba(255, 111, 0, 1);
     background: -moz-linear-gradient(left, rgba(255, 111, 0, 1) 0%, rgba(255, 64, 0, 1) 100%);
