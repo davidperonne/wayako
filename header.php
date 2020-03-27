@@ -78,7 +78,5 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
-
-
-
+		
 	</div><!-- #wrapper-navbar end -->
