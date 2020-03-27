@@ -79,20 +79,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- #page we need this extra closing tag here -->
 
-
-<nav class="mobile-navbar fixed-bottom d-flex justify-content-center d-lg-none mb-3">
-<?php /*	<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#menuModal"><i class="fa fa-fw fa-bars"></i> Accès rapide</button> */ ?>
-	<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#menuModal"><i class="material-icons">menu</i> Accès rapide</button> 
-</nav>
-
 <!-- Mobile menu -->
-<div class="modal fade" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade fullscreen" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog m-0">
 		<div class="modal-content">
-			<div class="modal-header d-flex justify-content-between align-items-center px-0 py-1">
-				<button type="button" class="btn btn-link"><i class="material-icons">search</i></button>
+			<div class="modal-header text-center">
 				<h4 class="modal-title text-center"><span class="">Navigation rapide</span></h4>
-				<button type="button" class="btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="material-icons">close</i></button>
+				<button type="button" class="btn btn-link" data-dismiss="modal" aria-hidden="true">X</button>
 			</div>
 			<div class="modal-body text-center px-0">
 				<div class="container-fluid px-0">
@@ -101,27 +94,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 						array(
 							'theme_location'  => 'mobile-menu',
 							'container_class' => '',
-							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'scrolling-wrapper',
+							'container_id'    => '',
+							'menu_class'      => '',
 							'fallback_cb'     => '',
-							'menu_id'         => 'mobile-menu',
+							'menu_id'         => '',
 							'depth'           => 2,
 							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 						)
 					); ?>
-				</div>
-				<div class="container-fluid">
-					<div class="d-flex justify-content-around quick-actions">
-						<div class="flex-grow-1">
-							<a href="tel:0033422130117"><i class="material-icons">phone</i>Appeler</a>
-						</div>
-						<div class="flex-grow-1">
-							<a href="mailto:contact@wayako.com"><i class="material-icons">email</i>Email</a>
-						</div>
-						<div class="flex-grow-1">
-							<a href="https://www.google.fr/maps/place/Wayako/@43.7507558,7.244928,15z/data=!4m5!3m4!1s0x0:0xac0839dc18ea2f7d!8m2!3d43.7507558!4d7.244928"><i class="material-icons">near_me</i>Position</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div><!-- /.modal-content -->
