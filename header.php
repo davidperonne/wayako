@@ -30,28 +30,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-<?php /*
-		<nav class="mobile-navbar d-flex d-xl-none">
-
-			<a class="mobile-logo mr-auto" href="" rel="home">
-				<div class="logo">
-					<img src="" class="img-fluid" alt="Wayako" width="272" height="44">
-				</div>
-			</a>
-
-			<button class="btn btn-link navbar-toggler" type="button" data-toggle="modal" data-target="#menuModal">
-				<span class="navbar-toggler-icon"></span> Menu
-			</button> 
-
-		</nav>
-*/ ?>
-
-		<nav class="navbar navbar-expand-md">
-
-		<?php if ( 'container' == $container ) : ?>
-			<div class="container d-flex justify-content-center justify-content-lg-between">
-			<?php /*			<div class="container d-flex justify-content-lg-between"> */ ?>
-		<?php endif; ?>
+		<nav class="navbar navbar-expand-md position-absolute w-100 d-none d-xl-block px-4 py-3">
+			<div class="d-flex justify-content-between align-items-center">
 
 				<div class="logo">
 					<a href="https://www.wayako.com/" class="" rel="home" data-wpel-link="internal"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Wayako" width="200" height="60"></a>
@@ -73,13 +53,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); ?>
 				</div>
 
-				<?php /*		<div class="d-lg-none text-right">Dev.&nbsp;WordPress<br>/&nbsp;PrestaShop</div> */ ?>
-
-
-			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
-			<?php endif; ?>
-
 		</nav><!-- .site-navigation -->
+
+		<nav class="mobile-navbar position-absolute w-100 d-flex justify-content-between align-items-center d-xl-none px-3 px-md-4 py-3">
+			<div class="logo">
+				<a class="mobile-logo" href="<?php echo home_url(); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Defstudio Productions" width="260" height="33.238"></a>
+			</div>
+			<button class="navbar-toggler collapsed" type="button" <?php /*data-toggle="collapse"*/ ?> aria-expanded="false" aria-label="Toggle navigation"  data-toggle="modal" data-target="#menuModal">
+				<span class="icon-bar top-bar"></span>
+				<span class="icon-bar middle-bar"></span>
+				<span class="icon-bar bottom-bar"></span>
+				<span class="sr-only">Menu principal</span>
+			</button>
+		</nav>
 
 	</div><!-- #wrapper-navbar end -->
