@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md <?php /*position-absolute*/ ?> w-100 d-none d-xl-block px-4 py-3">
+		<nav class="navbar navbar-expand-md <?php /*position-absolute*/ ?> w-100 d-none d-lg-block px-4 py-3">
 			<div class="d-flex justify-content-between align-items-center">
 
 				<div class="logo">
@@ -56,7 +56,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- .container -->
 		</nav><!-- .site-navigation -->
 
-		<nav class="mobile-navbar <?php /*position-absolute*/ ?> w-100 d-flex justify-content-between align-items-center d-xl-none px-3 px-md-4 py-3">
+		<nav class="mobile-navbar <?php /*position-absolute*/ ?> w-100 d-flex justify-content-between align-items-center d-lg-none px-3 px-md-4 py-3">
 			<div class="logo">
 				<a class="mobile-logo" href="<?php echo home_url(); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Defstudio Productions" width="260" height="33.238"></a>
 			</div>
