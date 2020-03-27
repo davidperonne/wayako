@@ -50,10 +50,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container d-flex justify-content-center justify-content-lg-between">
+			<?php /*			<div class="container d-flex justify-content-lg-between"> */ ?>
 		<?php endif; ?>
 
 				<div class="logo">
-					<a href="https://www.wayako.com/" class="" rel="home" data-wpel-link="internal"><img src="/wp-content/themes/wayako/images/wayako-logo-1x.png" class="img-fluid" alt="Wayako" width="200" height="60"></a>
+					<a href="https://www.wayako.com/" class="" rel="home" data-wpel-link="internal"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Wayako" width="200" height="60"></a>
 				</div>
 
 				<div class=" d-none d-lg-block">
@@ -72,11 +73,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); ?>
 				</div>
 
+				<?php /*		<div class="d-lg-none text-right">Dev.&nbsp;WordPress<br>/&nbsp;PrestaShop</div> */ ?>
+
 
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
-		
+
 	</div><!-- #wrapper-navbar end -->
