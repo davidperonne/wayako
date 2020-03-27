@@ -13,8 +13,6 @@ defined( 'ABSPATH' ) || exit;
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php //get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
-
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
@@ -57,8 +55,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</footer><!-- #colophon -->
 
 			</div><!--col end -->
-
-<?php /*		</div><!-- row end --> */ ?>
 
 			<div class="col-md-12 mb-5">
 
@@ -107,9 +103,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal-dialog -->
 </div><!-- /.fullscreen -->
-
-
-
 
 <?php wp_footer(); ?>
 
