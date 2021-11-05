@@ -1,14 +1,27 @@
 /*
- Theme Name:   Wayako
- Theme URI:    https://www.understrap.com
- Description:  Thème enfant Wayako basé sur UnderStrap.
- Author:       David PERONNE
- Author URI:   https://davidperonne.com
- Template:     understrap
- Version:      0.5.6
- License: GNU General Public License v2 or later
- License URI: http://www.gnu.org/licenses/gpl-2.0.html
- Text Domain:  wayako
- Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
- GitHub Theme URI: holger1411/understrap-child
+Theme Name: Wayako
+Theme URI: https://www.wayako.com
+Author: David PERONNE
+Author URI: https://davidperonne.com
+GitHub Theme URI: https://github.com/davidperonne/wayako
+Description: Combination of Automattic´s _s theme and Bootstrap 5.
+Requires at least: 5.3
+Tested up to: 5.8
+Requires PHP: 5.6
+Version: 0.0.1
+License: Wayako WordPress Theme, Copyright 2020-2021 David PERONNE
+Text Domain: wayako
+Tags: translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+UnderStrap is based on Underscores https://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+Resource Licenses:
+Bootstrap: https://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+jQuery: https://jquery.org | (Code licensed under MIT)
+*/
+
+
+/*
+This file is just used to identify the theme in WordPress.
 */

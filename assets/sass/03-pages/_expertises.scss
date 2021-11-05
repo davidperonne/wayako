@@ -1,0 +1,129 @@
+/* Expertises */
+
+.page-template-expertises {
+    .expertise {
+        position: relative;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-bottom: 5rem;
+        @media (min-width: 768px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .left {
+            padding: 1rem 0 1.5rem 0;
+            @media (min-width: 768px) {
+                width: 50%;
+                padding: 1rem 3rem 1rem 4rem;
+            }
+        }
+        .right {
+            display: flex;
+            @media (min-width: 768px) {
+                width: 50%;
+                padding: 1rem;
+            }
+        }
+        &:nth-child(even) {
+            .left {
+                margin-bottom: 5rem;
+                @media (min-width: 768px) {
+                    order: 6;
+                }
+            }
+            .right {
+                @media (min-width: 768px) {
+                    order: -1;
+                }
+            }
+        }
+        &:nth-child(odd) {
+            .right {
+                @media (min-width: 768px) {
+                    padding-right: 5rem;
+                }
+            }
+        }
+        &:first-child {
+            .left {
+                background-color: #2D2F2B;
+                padding: 1rem 1.5rem 1rem 1.5rem;
+                margin-bottom: 1.5rem;
+                @media (min-width: 768px) {
+                    padding: 1rem 2.5rem 1rem 1.5rem;
+                }
+                .number {
+                    color: #434541;
+                }
+                .title {
+                    color: white;
+                    &:before {
+                        background-color: white;
+                    }
+                }
+                .excerpt {
+                    color: white;
+                }
+                .btn:not(:hover) {
+                    background-color: transparent;
+                    border-color: white;
+                }
+            }
+        }
+        .number {
+            color: #EFEFEF;
+            font-family: 'Playfair Display';
+            font-size: 10rem;
+            line-height: 1.0;
+            padding-left: 40%;
+            @media (min-width: 768px) {
+                font-size: 11.8rem;
+                padding-left: 15%;
+            }
+        }
+        .title {
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                width: 5rem;
+                height: .5rem;
+                background-color: #2D2F2B;
+                position: absolute;
+                top: -2rem;
+                left: 0;
+                @media (min-width: 768px) {
+                    left: calc( -5rem / 2);
+                }
+            }
+        }
+        .excerpt {
+            margin-bottom: 1.5rem;
+        }
+        .picto {
+            position: absolute;
+            bottom: 0;
+            //    left: 50%;
+            right: 1.5rem;
+            background-color: #D5D5D5;
+            transform: translate(0, 50%);
+            padding: 1rem 3rem;
+            max-width: 10rem;
+            /**/
+            display: flex;
+            aspect-ratio: 16/9;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            @media (min-width: 768px) {
+                max-width: 14rem;
+                right: unset;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+            img {
+                align-self: center;
+            }
+        }
+    }
+}

@@ -1,16 +1,14 @@
 <?php
 /**
- * The header for our theme.
+ * The header for our theme
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package understrap
+ * @package Wayako
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -21,51 +19,74 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php wayako_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-<div class="site" id="page">
+<div id="page" class="site">
 
-	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+	<a class="skip-link visually-hidden visually-hidden-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
 
-		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+	<div id="wrapper-navbar" class="">
 
-		<nav class="navbar navbar-expand-md <?php /*position-absolute*/ ?> w-100 d-none d-lg-block px-4 py-3">
-			<div class="d-flex justify-content-between align-items-center">
+		<!-- desktop navigation -->
+		<nav id="header-nav" class="navbar desktop-navbar d-none d-md-flex flex-column justify-content-between align-items-center h-100 ms-auto" aria-labelledby="header-nav-label"> 
 
-				<div class="logo">
-					<a href="https://www.wayako.com/" class="" rel="home" data-wpel-link="internal"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Wayako" width="200" height="60"></a>
-				</div>
+			<div id="header-nav-label" class="visually-hidden">
+				<?php esc_html_e( 'Main Navigation', 'wayako' ); ?>
+			</div>
 
-				<div class=" d-none d-lg-block">
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
+			<?php if ( is_front_page() ) : ?>
+				<h1 class="navbar-brand">
+					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+						<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" alt="wayako" width="187" height="50" />
+						<span class="visually-hidden"><?php bloginfo( 'name' ); ?></span>
+					</a>
+				</h1>
+			<?php else : ?>
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" alt="wayako" width="187" height="50" />
+				</a>
+			<?php endif; ?>
+
+			<div id="menu_title" class="menu-title"><?php esc_html_e( 'Menu', 'wayako' ); ?><span class="menu-icon"></span></div>
+
+			<div class="" id="mainMenu" style="">
+				<div class="phone d-flex"><a href="tel:+33493341868">+33 (0) 4 93 34 18 68</a></div>
+				<?php
+				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav ml-auto',
+						'container_class' => 'navbar navbar-nav',
+						'container_id'    => 'mainMenuNavbar',
+						'menu_class'      => 'desktop-menu navbar-nav text-center',
 						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
+						'menu_id'         => 'desktop_primary_menu',
 						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+						'walker'          => new wayako_WP_Bootstrap_Navwalker(),
 					)
-				); ?>
-				</div>
-
-			</div><!-- .container -->
-		</nav><!-- .site-navigation -->
-
-		<nav class="mobile-navbar <?php /*position-absolute*/ ?> w-100 d-flex justify-content-between align-items-center d-lg-none px-3 px-md-4 py-3">
-			<div class="logo">
-				<a class="mobile-logo" href="<?php echo home_url(); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() . '/images/wayako-logo-1x.png'; ?>" class="img-fluid" alt="Defstudio Productions" width="260" height="33.238"></a>
+				);
+				?>
 			</div>
-			<button class="navbar-toggler collapsed" type="button" <?php /*data-toggle="collapse"*/ ?> aria-expanded="false" aria-label="Toggle navigation"  data-toggle="modal" data-target="#menuModal">
+
+			<div class="customers view-customers">Tous nos clients<br>en 1 coup d'oeil<span class="eye-icon"></span></div>
+
+			<?php get_template_part( 'global-templates/social' ); ?>
+
+		</nav>
+
+		<!-- mobile navigation -->
+		<nav class="mobile-navbar d-flex justify-content-between align-items-center d-md-none p-3">
+
+			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" class="img-fluid" alt="wayako" width="234" height="63.15" />
+			</a>
+
+			<button class="navbar-toggler collapsed" type="button" aria-expanded="false" aria-label="Toggle navigation"  data-bs-toggle="modal" data-bs-target="#menuModal">
 				<span class="icon-bar top-bar"></span>
 				<span class="icon-bar middle-bar"></span>
 				<span class="icon-bar bottom-bar"></span>
-				<span class="sr-only">Menu principal</span>
+				<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
 			</button>
+
 		</nav>
 
 	</div><!-- #wrapper-navbar end -->

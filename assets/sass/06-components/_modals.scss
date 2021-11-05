@@ -1,0 +1,239 @@
+/* Modals */
+
+.modal-backdrop {
+    background-color: white;
+    &.show {
+        //opacity: 1;
+    }
+}
+
+
+/* Mobile menu modal (full screen) */
+
+.mobile-menu-modal {
+    background-color: white;
+    z-index: 1070;
+    padding-right: 0 !important;
+    padding-top: 5rem;
+    .modal-dialog {
+        margin: 0 0 0 0;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+        padding: 0;
+    }
+    .modal-content {
+        height: 100%;
+        min-height: 100%;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+        overflow: auto;
+        background: transparent;
+    }
+    .modal-body {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    .mobile-menu {
+        margin-bottom: 1.5rem;
+    }
+    .customers {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+    }
+}
+
+
+/* Customers modal */
+
+.customers-modal {
+    .modal-dialog {
+        max-width: calc(100% - 25rem);
+        margin: 3rem auto;
+        width: 100%;
+        height: min-content;
+        min-height: min-content;
+        padding: 0;
+        background-color: white;
+        background-color: #2D2F2B;
+    }
+    .modal-content {
+        height: min-content;
+        min-height: min-content;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+        overflow: auto;
+        background: transparent;
+    }
+    .modal-body {
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            content: '';
+            width: 4.6875rem;
+            height: 4.6875rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75.699' height='75.699' viewBox='0 0 75.699 75.699'%3E%3Cg id='Groupe_259' data-name='Groupe 259' transform='translate(-1393.65 -4697.15)'%3E%3Cline id='Ligne_40' data-name='Ligne 40' x1='73.404' y2='75' transform='translate(1394.798 4697.5)' fill='none' stroke='%23efefef' stroke-width='1'/%3E%3Cline id='Ligne_41' data-name='Ligne 41' x1='73.404' y2='75' transform='translate(1469 4698.298) rotate(90)' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 0.5;
+            z-index: 1100;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+/* Team member modal */
+
+.team-member-modal {
+    .modal-dialog {
+        width: 100%;
+        padding: 0;
+        max-width: 100%;
+        margin: 0;
+        background-color: #2D2F2B;
+        height: min-content;
+        min-height: min-content;
+        @media (min-width: 768px) {
+            //   max-width: calc(100% - 25rem);
+            max-width: 90%;
+            margin: 3rem auto;
+        }
+        @media (min-width: 1400px) {
+            max-width: 65rem;
+        }
+    }
+    .modal-content {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+        overflow: auto;
+        background: transparent;
+        height: min-content;
+        min-height: min-content;
+    }
+    .modal-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 992px) {
+            flex-direction: row;
+        }
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            content: '';
+            width: 3.75rem;
+            height: 3.75rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75.699' height='75.699' viewBox='0 0 75.699 75.699'%3E%3Cg id='Groupe_259' data-name='Groupe 259' transform='translate(-1393.65 -4697.15)'%3E%3Cline id='Ligne_40' data-name='Ligne 40' x1='73.404' y2='75' transform='translate(1394.798 4697.5)' fill='none' stroke='%23efefef' stroke-width='1'/%3E%3Cline id='Ligne_41' data-name='Ligne 41' x1='73.404' y2='75' transform='translate(1469 4698.298) rotate(90)' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 0.5;
+            z-index: 1100;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .left {
+            width: 100%;
+            position: relative;
+            padding-top: 12%;
+            padding-left: 9%;
+            padding-bottom: 18%;
+            padding-right: 26%;
+            @media (min-width: 992px) {
+                padding-right: unset;
+                padding-left: 11%;
+                // padding-bottom: 18%;
+            }
+            @media (min-width: 992px) {
+                width: 50%;
+            }
+        }
+        .right {
+            width: 100%;
+            padding-top: 10%;
+            padding-right: 6%;
+            @media (min-width: 992px) {
+                width: 50%;
+                padding-top: 45%;
+            }
+            @media (min-width: 1400px) {
+                padding-top: 40%;
+            }
+        }
+        figure {
+            padding: 0px 20% 20% 20%;
+            padding-left: 25%;
+            padding-right: 25%;
+            width: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480.512' height='380.488' viewBox='0 0 480.512 380.488'%3E%3Cpath id='Tracé_138' data-name='Tracé 138' d='M0,0H280V280H0Z' transform='translate(100.182 0.462)' fill='%23f7f7f7'/%3E%3Crect id='Rectangle_72' data-name='Rectangle 72' width='100' height='100' transform='translate(380.512)' fill='%23acacac'/%3E%3Crect id='Rectangle_75' data-name='Rectangle 75' width='100' height='100' transform='translate(280.013 280.488)' fill='%23acacac'/%3E%3Crect id='Rectangle_78' data-name='Rectangle 78' width='100' height='100' transform='translate(0 180.462)' fill='%23c7c7c7'/%3E%3C/svg%3E%0A");
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: contain;
+            aspect-ratio: 1/1;
+            position: relative;
+        }
+        .illustration-1,
+        .illustration-2,
+        .illustration-3 {
+            position: absolute;
+            width: 40%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        .illustration-1 {
+            top: 0;
+            left: 0;
+            transform: translate(-37%, -50%);
+        }
+        .illustration-2 {
+            bottom: 0;
+            right: 0;
+            transform: translate(-52%, 100%);
+        }
+        .illustration-3 {
+            bottom: 0;
+            right: 0;
+            transform: translate(100%, -170%);
+        }
+        figcaption {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .name {
+            font-size: 0.8rem;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .function {
+            font-size: 0.8rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        .description {
+            font-size: .75rem;
+        }
+        p {
+            color: white;
+        }
+    }
+}

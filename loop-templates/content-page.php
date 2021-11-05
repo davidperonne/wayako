@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package understrap
+ * @package Wayako
  */
 
 // Exit if accessed directly.
@@ -11,14 +11,11 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-
-<?php if ( ! is_front_page() && ! is_home() ) { ?>
 	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
-<?php } ?>
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
@@ -29,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 		<?php
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'wayako' ),
 				'after'  => '</div>',
 			)
 		);
@@ -37,10 +34,10 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
-<?php /*	<footer class="entry-footer">
+	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php //edit_post_link( __( 'Edit', 'wayako' ), '<span class="edit-link">', '</span>' ); ?>
 
-	</footer><!-- .entry-footer --> */ ?>
+	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

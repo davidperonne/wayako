@@ -1,108 +1,133 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template for displaying the footer
  *
  * Contains the closing of the #content div and all content after
  *
- * @package understrap
+ * @package Wayako
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="wrapper-footer">
+	<footer class="wrapper wrapper-footer mb-5" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+		<div class="container">
 
-		<div class="row">
+			<div class="row">
 
-			<div class="col-12 mb-3">
+				<div class="col-12 col-md-6 col-lg-4 px-4 mb-3">
 
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'footer-menu',
-						'container_class' => '',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav d-flex flex-column flex-md-row justify-content-center text-center',
-						'fallback_cb'     => '',
-						'menu_id'         => 'footer-menu',
-						'depth'           => 2,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
+					<?php if ( is_active_sidebar( 'footercol1' ) ) : ?>
 
-			</div>
+						<div class="wrapper" id="wrapper-footer-col1">
 
-			<div class="col-md-12">
+							<?php dynamic_sidebar( 'footercol1' ); ?>
 
-				<footer class="site-footer" id="colophon">
+						</div>
 
-					<div class="site-info">
+					<?php endif; ?>
 
-						<ul id="footer-social" class="d-flex justify-content-center pl-0">
-							<li class="mx-1"><a href="https://twitter.com/davidperonne"><i class="fa fa-fw fa-twitter"></i></a></li>
-							<li class="mx-1"><a href="https://fr.linkedin.com/in/davidperonne/"><i class="fa fa-fw fa-linkedin"></i></a></li>
-							<li class="mx-1"><a href="skype:david.peronne?call"><i class="fa fa-fw fa-skype"></i></a></li>
+				</div>
 
-						</ul>
+				<div class="col-12 col-md-6 col-lg-4 px-4 mb-3">
 
-					</div><!-- .site-info -->
+					<?php if ( is_active_sidebar( 'footercol2' ) ) : ?>
 
-				</footer><!-- #colophon -->
+						<div class="wrapper" id="wrapper-footer-col2">
 
-			</div><!--col end -->
+							<?php dynamic_sidebar( 'footercol2' ); ?>
 
-			<div class="col-md-12 mb-5">
+						</div>
 
-				<footer class="site-footer d-flex flex-column flex-md-row justify-content-center" id="colophon">
+					<?php endif; ?>
 
-					<div class="site-info copyright text-center text-md-right">© 2009 - 2019 Wayako</div>
-					<div class="site-info legal text-center text-md-left"><a href="/a-propos/mentions-legales/">Mentions légales & confidentialité</a></div>
+				</div>
 
-				</footer>
+				<div class="col-12 col-md-12 col-lg-4 px-4 d-flex justify-content-center justify-content-lg-start">
 
-			</div><!--col end -->
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location'  => 'footer-menu',
+							'container_class' => 'footer-menu',
+							'container_id'    => '',
+							'menu_class'      => 'navbar-nav flex-column flex-sm-row flex-lg-column',
+							'fallback_cb'     => '',
+							'menu_id'         => '',
+							'depth'           => 1,
+							'walker'          => new wayako_WP_Bootstrap_Navwalker(),
+						)
+					);
+					?>
 
-		</div><!-- row end -->
+				</div>
 
-	</div><!-- container end -->
+			</div><!-- row end -->
 
-</div><!-- wrapper end -->
+		</div><!-- container end -->
+
+	</footer><!-- wrapper end -->
 
 </div><!-- #page we need this extra closing tag here -->
 
-<!-- Mobile menu -->
-<div class="modal fade fullscreen" id="menuModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog m-0">
+<a href="#" id="topbutton" title="<?php esc_html_e( 'To top', 'wayako' ); ?>"><span class="visually-hidden"><?php esc_html_e( 'To top', 'wayako' ); ?></span></a>
+
+<!-- MODAL Mobile main menu -->
+<div class="modal fade mobile-menu-modal" id="menuModal" tabindex="-1">
+	<div class="modal-dialog">
 		<div class="modal-content">
-			<div class="modal-header text-center">
-				<h4 class="modal-title text-center"><span class="">Navigation rapide</span></h4>
-				<button type="button" class="btn btn-link" data-dismiss="modal" aria-hidden="true">X</button>
+			<div class="modal-body">
+
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'mobile-menu navbar-nav ml-auto',
+						'fallback_cb'     => '',
+						'menu_id'         => 'mobile_primary_menu',
+						'depth'           => 2,
+						'walker'          => new wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
+
+				<div class="phone d-flex"><a href="tel:+33493341868">+33 (0) 4 93 34 18 68</a></div>
+
+				<div class="customers view-customers">Tous nos clients<br>en 1 coup d'oeil<span class="eye-icon"></span></div>
+
+				<?php get_template_part( 'global-templates/social' ); ?>
+
 			</div>
-			<div class="modal-body text-center px-0">
-				<div class="container-fluid px-0">
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location'  => 'mobile-menu',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => '',
-							'fallback_cb'     => '',
-							'menu_id'         => '',
-							'depth'           => 2,
-							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-						)
-					); ?>
-				</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal customers ajax -->
+<div class="modal fade customers-modal" id="customersModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"></div>
+		</div>
+	</div>
+</div>
+
+
+<?php if ( is_page( 'agence' ) ) : ?>
+
+	<!-- Modal team member post ajax -->
+	<div class="modal fade team-member-modal" id="teamMemberPostModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body"></div>
 			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.fullscreen -->
+		</div>
+	</div>
+
+<?php endif; ?>
 
 <?php wp_footer(); ?>
 
