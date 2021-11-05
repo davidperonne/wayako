@@ -114,6 +114,11 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 		// Check and setup theme default settings.
 	//	wayako_setup_theme_default_settings();
 
+
+		// FSE ???
+	add_theme_support( 'wp-block-styles' );
+
+
 	}
 }
 
