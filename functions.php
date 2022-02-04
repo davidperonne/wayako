@@ -1,6 +1,6 @@
 <?php
 /**
- * Blooming Dream functions and definitions
+ * Wayako functions and definitions
  *
  * @package Wayako
  */

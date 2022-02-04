@@ -1,4 +1,4 @@
-=== Blooming Dream ===
+=== Wayako ===
 Contributors: wordpressdotorg
 Requires at least: 5.3
 Tested up to: 5.6

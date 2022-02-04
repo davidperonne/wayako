@@ -1,6 +1,6 @@
 <?php
 /**
- * Blooming Dream enqueue scripts
+ * Wayako enqueue scripts
  *
  * @package Wayako
  */

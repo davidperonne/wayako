@@ -33,13 +33,14 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Blooming Dream" width="224" height="162" />
+				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Wayako" width="224" height="162" />
 			</a>
+
 
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location'  => 'primary',
+					'theme_location'  => 'top-menu',
 					'container_class' => 'desktop-menu w-100 nav-wrap',
 					'container_id'    => 'desktop_menu',
 					'menu_class'      => 'nav justify-content-center align-items-center group',
@@ -51,31 +52,30 @@ defined( 'ABSPATH' ) || exit;
 			);
 			?>
 
-			<div class="desktop-sub-menu-container d-flex">
-				<?php
-				// Use the second level content of sub menu.
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'desktop-sub-menu align-self-center',
-						'container_id'    => '',
-						'menu_class'      => 'nav justify-content-center align-items-center',
-						'menu_id'         => '',
-						'sub_menu'      => true,
-						'direct_parent' => true,
-						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
-			</div>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'main-menu',
+					'container_class' => 'desktop-menu w-100 nav-wrap',
+					'container_id'    => 'desktop_menu',
+					'menu_class'      => 'nav justify-content-center align-items-center group',
+					'fallback_cb'     => '',
+					'menu_id'         => '',
+					'depth'           => 1,
+					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
+
+		
 
 			<div class="header-left">
 
-				<?php get_template_part( 'global-templates/social-nav-1' ); ?>
+				<?php //get_template_part( 'global-templates/social-nav-1' ); ?>
 
-				<?php get_template_part( 'global-templates/phone' ); ?>
+				<?php //get_template_part( 'global-templates/phone' ); ?>
 
-				<?php do_action( 'wpml_add_language_selector' ); ?>
+				<?php //do_action( 'wpml_add_language_selector' ); ?>
 
 			</div>
 
@@ -85,7 +85,7 @@ defined( 'ABSPATH' ) || exit;
 		<nav class="mobile-navbar d-flex justify-content-center align-items-center d-md-none p-3">
 
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Blooming Dream" width="224" height="162" />
+				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Wayako" width="224" height="162" />
 			</a>
 
 			<button class="navbar-toggler collapsed" type="button" aria-expanded="false" aria-label="Toggle navigation"  data-bs-toggle="modal" data-bs-target="#menuModal">

@@ -1,2 +1,2 @@
 # wayako
-Blooming Dream theme
+Wayako theme

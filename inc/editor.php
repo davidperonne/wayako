@@ -1,6 +1,6 @@
 <?php
 /**
- * Blooming Dream modify editor
+ * Wayako modify editor
  *
  * @package Wayako
  */
