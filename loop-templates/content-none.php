@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="no-result">
 
-	<?php echo esc_html__( 'Aucun résultat à afficher !', 'wayako' ); ?>
+	<p><?php echo esc_html__( 'Aucun résultat à afficher !', 'wayako' ); ?></p>
 
 </div>
 

@@ -8,8 +8,6 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
-
 function mytheme_setup_theme_supported_features() {
 
 	add_theme_support(
@@ -100,8 +98,6 @@ function gb_gutenberg_admin_styles() {
 add_action( 'admin_head', 'gb_gutenberg_admin_styles' );
 
 
-
-
 /**
  * Disable Editor
  *
@@ -119,18 +115,15 @@ function ea_disable_editor( $id = false ) {
 
 	$excluded_templates = array(
 		'page-templates/homepage.php',
-		'page-templates/agence.php',
-		'page-templates/expertises.php',
-		'page-templates/references.php',
-		'page-templates/reference-template-1.php',
-		'page-templates/single-expertise.php',
+		'page-templates/qui-suis-je.php',
+		'page-templates/prestations.php',
+		'page-templates/book.php',
 		'page-templates/contact.php',
 	);
 
 	$excluded_ids = array(
-		// get_option( 'page_on_front' )
 		736,
-		1348
+		1348,
 	);
 
 	if ( empty( $id ) )

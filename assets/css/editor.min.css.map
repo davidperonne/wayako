@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACKA,AAAA,oBAAoB,AAAC,CACjB,QAAQ,CAAE,QAAQ,CAClB,WAAW,CAAE,GAAG,CAChB,aAAa,CAAE,IAAI,CAYtB,AAfD,AAKQ,oBALY,CAIhB,MAAM,AACD,UAAW,CAAA,CAAC,CAAE,CACX,SAAS,CAAE,GAAG,CACjB,AAPT,AAQQ,oBARY,CAIhB,MAAM,AAID,UAAW,CAAA,CAAC,CAAE,CACX,QAAQ,CAAE,QAAQ,CAClB,KAAK,CAAE,CAAC,CACR,GAAG,CAAE,CAAC,CACN,SAAS,CAAE,GAAG,CACjB",
+    "sources": [
+        "../sass/editor.scss",
+        "../sass/06-components/_blocks.scss"
+    ],
+    "names": [],
+    "file": "editor.min.css"
+}

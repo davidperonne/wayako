@@ -47,7 +47,11 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary'     => __( 'Primary Menu', 'wayako' ),
-				'footer-menu' => __( 'Footer Menu', 'wayako' ),
+				'footer1-menu' => __( 'Footer 1 Menu', 'wayako' ),
+				'footer2-menu' => __( 'Footer 2 Menu', 'wayako' ),
+				'footer3-menu' => __( 'Footer 3 Menu', 'wayako' ),
+				'footer4-menu' => __( 'Footer 4 Menu', 'wayako' ),
+				'copyright-menu' => __( 'Copyright Menu', 'wayako' ),
 			)
 		);
 
@@ -93,31 +97,11 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-	/*	add_theme_support(
-			'custom-background',
-			apply_filters(
-				'wayako_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);*/
-
 		// Set up the WordPress Theme logo feature.
 		add_theme_support( 'custom-logo' );
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
-
-		// Check and setup theme default settings.
-	//	wayako_setup_theme_default_settings();
-
-
-		// FSE ???
-	add_theme_support( 'wp-block-styles' );
-
 
 	}
 }
@@ -138,23 +122,5 @@ if ( ! function_exists( 'wayako_custom_excerpt_more' ) ) {
 			$more = '';
 		}
 		return $more;
-	}
-}
-
-//add_filter( 'wp_trim_excerpt', 'wayako_all_excerpts_get_more_link' );
-
-if ( ! function_exists( 'wayako_all_excerpts_get_more_link' ) ) {
-	/**
-	 * Adds a custom read more link to all excerpts, manually or automatically generated
-	 *
-	 * @param string $post_excerpt Posts's excerpt.
-	 *
-	 * @return string
-	 */
-	function wayako_all_excerpts_get_more_link( $post_excerpt ) {
-		if ( ! is_admin() ) {
-			$post_excerpt = $post_excerpt . ' [...]<p><a class="btn btn-secondary wayako-read-more-link" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">Continuer la <span>lecture</span></a></p>';
-		}
-		return $post_excerpt;
 	}
 }

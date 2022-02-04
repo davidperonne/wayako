@@ -41,6 +41,33 @@ if ( ! function_exists( 'wayako_posted_on' ) ) {
 }
 
 
+if ( ! function_exists( 'wayako_shorted_posted_on' ) ) {
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function wayako_shorted_posted_on() {
+
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date( 'd.m.y' ) )
+		);
+
+		$posted_on   = apply_filters(
+			'wayako_posted_on',
+			sprintf(
+				'<span class="posted-on">%1$s</span>',
+				apply_filters( 'wayako_posted_on_time', $time_string )
+			)
+		);
+
+		echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+}
+
+
 if ( ! function_exists( 'wayako_comments_quantity' ) ) {
 	/**
 	 * Prints HTML with meta information for the current number of comments.
@@ -98,7 +125,7 @@ if ( ! function_exists( 'wayako_entry_footer' ) ) {
 				esc_html__( 'Edit %s', 'wayako' ),
 				the_title( '<span class="visually-hidden">"', '"</span>', false )
 			),
-			'<span class="edit-link">',
+			' <span class="edit-link">',
 			'</span>'
 		);
 	}

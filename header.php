@@ -23,61 +23,69 @@ defined( 'ABSPATH' ) || exit;
 <?php do_action( 'wp_body_open' ); ?>
 <div id="page" class="site">
 
-	<a class="skip-link visually-hidden visually-hidden-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
-
 	<div id="wrapper-navbar" class="">
 
 		<!-- desktop navigation -->
-		<nav id="header-nav" class="navbar desktop-navbar d-none d-md-flex flex-column justify-content-between align-items-center h-100 ms-auto" aria-labelledby="header-nav-label"> 
+		<nav id="header-nav" class="navbar desktop-navbar d-none d-md-flex flex-column justify-content-center align-items-center pb-0" aria-labelledby="header-nav-label"> 
 
 			<div id="header-nav-label" class="visually-hidden">
 				<?php esc_html_e( 'Main Navigation', 'wayako' ); ?>
 			</div>
 
-			<?php if ( is_front_page() ) : ?>
-				<h1 class="navbar-brand">
-					<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-						<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" alt="wayako" width="187" height="50" />
-						<span class="visually-hidden"><?php bloginfo( 'name' ); ?></span>
-					</a>
-				</h1>
-			<?php else : ?>
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" alt="wayako" width="187" height="50" />
-				</a>
-			<?php endif; ?>
+			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Blooming Dream" width="224" height="162" />
+			</a>
 
-			<div id="menu_title" class="menu-title"><?php esc_html_e( 'Menu', 'wayako' ); ?><span class="menu-icon"></span></div>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'desktop-menu w-100 nav-wrap',
+					'container_id'    => 'desktop_menu',
+					'menu_class'      => 'nav justify-content-center align-items-center group',
+					'fallback_cb'     => '',
+					'menu_id'         => '',
+					'depth'           => 1,
+					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
 
-			<div class="" id="mainMenu" style="">
-				<div class="phone d-flex"><a href="tel:+33493341868">+33 (0) 4 93 34 18 68</a></div>
+			<div class="desktop-sub-menu-container d-flex">
 				<?php
+				// Use the second level content of sub menu.
 				wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'navbar navbar-nav',
-						'container_id'    => 'mainMenuNavbar',
-						'menu_class'      => 'desktop-menu navbar-nav text-center',
-						'fallback_cb'     => '',
-						'menu_id'         => 'desktop_primary_menu',
-						'depth'           => 2,
-						'walker'          => new wayako_WP_Bootstrap_Navwalker(),
+						'container_class' => 'desktop-sub-menu align-self-center',
+						'container_id'    => '',
+						'menu_class'      => 'nav justify-content-center align-items-center',
+						'menu_id'         => '',
+						'sub_menu'      => true,
+						'direct_parent' => true,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
 					)
 				);
 				?>
 			</div>
 
-			<div class="customers view-customers">Tous nos clients<br>en 1 coup d'oeil<span class="eye-icon"></span></div>
+			<div class="header-left">
 
-			<?php get_template_part( 'global-templates/social' ); ?>
+				<?php get_template_part( 'global-templates/social-nav-1' ); ?>
+
+				<?php get_template_part( 'global-templates/phone' ); ?>
+
+				<?php do_action( 'wpml_add_language_selector' ); ?>
+
+			</div>
 
 		</nav>
 
 		<!-- mobile navigation -->
-		<nav class="mobile-navbar d-flex justify-content-between align-items-center d-md-none p-3">
+		<nav class="mobile-navbar d-flex justify-content-center align-items-center d-md-none p-3">
 
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.svg'; ?>" class="img-fluid" alt="wayako" width="234" height="63.15" />
+				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Blooming Dream" width="224" height="162" />
 			</a>
 
 			<button class="navbar-toggler collapsed" type="button" aria-expanded="false" aria-label="Toggle navigation"  data-bs-toggle="modal" data-bs-target="#menuModal">

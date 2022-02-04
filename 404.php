@@ -32,9 +32,7 @@ get_header();
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wayako' ); ?></p>
-
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'wayako' ); ?></p>
 
 						</div><!-- .page-content -->
 

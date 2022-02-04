@@ -1,0 +1,94 @@
+/* Footer */
+
+footer.wrapper-footer {
+    margin-top: 5rem;
+    .footer-widget {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: #2D2F2B;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    p {
+        font-size: .75rem;
+        line-height: 1.875;
+    }
+    .square-decoration:after {
+        content: '';
+        display: inline-block;
+        width: .625rem;
+        height: 0.625rem;
+        background-color: #B1AF00;
+        margin-left: 0.5rem;
+    }
+    .footer-menu {
+        li {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            align-self: center;
+            @media (min-width: 992px) {
+                align-self: flex-start;
+            }
+        }
+    }
+    .nav-link {
+        font-size: .75rem;
+        line-height: 1.875;
+        padding: 0.25rem;
+        @media (min-width: 992px) {
+            padding: 0;
+        }
+        width: min-content;
+        white-space: nowrap;
+    }
+    .cli_settings_button {
+        color: #2D2F2B !important;
+    }
+    .cli_settings_button:hover {
+        color: #B1AF00 !important;
+        text-decoration: underline;
+    }
+}
+
+
+/* To top */
+
+#topbutton {
+    position: fixed;
+    display: none;
+    height: 2.125rem;
+    width: 2.125rem;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    z-index: 1;
+    background-color: #2D2F2B;
+    text-decoration: none;
+    border: solid #FFFFFF 1px;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: #B1AF00;
+    }
+}
+
+#topbutton:after {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.882' height='17.882'%3E%3Cpath data-name='Tracé ' d='M.707 8.892L8.893.706l8.281 8.282' fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center 0.75rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* Customers modal */
+
+#customersModal {
+    z-index: 1100;
+}

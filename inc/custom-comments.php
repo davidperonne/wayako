@@ -30,18 +30,18 @@ if ( ! function_exists( 'wayako_bootstrap_comment_form_fields' ) ) {
 
 		if ( isset( $fields['author'] ) ) {
 			$fields['author'] = '<div class="d-flex flex-column flex-md-row justify-content-md-between mb-3">
-			<div class="form-group comment-form-author mb-3"><label class="visually-hidden" for="author">Nom <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" placeholder="Nom*" maxlength="245" required="required"></div>';
+			<div class="form-group comment-form-author pe-md-3 pe-lg-0 mb-3"><label class="visually-hidden" for="author">' . esc_html__( 'Name', 'wayako' ) . ' <span class="required">*</span></label> <input class="form-control" id="author" name="author" type="text" value="" size="30" placeholder="' . esc_html__( 'Name', 'wayako' ) . '*" maxlength="245" required="required"></div>';
 		}
 		if ( isset( $fields['email'] ) ) {
-			$fields['email'] = '<div class="form-group comment-form-email mb-3"><label class="visually-hidden" for="email">E-mail <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" placeholder="Email*" maxlength="100" aria-describedby="email-notes" required="required"></div>';
+			$fields['email'] = '<div class="form-group comment-form-email pe-md-3 pe-lg-0 mb-3"><label class="visually-hidden" for="email">E-mail <span class="required">*</span></label> <input class="form-control" id="email" name="email" type="email" value="" size="30" placeholder="Email*" maxlength="100" aria-describedby="email-notes" required="required"></div>';
 		}
 		if ( isset( $fields['url'] ) ) {
-			$fields['url'] = '<div class="form-group comment-form-url mb-3"><label class="visually-hidden" for="url">Site web</label> <input class="form-control" id="url" name="url" type="url" value="" size="30" placeholder="Site web" maxlength="200"></div>
+			$fields['url'] = '<div class="form-group comment-form-url mb-3"><label class="visually-hidden" for="url">Site web</label> <input class="form-control" id="url" name="url" type="url" value="" size="30" placeholder="' . esc_html__( 'Website', 'wayako' ) . '" maxlength="200"></div>
 			</div>';
 		}
 
 		if ( isset( $fields['cookies'] ) ) {
-			$fields['cookies'] = '<div class="form-group form-check comment-form-cookies-consent mb-4"><input class="form-check-input me-3" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label class="form-check-label" for="wp-comment-cookies-consent">Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.</label></div>';
+			$fields['cookies'] = '<div class="form-group form-check comment-form-cookies-consent mb-4"><input class="form-check-input me-3" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label class="form-check-label" for="wp-comment-cookies-consent">' . esc_html__( 'Save my name, email, and site in the browser for my next comment.', 'wayako' ) . '</label></div>';
 		}
 
 		return $fields;
@@ -62,26 +62,26 @@ if ( ! function_exists( 'wayako_bootstrap_comment_form' ) ) {
 	function wayako_bootstrap_comment_form( $args ) {
 
 		if ( isset( $args['comment_field'] ) ) {
-			$args['comment_field'] = '<div class="form-group comment-form-comment">
+			$args['comment_field'] = '<div class="form-group comment-form-comment mb-3">
 			<label for="comment">Message</label> 
 			<textarea class="form-control" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
 			</div>';
 		}
 
 		if ( isset( $args['class_submit'] ) ) {
-			$args['class_submit'] = 'btn btn-dark';
+			$args['class_submit'] = 'btn btn-green';
 		}
 
 		if ( isset( $args['label_submit'] ) ) {
-			$args['label_submit'] = esc_html__( 'Publier le commentaire', 'wayako' );
+			$args['label_submit'] = esc_html__( 'Post comment', 'wayako' );
 		}
 
 		if ( isset( $args['title_reply'] ) ) {
-			$args['title_reply'] = esc_html__( 'Laisser un commentaire :', 'wayako' );
+			$args['title_reply'] = esc_html__( 'Leave a comment:', 'wayako' );
 		}
 
 		if ( isset( $args['comment_notes_before'] ) ) {
-			$args['comment_notes_before'] = '<p class="comment-notes">Champs obligatoires <span class="required">*</span></p>';
+			$args['comment_notes_before'] = '<p class="comment-notes required-fields"><span class="required">*</span> ' . esc_html__( 'Required fields', 'wayako' ) . '</p>';
 		}
 
 		return $args;
@@ -137,7 +137,7 @@ if ( ! function_exists( 'wayako_comments' ) ) {
 				<div class="comment-block">
 					<div class="comment-arrow"></div>
 					<?php if ( $comment->comment_approved == '0' ) : ?>
-						<em><?php esc_html_e( 'Your comment is awaiting moderation.','5balloons_theme' ); ?></em>
+						<em><?php esc_html_e( 'Your comment is awaiting moderation.','wayako' ); ?></em>
 						<br />
 					<?php endif; ?>
 

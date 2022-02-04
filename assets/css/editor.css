@@ -1,0 +1,20 @@
+/* Editor */
+/* Blocks */
+/* Block double images */
+.block-double-images {
+  position: relative;
+  padding-top: 35%;
+  margin-bottom: 3rem;
+}
+
+.block-double-images figure:nth-child(1) {
+  max-width: 60%;
+}
+
+.block-double-images figure:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 60%;
+}
+/*# sourceMappingURL=editor.css.map */

@@ -13,60 +13,108 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="wrapper wrapper-footer mb-5" id="wrapper-footer">
 
-		<div class="container">
+		<!-- top footer -->
+		<div class="top-footer container d-none d-md-block">
+			<?php get_template_part( 'global-templates/social-nav-2' ); ?>
+		</div>
 
-			<div class="row">
+		<!-- middle footer -->
+		<div class="middle-footer container">
+			<div class="d-flex flex-column flex-md-row justify-content-between flex-wrap">
 
-				<div class="col-12 col-md-6 col-lg-4 px-4 mb-3">
-
-					<?php if ( is_active_sidebar( 'footercol1' ) ) : ?>
-
-						<div class="wrapper" id="wrapper-footer-col1">
-
-							<?php dynamic_sidebar( 'footercol1' ); ?>
-
-						</div>
-
-					<?php endif; ?>
-
+				<div class="middle-footer__logo d-none d-md-block text-center mb-5 mb-lg-0">
+					<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Blooming Dream" width="224" height="162" />
+					</a>
 				</div>
 
-				<div class="col-12 col-md-6 col-lg-4 px-4 mb-3">
 
-					<?php if ( is_active_sidebar( 'footercol2' ) ) : ?>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'footer1-menu',
+						'container_class' => 'footer1-menu mb-md-3',
+						'container_id'    => '',
+						'menu_class'      => 'nav flex-column text-center text-md-start',
+						'fallback_cb'     => '',
+						'menu_id'         => '',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
 
-						<div class="wrapper" id="wrapper-footer-col2">
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'footer2-menu',
+						'container_class' => 'footer2-menu mb-md-3',
+						'container_id'    => '',
+						'menu_class'      => 'nav flex-column text-center text-md-start',
+						'fallback_cb'     => '',
+						'menu_id'         => '',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
 
-							<?php dynamic_sidebar( 'footercol2' ); ?>
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'footer3-menu',
+						'container_class' => 'footer3-menu mb-md-3',
+						'container_id'    => '',
+						'menu_class'      => 'nav flex-column text-center text-md-start',
+						'fallback_cb'     => '',
+						'menu_id'         => '',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
 
-						</div>
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'footer4-menu',
+						'container_class' => 'footer4-menu mb-3',
+						'container_id'    => '',
+						'menu_class'      => 'nav flex-column text-center text-md-start',
+						'fallback_cb'     => '',
+						'menu_id'         => '',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 
-					<?php endif; ?>
+				<?php get_template_part( 'global-templates/phone' ); ?>
 
-				</div>
+				<?php get_template_part( 'global-templates/social-nav-1' ); ?>
 
-				<div class="col-12 col-md-12 col-lg-4 px-4 d-flex justify-content-center justify-content-lg-start">
+			</div>
+		</div>
 
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'footer-menu',
-							'container_class' => 'footer-menu',
-							'container_id'    => '',
-							'menu_class'      => 'navbar-nav flex-column flex-sm-row flex-lg-column',
-							'fallback_cb'     => '',
-							'menu_id'         => '',
-							'depth'           => 1,
-							'walker'          => new wayako_WP_Bootstrap_Navwalker(),
-						)
-					);
-					?>
+		<!-- bottom footer -->
+		<div class="bottom-footer container">
+			<div class="d-flex flex-column flex-sm-row justify-content-center text-center">
+				<span class="copyright-info"><?php echo '&copy; Blooming'; ?></span> 
 
-				</div>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'copyright-menu',
+						'container_class' => '',
+						'container'       => '',
+						'container_id'    => '',
+						'menu_class'      => 'copyright-menu nav flex-column flex-sm-row align-items-center',
+						'fallback_cb'     => '',
+						'menu_id'         => '',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 
-			</div><!-- row end -->
+				<span class="made-by"><?php esc_html_e( 'Realization', 'wayako' ); ?> <a href="https://www.comdz.fr" rel="noopener, noreferrer" target="_blank">ComDZ.fr</a></span>
 
-		</div><!-- container end -->
+			</div> 
+		</div> 
 
 	</footer><!-- wrapper end -->
 
@@ -75,7 +123,7 @@ defined( 'ABSPATH' ) || exit;
 <a href="#" id="topbutton" title="<?php esc_html_e( 'To top', 'wayako' ); ?>"><span class="visually-hidden"><?php esc_html_e( 'To top', 'wayako' ); ?></span></a>
 
 <!-- MODAL Mobile main menu -->
-<div class="modal fade mobile-menu-modal" id="menuModal" tabindex="-1">
+<div class="modal modal-dialog-scrollable fade mobile-menu-modal right" id="menuModal" tabindex="-1" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -85,49 +133,24 @@ defined( 'ABSPATH' ) || exit;
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => '',
-						'container_id'    => '',
+						'container_id'    => 'mobileMenuNavbar',
 						'menu_class'      => 'mobile-menu navbar-nav ml-auto',
 						'fallback_cb'     => '',
-						'menu_id'         => 'mobile_primary_menu',
-						'depth'           => 2,
-						'walker'          => new wayako_WP_Bootstrap_Navwalker(),
+						'menu_id'         => 'mobile-menu',
+						'depth'           => 1,
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
 					)
 				);
 				?>
 
-				<div class="phone d-flex"><a href="tel:+33493341868">+33 (0) 4 93 34 18 68</a></div>
+				<?php get_template_part( 'global-templates/social-nav-1' ); ?>
 
-				<div class="customers view-customers">Tous nos clients<br>en 1 coup d'oeil<span class="eye-icon"></span></div>
-
-				<?php get_template_part( 'global-templates/social' ); ?>
+				<?php do_action( 'wpml_add_language_selector' ); ?>
 
 			</div>
 		</div>
 	</div>
 </div>
-
-<!-- Modal customers ajax -->
-<div class="modal fade customers-modal" id="customersModal" tabindex="-1">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-body"></div>
-		</div>
-	</div>
-</div>
-
-
-<?php if ( is_page( 'agence' ) ) : ?>
-
-	<!-- Modal team member post ajax -->
-	<div class="modal fade team-member-modal" id="teamMemberPostModal" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-body"></div>
-			</div>
-		</div>
-	</div>
-
-<?php endif; ?>
 
 <?php wp_footer(); ?>
 

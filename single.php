@@ -17,29 +17,18 @@ get_header();
 
 	<div class="container" id="content" tabindex="-1">
 
-		<div class="row">
+		<?php
+		while ( have_posts() ) {
+			the_post();
 
-			<div class="col-md content-area px-4" id="primary">
+			get_template_part( 'loop-templates/content-single', get_post_type() );
 
-				<main class="site-main" id="main">
-
-					<?php
-					while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'single' );
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}
-					?>
-
-				</main><!-- #main -->
-
-			</div>
-
-		</div><!-- .row -->
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			}
+		}
+		?>
 
 	</div><!-- #content -->
 

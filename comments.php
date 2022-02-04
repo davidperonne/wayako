@@ -33,12 +33,12 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( 1 === (int) $comments_number ) {
 				printf(
-					esc_html__( 'Cet article a %s commentaire', 'wayako' ),
+					esc_html__( 'This article has %s comment', 'wayako' ),
 					$comments_number
 				);
 			} else {
 				printf(
-					esc_html__( 'Cet article a %s commentaires', 'wayako' ),
+					esc_html__( 'This article has %s comments', 'wayako' ),
 					$comments_number
 				);
 			}

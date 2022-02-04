@@ -8,68 +8,45 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-
-// Set defaults.
-$args = wp_parse_args(
-    $args,
-    array(
-        'number' => '',
-    )
+$classes = array(
+	'col-12',
+	'col-lg-6',
+	'px-4',
 );
-
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( $classes ); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="row">
+	<a href="<?php echo esc_url( get_permalink() ); ?>">
+		<figure>
+			<?php echo get_the_post_thumbnail( $post->ID, 'medium_large', array( 'class' => 'img-cover reveal1' ) ); ?>
 
-		<div class="col-12 col-md-6 entry-thumbnail px-4 px-md-5 mb-3">
-			<a href="<?php echo esc_url( get_permalink() ); ?>">
-				<?php echo get_the_post_thumbnail( $post->ID, 'medium', array('class' => 'w-100') ); ?>
-			</a>
-		</div>
+			<figcaption class="d-flex flex-column fade-up">
 
-		<div class="col-12 col-md-6 align-self-center px-4 px-md-5 mb-3">
+				<?php
+				$categories = get_the_category( $post->ID );
 
-			<header class="entry-header">
+				if ( ! empty( $categories ) ) {
+					$post_categories = join( ', ', wp_list_pluck( $categories, 'name' ) );
+					echo '<div class="entry-categories">' . esc_html( $post_categories ) . '</div>';
+				}
+				?>
+
+				<?php
+				the_title( '<h2 class="entry-title mb-auto">', '</h2>' );
+				?>
 
 				<?php if ( 'post' === get_post_type() ) : ?>
 
 					<div class="entry-meta">
 						<?php wayako_posted_on(); ?>
-						<div class="number fade-up"><?php echo str_pad($args['number'], 2, "0", STR_PAD_LEFT); ?></div>
-					</div><!-- .entry-meta -->
+					</div>
 
 				<?php endif; ?>
 
-				<?php
-				the_title(
-					sprintf( '<h2 class="entry-title fade-up mb-4"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-					'</a></h2>'
-				);
-				?>
+			</figcaption>
 
-			</header><!-- .entry-header -->
-
-			<div class="entry-content">
-
-				<?php the_excerpt(); ?>
-
-				<a class="btn btn-outline reveal1 mt-3" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">Continuer la <strong>lecture</strong></a>
-
-				<?php
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . __( 'Pages:', 'wayako' ),
-						'after'  => '</div>',
-					)
-				);
-				?>
-
-			</div><!-- .entry-content -->
-
-		</div>
-
-	</div>
+		</figure>
+	</a>
 
 </article><!-- #post-## -->

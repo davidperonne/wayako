@@ -1,4 +1,4 @@
-=== wayako ===
+=== Blooming Dream ===
 Contributors: wordpressdotorg
 Requires at least: 5.3
 Tested up to: 5.6
@@ -15,18 +15,9 @@ Combination of Automattic´s _s theme and Bootstrap 5.
 
 == Changelog ==
 
-= 1.2 =
-* Released: March 9, 2021
-
-
-
-= 1.1 =
-* Released: December 22, 2020
-
-
 
 = 1.0 =
-* Released: December 8, 2020
+* Released: January 18, 2022
 
 
 

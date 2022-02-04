@@ -19,38 +19,24 @@ get_header();
 
 		<div class="row">
 
-			<div class="col-md content-area" id="primary">
+			<?php
+			if ( have_posts() ) {
 
-				<main class="site-main" id="main">
+				// Start the loop.
+				while ( have_posts() ) {
+					the_post();
 
-					<?php
-					if ( have_posts() ) {
-						?>
-						<header class="page-header">
-							<?php
-							the_archive_title( '<h1 class="page-title">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description">', '</div>' );
-							?>
-						</header><!-- .page-header -->
-						<?php
-						// Start the loop.
-						while ( have_posts() ) {
-							the_post();
+					get_template_part( 'loop-templates/content', get_post_format() );
+				}
+			} else {
+				get_template_part( 'loop-templates/content', 'none' );
+			}
+			?>
 
-							get_template_part( 'loop-templates/content', get_post_format() );
-						}
-					} else {
-						get_template_part( 'loop-templates/content', 'none' );
-					}
-					?>
-
-				</main><!-- #main -->
-
-				<?php
-				// Display the pagination component.
-				wayako_pagination();
-				?>
-			</div>
+			<?php
+			// Display the pagination component.
+			wayako_pagination();
+			?>
 
 		</div><!-- .row -->
 

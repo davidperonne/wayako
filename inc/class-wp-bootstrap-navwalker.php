@@ -23,13 +23,13 @@ defined( 'ABSPATH' ) || exit;
  */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'wayako_WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'Wayako_WP_Bootstrap_Navwalker' ) ) {
 	/**
 	 * WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class wayako_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class Wayako_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.
@@ -191,6 +191,7 @@ if ( ! class_exists( 'wayako_WP_Bootstrap_Navwalker' ) ) {
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
 				$atts['href']          = '#';
+			//	$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 			//	$atts['data-toggle']   = 'dropdown';
 				$atts['data-bs-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';

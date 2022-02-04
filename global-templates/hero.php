@@ -8,23 +8,61 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-if ( is_home() ) {
+if ( is_page_template( 'page-templates/homepage.php' ) ||
+	is_page_template( 'page-templates/qui-suis-je.php' ) ||
+	is_page_template( 'page-templates/prestations.php' ) ||
+	is_page_template( 'page-templates/contact.php' )
+) {
+	// code.
+	?>
+	<header class="entry-header d-flex hero">
 
-	get_template_part( 'hero-templates/hero', 'blog' );
+		<?php if ( have_rows( 'header' ) ) : ?>
+			<?php while ( have_rows( 'header' ) ) :
+				the_row(); ?>
 
-} elseif ( is_single() && ( 'post' == get_post_type() ) ) {
+				<?php if ( $image = get_sub_field( 'image' ) ) : ?>
 
-	get_template_part( 'hero-templates/hero', 'single' );
+					<?php
+					// Responsives backgrounds inline styles : for testimonials and parallax footer (based on this hero image).
+					$big_image_output   = wp_get_attachment_image_url( $image['id'], '16_9_landscape_medium_large' );
+					$small_image_output = wp_get_attachment_image_url( $image['id'], 'medium_large' );
 
-} elseif ( is_single() && ( 'reference' == get_post_type() ) ) {
+					$custom_css = "
+					/* Mobiles */
+						.parallax-hero-bg{
+					background-image:url('{$small_image_output}');
+					}
+					/* Desktop */
+					@media screen and (min-width: 768px) {
+						.parallax-hero-bg{
+						background-image:url('{$big_image_output}');
+						} 
+					} ";
 
-	get_template_part( 'hero-templates/hero', 'reference' );
+					echo '<style>' . $custom_css . '</style>';
+					?>
 
-} else {
+					<figure class="is-background">
+						<?php echo wp_get_attachment_image( $image['id'], '16_9_landscape_medium_large', false, array( 'class' => 'img-cover', 'alt' => esc_attr( $image['alt'] ), 'loading' => false ) ); ?>
+					</figure>
+				<?php endif; ?>
 
-	if ( $header_type = get_field( 'header_type' ) ) {
+				<div class="container d-flex flex-column align-items-center align-self-center">
 
-		get_template_part( 'hero-templates/hero', $header_type );
+					<?php if ( $title = get_sub_field( 'title' ) ) : ?>
+						<h1><?php echo esc_html( $title ); ?></h1>
+					<?php endif; ?>
 
-	}
+					<?php if ( ! is_page_template( 'page-templates/contact.php' ) ) : ?>
+						<a class="btn btn-light" href="<?php echo get_permalink( get_page_by_path( 'contact' ) ); ?>"><?php echo esc_html__( 'Let\'s meet up', 'wayako' ); ?></a>
+					<?php endif; ?>
+
+				</div>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
+
+	</header>
+	<?php
 }

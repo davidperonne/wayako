@@ -1,6 +1,6 @@
 <?php
 /**
- * wayako modify editor
+ * Blooming Dream modify editor
  *
  * @package Wayako
  */
@@ -8,13 +8,13 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'admin_init', 'wayako_wpdocs_theme_add_editor_styles' );
+add_action( 'admin_init', 'Wayako_WPdocs_theme_add_editor_styles' );
 
-if ( ! function_exists( 'wayako_wpdocs_theme_add_editor_styles' ) ) {
+if ( ! function_exists( 'Wayako_WPdocs_theme_add_editor_styles' ) ) {
 	/**
 	 * Registers an editor stylesheet for the theme.
 	 */
-	function wayako_wpdocs_theme_add_editor_styles() {
+	function Wayako_WPdocs_theme_add_editor_styles() {
 		add_editor_style( 'css/custom-editor-style.min.css' );
 	}
 }
