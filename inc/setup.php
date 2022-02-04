@@ -46,12 +46,10 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'primary'     => __( 'Primary Menu', 'wayako' ),
-				'footer1-menu' => __( 'Footer 1 Menu', 'wayako' ),
-				'footer2-menu' => __( 'Footer 2 Menu', 'wayako' ),
-				'footer3-menu' => __( 'Footer 3 Menu', 'wayako' ),
-				'footer4-menu' => __( 'Footer 4 Menu', 'wayako' ),
-				'copyright-menu' => __( 'Copyright Menu', 'wayako' ),
+				'top-menu' => __( 'Top menu', 'wayako' ),
+				'main-menu' => __( 'Main menu', 'wayako' ),
+				'footer-menu' => __( 'Footer menu', 'wayako' ),
+				'copyright-menu' => __( 'Copyright menu', 'wayako' ),
 			)
 		);
 
