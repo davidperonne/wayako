@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="site-footer__branding">
 				<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Wayako" width="224" height="162" />
+					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
 				</a>
 			</div>
 

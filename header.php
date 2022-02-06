@@ -27,31 +27,43 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="site-header">
 
+
+
+
+
+
+
+
+
+
+
+
 		<div class="site-header__branding">
 			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-wayako.png'; ?>" alt="Wayako" width="224" height="162" />
+				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
 			</a>
 		</div>
 
-		<button class="navbar-toggler collapsed" type="button" aria-expanded="false" aria-label="Toggle navigation"  data-bs-toggle="modal" data-bs-target="#menuModal">
+		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="icon-bar top-bar"></span>
 			<span class="icon-bar middle-bar"></span>
 			<span class="icon-bar bottom-bar"></span>
 			<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
 		</button>
 
-		<div class="site-header__menus">
+		<div id="main_nav" class="site-header__menus navbar-collapse collapse">
 
-			<?php // TODO : Change the div into nav in the menus !
+			<?php
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'top-menu',
-					'container_class' => 'top-menu',
-					'container_id'    => 'top_menu',
-					'menu_class'      => 'nav justify-content-center align-items-center group',
-					'fallback_cb'     => '',
-					'menu_id'         => '',
+					'container'       => 'nav',
+					'container_id'    => 'top-nav',
+					'container_class' => 'top-nav',
+					'menu_id'         => 'top-menu',
+					'menu_class'      => 'main-menu justify-content-center align-items-center',
 					'depth'           => 1,
+					'fallback_cb'     => '',
 					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
 				)
 			);
@@ -61,12 +73,13 @@ defined( 'ABSPATH' ) || exit;
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'main-menu',
-					'container_class' => 'main-menu',
-					'container_id'    => 'main_menu',
-					'menu_class'      => 'nav justify-content-center align-items-center group',
-					'fallback_cb'     => '',
-					'menu_id'         => '',
+					'container'       => 'nav',
+					'container_id'    => 'main-nav',
+					'container_class' => 'main-nav justify-content-center align-items-center',
+					'menu_id'         => 'main-menu',
+					'menu_class'      => 'main-menu navbar-nav',
 					'depth'           => 1,
+					'fallback_cb'     => '',
 					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
 				)
 			);
