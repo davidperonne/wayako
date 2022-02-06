@@ -27,66 +27,58 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="site-header">
 
+		<div class="container"> <!-- TODO : flex-row ! -->
 
+			<div class="site-header__branding">
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
+				</a>
+			</div>
 
+			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="icon-bar top-bar"></span>
+				<span class="icon-bar middle-bar"></span>
+				<span class="icon-bar bottom-bar"></span>
+				<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
+			</button>
 
+			<div id="main_nav" class="site-header__menus navbar-collapse collapse">
 
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'top-menu',
+						'container'       => 'nav',
+						'container_id'    => 'top-nav',
+						'container_class' => 'top-nav',
+						'menu_id'         => 'top-menu',
+						'menu_class'      => 'main-menu nav justify-content-center align-items-center',
+						'depth'           => 1,
+						'fallback_cb'     => '',
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'main-menu',
+						'container'       => 'nav',
+						'container_id'    => 'main-nav',
+						'container_class' => 'main-nav justify-content-center align-items-center',
+						'menu_id'         => 'main-menu',
+						'menu_class'      => 'main-menu nav',
+						'depth'           => 1,
+						'fallback_cb'     => '',
+						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+					)
+				);
+				?>
 
-
-
-
-
-
-		<div class="site-header__branding">
-			<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
-			</a>
-		</div>
-
-		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="icon-bar top-bar"></span>
-			<span class="icon-bar middle-bar"></span>
-			<span class="icon-bar bottom-bar"></span>
-			<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
-		</button>
-
-		<div id="main_nav" class="site-header__menus navbar-collapse collapse">
-
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'top-menu',
-					'container'       => 'nav',
-					'container_id'    => 'top-nav',
-					'container_class' => 'top-nav',
-					'menu_id'         => 'top-menu',
-					'menu_class'      => 'main-menu nav justify-content-center align-items-center',
-					'depth'           => 1,
-					'fallback_cb'     => '',
-					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-				)
-			);
-			?>
-
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'main-menu',
-					'container'       => 'nav',
-					'container_id'    => 'main-nav',
-					'container_class' => 'main-nav justify-content-center align-items-center',
-					'menu_id'         => 'main-menu',
-					'menu_class'      => 'main-menu nav',
-					'depth'           => 1,
-					'fallback_cb'     => '',
-					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-				)
-			);
-			?>
+			</div>		
 
 		</div>
-
 
 	</header>
 
