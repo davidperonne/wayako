@@ -50,6 +50,7 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 				'main-menu' => __( 'Main menu', 'wayako' ),
 				'footer-menu' => __( 'Footer menu', 'wayako' ),
 				'copyright-menu' => __( 'Copyright menu', 'wayako' ),
+				'legal-menu' => __( 'Legal menu', 'wayako' ),
 			)
 		);
 
