@@ -158,5 +158,43 @@ function wt_cli_add_html_wrapper( $html, $begin, $end ) {
 	$html  = $begin . $html . $end;
 	return $html;
 }
-add_filter( 'wt_cli_change_privacy_overview_title_tag', 'wt_cli_add_html_wrapper', 10, 3 );
+//add_filter( 'wt_cli_change_privacy_overview_title_tag', 'wt_cli_add_html_wrapper', 10, 3 );
+
+
+
+
+
+
+
+
+
+if ( ! function_exists( 'wayako_cmplz_show_banner_on_click' ) ) :
+
+	/**
+	 * Show the banner when a html element with class 'cmplz-show-banner' is clicked.
+	 *
+	 * @return void
+	 */
+	function wayako_cmplz_show_banner_on_click() {
+		?>
+		<script>
+			function addEvent(event, selector, callback, context) {
+				document.addEventListener(event, e => {
+					if ( e.target.closest(selector) ) {
+						callback(e);
+					}
+				});
+			}
+			addEvent('click', '.cmplz-show-banner', function(){
+				document.querySelectorAll('.cmplz-manage-consent').forEach(obj => {
+					obj.click();
+				});
+			});
+		</script>
+		<?php
+	}
+
+endif;
+
+add_action( 'wp_footer', 'wayako_cmplz_show_banner_on_click' );
 

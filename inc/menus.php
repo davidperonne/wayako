@@ -15,7 +15,7 @@
  */
 function new_nav_menu_items( $items, $args ) {
 	if ( $args->theme_location == 'copyright-menu' ) {
-		$cookies_link = '<li class="nav-item"><span class="nav-link cli_settings_button">' . esc_html__( 'Cookies', 'wayako' ) . '</span></li>';
+		$cookies_link = '<li class="nav-item"><a class="nav-link cmplz-show-banner">' . esc_html__( 'Cookies', 'wayako' ) . '</a></li>';
 		$items = $items . $cookies_link;
 	}
 	return $items;
