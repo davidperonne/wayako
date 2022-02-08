@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="site-header">
 
-		<div class="container"> <!-- TODO : flex-row ! -->
+		<div class="container site-header__inner"> <!-- TODO : flex-row ! -->
 
 			<div class="site-header__branding">
 				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
@@ -49,10 +49,10 @@ defined( 'ABSPATH' ) || exit;
 					array(
 						'theme_location'  => 'top-menu',
 						'container'       => 'nav',
-						'container_id'    => 'top-nav',
-						'container_class' => 'top-nav',
-						'menu_id'         => 'top-menu',
-						'menu_class'      => 'main-menu nav justify-content-center align-items-center',
+					//	'container_id'    => 'top-nav',
+						'container_class' => 'site-header__top-nav',
+					//	'menu_id'         => 'top-menu',
+						'menu_class'      => ' nav',
 						'depth'           => 1,
 						'fallback_cb'     => '',
 						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
@@ -65,10 +65,10 @@ defined( 'ABSPATH' ) || exit;
 					array(
 						'theme_location'  => 'main-menu',
 						'container'       => 'nav',
-						'container_id'    => 'main-nav',
-						'container_class' => 'main-nav justify-content-center align-items-center',
-						'menu_id'         => 'main-menu',
-						'menu_class'      => 'main-menu nav',
+					//	'container_id'    => 'main-nav',
+						'container_class' => 'site-header__main-nav',
+					//	'menu_id'         => 'main-menu',
+						'menu_class'      => 'nav',
 						'depth'           => 1,
 						'fallback_cb'     => '',
 						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
