@@ -10,19 +10,19 @@ defined( 'ABSPATH' ) || exit;
 
 
 /**
- * Register Book Custom Post Type.
+ * Register Portfolio Custom Post Type.
  */
-function create_book_cpt() {
+function create_portfolio_cpt() {
 
 	$labels = array(
-		'name'                  => _x( 'Book', 'Post Type General Name', 'wayako' ),
-		'singular_name'         => _x( 'Book', 'Post Type Singular Name', 'wayako' ),
-		'menu_name'             => _x( 'Books', 'Admin Menu text', 'wayako' ),
-		'name_admin_bar'        => _x( 'Book', 'Add New on Toolbar', 'wayako' ),
+		'name'                  => _x( 'Portfolio', 'Post Type General Name', 'wayako' ),
+		'singular_name'         => _x( 'Portfolio', 'Post Type Singular Name', 'wayako' ),
+		'menu_name'             => _x( 'Portfolio', 'Admin Menu text', 'wayako' ),
+		'name_admin_bar'        => _x( 'Portfolio', 'Add New on Toolbar', 'wayako' ),
 		'archives'              => __( 'Archives', 'wayako' ),
 		'attributes'            => __( 'Attributs', 'wayako' ),
 		'parent_item_colon'     => __( 'Parent:', 'wayako' ),
-		'all_items'             => __( 'Tous les Books', 'wayako' ),
+		'all_items'             => __( 'Tous les Portfolio', 'wayako' ),
 		'add_new_item'          => __( 'Ajouter un ...', 'wayako' ),
 		'add_new'               => __( 'Ajouter', 'wayako' ),
 		'new_item'              => __( 'New ...', 'wayako' ),
@@ -44,14 +44,14 @@ function create_book_cpt() {
 		'filter_items_list'     => __( 'Filter ... list', 'wayako' ),
 	);
 	$rewrite = array(
-		'slug' => 'book',
+		'slug' => 'portfolio',
 		'with_front' => true,
 		'pages' => true,
 		'feeds' => true,
 	);
 	$args = array(
-		'label'               => __( 'Book', 'wayako' ),
-		'description'         => __( 'Book', 'wayako' ),
+		'label'               => __( 'Portfolio', 'wayako' ),
+		'description'         => __( 'Portfolio', 'wayako' ),
 		'labels'              => $labels,
 		'menu_icon'           => 'dashicons-admin-post',
 		'supports'            => array(
@@ -76,8 +76,8 @@ function create_book_cpt() {
 		'capability_type'     => 'page',
 		'rewrite'             => $rewrite,
 	);
-	register_post_type( 'book', $args );
+	register_post_type( 'portfolio', $args );
 
 }
-add_action( 'init', 'create_book_cpt', 0 );
+add_action( 'init', 'create_portfolio_cpt', 0 );
 

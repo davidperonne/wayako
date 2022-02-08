@@ -11,11 +11,11 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Register taxonomy secteur d'activité.
  */
-function create_book_tax() {
+function create_portfolio_tax() {
 
 	$labels = array(
-		'name'              => _x( 'Book categories', 'taxonomy general name', 'wayako' ),
-		'singular_name'     => _x( 'Book categorie', 'taxonomy singular name', 'wayako' ),
+		'name'              => _x( 'Portfolio categories', 'taxonomy general name', 'wayako' ),
+		'singular_name'     => _x( 'Portfolio categorie', 'taxonomy singular name', 'wayako' ),
 		'search_items'      => __( 'Search book categories', 'wayako' ),
 		'all_items'         => __( 'All book categories', 'wayako' ),
 		'parent_item'       => __( 'Parent theme', 'wayako' ),
@@ -33,7 +33,7 @@ function create_book_tax() {
 	);
 	$args = array(
 		'labels'             => $labels,
-		'description'        => __( 'Book categories', 'wayako' ),
+		'description'        => __( 'Portfolio categories', 'wayako' ),
 		'hierarchical'       => true,
 		'public'             => true,
 		'publicly_queryable' => true,
@@ -46,7 +46,7 @@ function create_book_tax() {
 		'show_in_rest' => true,		
 		'rewrite' => $rewrite,
 	);
-	register_taxonomy( 'book_cat', array( 'book' ), $args );
+	register_taxonomy( 'book_cat', array( 'portfolio' ), $args );
 
 }
-add_action( 'init', 'create_book_tax' );
+//add_action( 'init', 'create_portfolio_tax' );

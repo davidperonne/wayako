@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Book
+ * Template Name: Portfolio
  *
  * Template for displaying a page without sidebar even if a sidebar widget is published.
  *
@@ -19,7 +19,7 @@ get_header();
 
 	<?php
 	$args = array(
-		'post_type' => 'book',
+		'post_type' => 'portfolio',
 	);
 
 	$books = new WP_Query( $args );

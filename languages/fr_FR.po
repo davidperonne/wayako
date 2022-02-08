@@ -183,22 +183,22 @@ msgstr ""
 
 #: inc/custom-post-types.php:18
 msgctxt "Post Type General Name"
-msgid "Book"
+msgid "Portfolio"
 msgstr ""
 
 #: inc/custom-post-types.php:19
 msgctxt "Post Type Singular Name"
-msgid "Book"
+msgid "Portfolio"
 msgstr ""
 
 #: inc/custom-post-types.php:20
 msgctxt "Admin Menu text"
-msgid "Books"
+msgid "Portfolios"
 msgstr ""
 
 #: inc/custom-post-types.php:21
 msgctxt "Add New on Toolbar"
-msgid "Book"
+msgid "Portfolio"
 msgstr ""
 
 #: inc/custom-post-types.php:22
@@ -214,7 +214,7 @@ msgid "Parent:"
 msgstr ""
 
 #: inc/custom-post-types.php:25
-msgid "Tous les Books"
+msgid "Tous les Portfolios"
 msgstr ""
 
 #: inc/custom-post-types.php:26
@@ -294,7 +294,7 @@ msgid "Filter ... list"
 msgstr ""
 
 #: inc/custom-post-types.php:53 inc/custom-post-types.php:54
-msgid "Book"
+msgid "Portfolio"
 msgstr ""
 
 #: inc/extras.php:96
@@ -373,12 +373,12 @@ msgstr ""
 
 #: inc/taxonomies.php:17
 msgctxt "taxonomy general name"
-msgid "Book categories"
+msgid "Portfolio categories"
 msgstr ""
 
 #: inc/taxonomies.php:18
 msgctxt "taxonomy singular name"
-msgid "Book categorie"
+msgid "Portfolio categorie"
 msgstr ""
 
 #: inc/taxonomies.php:19
@@ -418,7 +418,7 @@ msgid "Catégorie"
 msgstr ""
 
 #: inc/taxonomies.php:36
-msgid "Book categories"
+msgid "Portfolio categories"
 msgstr ""
 
 #: inc/template-tags.php:81

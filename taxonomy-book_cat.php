@@ -27,7 +27,7 @@ get_header();
 	$current_cat = get_query_var( 'book_cat' );
 
 	$args = array(
-		'post_type' => 'book',
+		'post_type' => 'portfolio',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'book_cat',

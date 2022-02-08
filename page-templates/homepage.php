@@ -159,7 +159,7 @@ get_header();
 								<div class="wrote-story-banner__description fade-up"><?php echo wp_kses_post( $description ); ?></div>
 							<?php endif; ?>
 
-							<a class="btn btn-light mb-4 fade-up" href="<?php echo get_permalink( get_page_by_path( 'book' ) ); ?>"><?php echo esc_html__( 'To discover', 'wayako' ); ?></a>
+							<a class="btn btn-light mb-4 fade-up" href="<?php echo get_permalink( get_page_by_path( 'portfolio' ) ); ?>"><?php echo esc_html__( 'To discover', 'wayako' ); ?></a>
 
 						</div>
 						<div class="image-column align-self-center align-self-lg-start order-md-first">
