@@ -222,10 +222,48 @@
 /* Comments */
 /* Flexslider */
 /* Plugins */
-/* WPML */
-/* Cookie law - GDPR Cookie Consent */
+/* CoBlocks */
+.wp-block-coblocks-pricing-table-item__price-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 /* GDPR Data Request Form */
 /* Contact Form 7 */
 /* Blocks */
 /* Gutenberg */
+.features .wp-block-columns {
+  margin-bottom: 0;
+}
+
+.features .wp-block-columns .wp-block-column {
+  padding: 2rem;
+  margin-left: 0;
+}
+
+@media (min-width: 600px) {
+  .features .wp-block-columns .wp-block-column {
+    border-right: 1px solid #eeeeee;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+.features .wp-block-columns .wp-block-column:nth-child(even) {
+  border-right: none;
+}
+
+@media (min-width: 600px) {
+  .features .wp-block-columns:not(:last-child) .wp-block-column {
+    border-bottom: 1px solid #eeeeee;
+  }
+}
+
+@media (min-width: 600px) {
+  .features .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:not(:first-child) {
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=wayako.css.map */

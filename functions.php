@@ -198,3 +198,23 @@ endif;
 
 add_action( 'wp_footer', 'wayako_cmplz_show_banner_on_click' );
 
+
+
+
+/*
+
+// Antispam test.
+function preprocess_new_comment( $result, $tag ) {
+	if ( ! isset( $_POST['is_legit'] ) ) {
+	//	die(' You are bullshit' );
+	}
+	return $result;
+}
+
+// Processes the form.
+add_filter( 'wpcf7_validate', 'preprocess_new_comment', 10, 2 );
+*/
+/*
+if(function_exists('add_action')) {
+	add_action('preprocess_comment', 'preprocess_new_comment');
+}*/
