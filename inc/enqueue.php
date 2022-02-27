@@ -108,122 +108,33 @@ if ( ! function_exists( 'wayako_get_font_face_styles' ) ) :
 	function wayako_get_font_face_styles() {
 		return "
 		@font-face{
-			font-family: 'Quasimoda';
+			font-family: 'Montserrat';
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+			src: url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-regular.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-regular.woff' ) . "') format('woff');
+			font-display: swap;
+		}
+
+		@font-face{
+			font-family: 'Montserrat';
 			font-weight: 500;
 			font-style: normal;
 			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/quasimoda-medium.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/quasimoda-medium.woff' ) . "') format('woff');
+			src: url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-500.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-500.woff' ) . "') format('woff');
 			font-display: swap;
 		}
 		@font-face{
-			font-family: 'Quasimoda';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/quasimoda-bold.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/quasimoda-bold.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Marison Brieny';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/marison-brieny-regular.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/marison-brieny-regular.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Crimson Text';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/crimson-text-regular.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/crimson-text-regular.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Crimson Text';
+			font-family: 'Montserrat';
 			font-weight: 600;
 			font-style: normal;
 			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/crimson-text-semibold.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/crimson-text-semibold.woff' ) . "') format('woff');
+			src: url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-600.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-600.woff' ) . "') format('woff');
 			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Lato';
-			font-weight: 100;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-100.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-100.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Lato';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-regular.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-regular.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Lato';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-700.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/lato-v20-latin-700.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Josefin Sans';
-			font-weight: 600;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/josefin-sans-v20-latin-600.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/josefin-sans-v20-latin-600.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Muli';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/muli.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/muli.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Muli';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/muli-bold.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/muli-bold.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Work Sans';
-			font-weight: 400;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/work-sans-v13-latin-regular.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/work-sans-v13-latin-regular.woff' ) . "') format('woff');
-			font-display: swap;
-		}
-		@font-face{
-			font-family: 'Work Sans';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/work-sans-v13-latin-700.woff2' ) . "') format('woff2'),
-				url('" . get_theme_file_uri( 'assets/fonts/work-sans-v13-latin-700.woff' ) . "') format('woff');
-			font-display: swap;
-		}
+		}		
 		";
 	}
 
@@ -244,7 +155,7 @@ if ( ! function_exists( 'wayako_preload_webfonts' ) ) :
 	 */
 	function wayako_preload_webfonts() {
 		?>
-		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/lato-v20-latin-regular.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="<?php echo esc_url( get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-regular.woff2' ) ); ?>" as="font" type="font/woff2" crossorigin>
 		<?php
 	}
 

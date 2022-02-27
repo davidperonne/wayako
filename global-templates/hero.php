@@ -66,3 +66,7 @@ if ( is_page_template( 'page-templates/homepage.php' ) ||
 	</header>
 	<?php
 }
+
+
+// if(function_exists('seopress_display_breadcrumbs')) { seopress_display_breadcrumbs(); } 
+
