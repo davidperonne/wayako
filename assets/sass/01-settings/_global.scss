@@ -1,5 +1,20 @@
 /* Global */
 
+:root {
+    --wayako-color1: #f94213;
+    --wayako-gray1: #DADCDE;
+}
+
 body {
     font-family: 'Montserrat';
+}
+
+a {
+    color: var(--wayako-color1);
+}
+
+input[type=text] {
+    border-color: var(--wayako-gray1);
+    border-radius: 1.025rem;
+    padding: 11px 31px;
 }
