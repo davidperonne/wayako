@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="" id="">
 
-		<div class="site-footer__container">
+		<div class="site-footer__container container">
 
 			<div class="site-footer__branding">
 				<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -57,6 +57,12 @@ defined( 'ABSPATH' ) || exit;
 					)
 				);
 				?>
+
+
+				<div class="site-footer__socials-icons">
+
+
+				</div>
 
 			</div>
 
