@@ -12,3 +12,9 @@ button {
     padding: 11px 31px;
     // -webkit-appearance: unset;
 }
+
+.wp-block-button__link {
+    color: black;
+    background-color: transparent;
+    border: solid var(--wayako-color1) 1px;
+}

@@ -19,6 +19,12 @@ input[type=text] {
   padding: 11px 31px;
 }
 
+/**/
+.clip-type1 img {
+  -webkit-clip-path: path("M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z");
+          clip-path: path("M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z");
+}
+
 /* Animations */
 /**/
 /* Pages */
@@ -43,6 +49,12 @@ button {
   border-color: var(--wayako-color1);
   border-radius: 1.5625rem;
   padding: 11px 31px;
+}
+
+.wp-block-button__link {
+  color: black;
+  background-color: transparent;
+  border: solid var(--wayako-color1) 1px;
 }
 
 /* Header */

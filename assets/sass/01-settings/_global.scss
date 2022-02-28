@@ -18,3 +18,10 @@ input[type=text] {
     border-radius: 1.025rem;
     padding: 11px 31px;
 }
+
+
+/**/
+
+.clip-type1 img {
+    clip-path: path('M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z');
+}
