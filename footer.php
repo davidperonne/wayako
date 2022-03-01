@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
 			<div class="site-footer__menu">
 
 
-			<?php dynamic_sidebar( 'footer-widget' ); ?>
+				<?php dynamic_sidebar( 'footer-widget' ); ?>
 
 				<?php
 				wp_nav_menu(
