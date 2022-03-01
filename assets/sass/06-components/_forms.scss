@@ -1,1 +1,14 @@
 /* Forms */
+
+input[type=text],
+input[type=email] {
+    border: solid var(--wayako-gray1) 1px;
+    border-radius: 1.025rem;
+    padding: 11px 31px;
+}
+
+textarea {
+    border: solid var(--wayako-gray1) 1px;
+    border-radius: 1.025rem;
+    padding: 11px 31px;
+}
