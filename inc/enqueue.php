@@ -109,6 +109,15 @@ if ( ! function_exists( 'wayako_get_font_face_styles' ) ) :
 		return "
 		@font-face{
 			font-family: 'Montserrat';
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			src: url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-300.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-300.woff' ) . "') format('woff');
+			font-display: swap;
+		}
+		@font-face{
+			font-family: 'Montserrat';
 			font-weight: 400;
 			font-style: normal;
 			font-stretch: normal;

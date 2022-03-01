@@ -18,7 +18,7 @@ a {
 }
 
 input[type=text] {
-  border-color: var(--wayako-gray1);
+  border: solid var(--wayako-gray1) 1px;
   border-radius: 1.025rem;
   padding: 11px 31px;
 }
@@ -70,9 +70,9 @@ h2 {
 button {
   color: white;
   background-color: var(--wayako-color1);
-  border-color: var(--wayako-color1);
+  border: solid var(--wayako-color1) 1px;
   border-radius: 1.5625rem;
-  padding: 11px 31px;
+  padding: 10px 30px;
 }
 
 .wp-block-button__link {
@@ -298,11 +298,51 @@ button {
 
 /* GDPR Data Request Form */
 /* Contact Form 7 */
+::-webkit-input-placeholder {
+  font-family: "Montserrat", Sans-serif;
+  color: #959397;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+::-moz-placeholder {
+  font-family: "Montserrat", Sans-serif;
+  color: #959397;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+:-ms-input-placeholder {
+  font-family: "Montserrat", Sans-serif;
+  color: #959397;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+:-moz-placeholder {
+  font-family: "Montserrat", Sans-serif;
+  color: #959397;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
 /* Blocks */
 /* Gutenberg */
 .alignfull {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+}
+
+.alignwide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /**/

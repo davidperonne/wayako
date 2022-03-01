@@ -18,7 +18,7 @@ a {
 }
 
 input[type=text] {
-    border-color: var(--wayako-gray1);
+    border: solid var(--wayako-gray1) 1px;
     border-radius: 1.025rem;
     padding: 11px 31px;
 }
