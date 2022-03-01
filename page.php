@@ -19,7 +19,7 @@ get_header();
 <?php get_template_part( 'global-templates/hero' ); ?>
 
 <div class="wrapper" id="page-wrapper">
-
+<?php /*
 	<div class="container" id="content" tabindex="-1">
 
 		<div class="row">
@@ -27,9 +27,13 @@ get_header();
 			<div class="col-md content-area px-4" id="primary">
 
 				<main class="site-main" id="main">
+*/ ?>
+
+					<?php the_content(); ?>
+
 
 					<?php
-					while ( have_posts() ) {
+				/*	while ( have_posts() ) {
 						the_post();
 						get_template_part( 'loop-templates/content', 'page' );
 
@@ -37,16 +41,16 @@ get_header();
 						if ( comments_open() || get_comments_number() ) {
 							comments_template();
 						}
-					}
+					}*/
 					?>
-
+<?php /*
 				</main><!-- #main -->
 
 			</div>
 
 		</div><!-- .row -->
 
-	</div><!-- #content -->
+	</div><!-- #content --> */ ?>
 
 </div><!-- #page-wrapper -->
 

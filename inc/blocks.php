@@ -18,7 +18,7 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 	function wayako_register_acf_block_types() {
 
 		// Register home slider block.
-		acf_register_block_type(
+	/*	acf_register_block_type(
 			array(
 				'name'            => 'double-images',
 				'title'           => __( 'Double images', 'wayako' ),
@@ -28,8 +28,20 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 				'icon'            => file_get_contents( get_template_directory() . '/assets/img/o-comdz-icon.svg' ),
 				'keywords'        => array( __( 'Double images', 'images' ), __( 'Plugin', 'wayako' ) ),
 			)
-		);
+		);*/
 
+		// Register home slider block.
+		acf_register_block_type(
+			array(
+				'name'            => 'hero',
+				'title'           => __( 'Hero', 'wayako' ),
+				'description'     => __( 'Hero', 'wayako' ),
+				'render_template' => get_template_directory() . '/blocks/hero.php',
+				'category'        => 'formatting',
+			//	'icon'            => file_get_contents( get_template_directory() . '/assets/img/o-comdz-icon.svg' ),
+				'keywords'        => array( __( 'Hero', 'header' ), __( 'Plugin', 'wayako' ) ),
+			)
+		);
 	}
 
 endif;
