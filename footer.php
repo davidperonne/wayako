@@ -23,7 +23,11 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="site-footer__copyright">
 
-				<span class="site-footer__copyright-info"><?php echo '&copy; 2020 Wayako - Tous droits réservés.'; ?></span> 
+
+				<?php dynamic_sidebar( 'copyright-widget' ); ?>
+
+
+		<?php /*		<span class="site-footer__copyright-info"><?php echo '&copy; 2020 Wayako - Tous droits réservés.'; ?></span> 
 
 				<?php
 				wp_nav_menu(
@@ -44,7 +48,7 @@ defined( 'ABSPATH' ) || exit;
 				<div class="site-footer__copyright-icons ms-auto">
 					A B C
 
-				</div>
+				</div> */ ?>
 
 			</div>
 

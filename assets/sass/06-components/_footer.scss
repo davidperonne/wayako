@@ -38,8 +38,13 @@
         }
         ul.menu {
             padding-left: 0;
-            a {
-                font-weight: 500;
+            li {
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                a {
+                    font-weight: 500;
+                    white-space: nowrap;
+                }
             }
         }
     }
@@ -51,5 +56,23 @@
         padding-top: 2rem;
         margin-bottom: 2rem;
         border-top: solid var(--wayako-gray1) 1px;
+        ul.menu {
+            padding-left: .3125rem;
+            display: flex;
+            flex-direction: row;
+        }
+        >.widget:last-child {
+            margin-left: auto;
+        }
+        .wp-block-social-links.is-style-logos-only {
+            .wp-social-link-twitter,
+            .wp-social-link-github,
+            .wp-social-link-skype {
+                color: #C3C4C7;
+                &:hover {
+                    color: var(--wayako-color1);
+                }
+            }
+        }
     }
 }

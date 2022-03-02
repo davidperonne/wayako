@@ -134,5 +134,17 @@ if ( ! function_exists( 'wayako_widgets_init' ) ) {
 			)
 		);
 
+		register_sidebar(
+			array(
+				'name'          => __( 'Copyright', 'wayako' ),
+				'id'            => 'copyright-widget',
+				'description'   => __( 'Copyright sidebar widget area', 'wayako' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+		);
+
 	}
 } // End of function_exists( 'wayako_widgets_init' ).
