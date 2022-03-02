@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-	<footer class="" id="">
+	<footer class="site-footer" id="">
 
 		<div class="site-footer__container container">
 
