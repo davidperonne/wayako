@@ -24,6 +24,10 @@ h2 {
   margin-bottom: 2.5rem;
 }
 
+h3.h4 {
+  color: var(--wayako-color1);
+}
+
 /**/
 .nav-link {
   /*  display: block;
@@ -55,6 +59,23 @@ h2 {
   color: var(--wayako-color2);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.sub-title-sep {
+  color: #47404E;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.sub-title-sep:before {
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background-color: var(--wayako-color2);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
 }
 
 /**/
@@ -656,6 +677,64 @@ textarea:focus-visible {
 
 .block-service:hover .block-service__link:hover {
   text-decoration: underline;
+}
+
+/* Block pricing */
+.block-pricing__inner {
+  margin: 0 0 0 0;
+  padding: 4rem 2rem;
+  border-radius: 16px 16px 16px 16px;
+  -webkit-box-shadow: 0 0 20px 0 #eae5ee;
+          box-shadow: 0 0 20px 0 #eae5ee;
+  text-align: center;
+}
+
+.block-pricing__sub-title {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.block-pricing__price {
+  font-size: 3.75rem;
+  line-height: 0.8;
+  font-weight: 700;
+  color: var(--wayako-color2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+.block-pricing__price-currency {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: calc(32em/100);
+}
+
+.block-pricing__price-detail {
+  color: #7C797E;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 40px;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.block-pricing__description {
+  margin-bottom: 2rem;
+}
+
+.block-pricing__description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.block-pricing__description li {
+  font-weight: 300;
 }
 
 /**/

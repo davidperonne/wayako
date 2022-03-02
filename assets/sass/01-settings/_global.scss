@@ -26,6 +26,10 @@ h2 {
     margin-bottom: 2.5rem;
 }
 
+h3.h4 {
+    color: var(--wayako-color1);
+}
+
 
 /**/
 
@@ -64,6 +68,22 @@ h2 {
     color: var(--wayako-color2);
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.sub-title-sep {
+    color: #47404E;
+    font-size: .75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:before {
+        content: '';
+        width: 2rem;
+        height: 2px;
+        background-color: var(--wayako-color2);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
 }
 
 
