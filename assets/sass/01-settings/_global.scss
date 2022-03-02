@@ -28,6 +28,18 @@ h2 {
 
 /**/
 
+.nav-link {
+    /*  display: block;
+    padding: 0.5rem 1rem;*/
+    color: #0F0E0F;
+    font-size: 1rem;
+    /*   text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;*/
+}
+
+
+/**/
+
 .clip-type1 img {
     clip-path: path('M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z');
 }

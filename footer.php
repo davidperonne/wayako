@@ -15,35 +15,15 @@ defined( 'ABSPATH' ) || exit;
 
 		<div class="site-footer__container container">
 
-			<div class="site-footer__branding">
-				<a class="" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
-				</a>
-			</div>
-
-			<div class="site-footer__menu">
-
+			<div class="site-footer__widgets">
 
 				<?php dynamic_sidebar( 'footer-widget' ); ?>
-
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'footer-menu',
-						'container_class' => 'footer1-menu mb-md-3',
-						'container_id'    => '',
-						'menu_class'      => 'nav flex-column text-center text-md-start',
-						'fallback_cb'     => '',
-						'menu_id'         => '',
-						'depth'           => 1,
-						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
 
 			</div>
 
 			<div class="site-footer__copyright">
+
+				<span class="site-footer__copyright-info"><?php echo '&copy; 2020 Wayako - Tous droits réservés.'; ?></span> 
 
 				<?php
 				wp_nav_menu(
@@ -61,8 +41,7 @@ defined( 'ABSPATH' ) || exit;
 				);
 				?>
 
-
-				<div class="site-footer__socials-icons">
+				<div class="site-footer__copyright-icons ms-auto">
 					A B C
 
 				</div>

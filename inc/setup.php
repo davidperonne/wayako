@@ -48,7 +48,9 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 			array(
 				'top-menu' => __( 'Top menu', 'wayako' ),
 				'main-menu' => __( 'Main menu', 'wayako' ),
-				'footer-menu' => __( 'Footer menu', 'wayako' ),
+			//	'footer-menu' => __( 'Footer menu', 'wayako' ),
+			//	'footer-menu-1' => __( 'Footer menu 1', 'wayako' ),
+			//	'footer-menu-2' => __( 'Footer menu 2', 'wayako' ),
 				'copyright-menu' => __( 'Copyright menu', 'wayako' ),
 				'legal-menu' => __( 'Legal menu', 'wayako' ),
 			)

@@ -69,7 +69,7 @@ defined( 'ABSPATH' ) || exit;
 						'container_class' => 'site-header__main-nav',
 					//	'menu_id'         => 'main-menu',
 						'menu_class'      => 'nav',
-						'depth'           => 1,
+						'depth'           => 2,
 						'fallback_cb'     => '',
 						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
 					)
