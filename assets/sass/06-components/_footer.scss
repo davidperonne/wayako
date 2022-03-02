@@ -19,8 +19,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 9.375rem;
-        margin-bottom: 9.375rem;
+        margin-top: 8rem;
+        margin-bottom: 5rem;
         >.widget:first-child {
             width: 40%;
         }
@@ -60,6 +60,10 @@
             padding-left: .3125rem;
             display: flex;
             flex-direction: row;
+            li {
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
         }
         >.widget:last-child {
             margin-left: auto;

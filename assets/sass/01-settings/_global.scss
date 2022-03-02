@@ -3,6 +3,7 @@
 :root {
     --wayako-color1: #f94213;
     --wayako-color2: #DD38B4;
+    --wayako-color3: #d35a3c; // Buttons hover
     --wayako-gray1: #DADCDE;
     --wayako-gray2: #39353D;
 }
@@ -59,6 +60,6 @@ h2 {
 
 .sub-title {
     color: var(--wayako-color2);
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
 }

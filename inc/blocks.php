@@ -30,7 +30,6 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 			)
 		);*/
 
-		// Register home slider block.
 		acf_register_block_type(
 			array(
 				'name'            => 'hero',
@@ -40,6 +39,18 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 				'category'        => 'formatting',
 				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
 				'keywords'        => array( __( 'Hero', 'header' ), __( 'Plugin', 'wayako' ) ),
+			)
+		);
+
+		acf_register_block_type(
+			array(
+				'name'            => 'service',
+				'title'           => __( 'Service', 'wayako' ),
+				'description'     => __( 'Service', 'wayako' ),
+				'render_template' => get_template_directory() . '/blocks/service.php',
+				'category'        => 'formatting',
+				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
+				'keywords'        => array( __( 'Service', 'Services' ), __( 'Plugin', 'wayako' ) ),
 			)
 		);
 	}

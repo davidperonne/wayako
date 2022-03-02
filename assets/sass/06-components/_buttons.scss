@@ -7,12 +7,46 @@ button {
     color: white;
     background-color: var(--wayako-color1);
     border: solid var(--wayako-color1) 1px;
-    border-radius: 1.5625rem;
-    padding: 10px 30px;
+    border-radius: 9999px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 16px 32px 16px 32px;
+    transition: all .3s;
+    &:hover {
+        background-color: var(--wayako-color3);
+    }
 }
 
-.wp-block-button__link {
-    color: black;
-    background-color: transparent;
-    border: solid var(--wayako-color1) 1px;
+
+/**/
+
+.wp-block-button {
+    .wp-block-button__link {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 16px 32px 16px 32px;
+        transition: all .3s;
+    }
+    &.is-style-outline {
+        .wp-block-button__link:not(.has-text-color) {
+            color: var(--wayako-color1);
+            border: solid var(--wayako-color1) 1px;
+            &:hover {
+                color: white;
+                background-color: var(--wayako-color1);
+                border: solid var(--wayako-color1) 1px;
+            }
+        }
+    }
+    &.is-style-fill {
+        .wp-block-button__link {
+            background-color: var(--wayako-color1);
+            border: solid var(--wayako-color1) 1px;
+            &:hover {
+                background-color: var(--wayako-color3);
+            }
+        }
+    }
 }

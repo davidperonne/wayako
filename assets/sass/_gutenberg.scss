@@ -13,9 +13,71 @@
     padding-right: 1rem;
 }
 
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* Services */
+
+.services {
+    background-color: #F6F7FC;
+    padding-top: 9.375rem;
+    padding-bottom: 9.375rem;
+    .wp-block-columns {
+        .wp-block-columns {
+            padding-right: 4rem;
+        }
+    }
+}
+
 
 /**/
 
+.block-service {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #FFF;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.25rem 0 #eae5ee;
+    &__picto {
+        margin-bottom: 3rem;
+    }
+    &__title {
+        font-size: 1rem;
+        color: var(--wayako-color1);
+        margin-bottom: 1.5rem;
+    }
+    &__link {
+        display: none;
+        text-decoration: none;
+    }
+    &:hover {
+        color: white;
+        background-color: var(--wayako-color1);
+        .block-service__title {
+            color: white;
+        }
+        .block-service__picto {
+            display: none;
+        }
+        .block-service__link {
+            display: block;
+            color: white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/**/
+
+
+/*
 .features {
     .wp-block-columns {
         margin-bottom: 0;
@@ -43,7 +105,7 @@
             }
         }
     }
-}
+}*/
 
 
 /* Hero */
