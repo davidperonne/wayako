@@ -33,6 +33,10 @@ h2 {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;*/
 }
 
+.nav-link:hover {
+  color: var(--wayako-color1);
+}
+
 /**/
 .clip-type1 img {
   -webkit-clip-path: path("M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z");
@@ -296,6 +300,10 @@ button {
   text-decoration: none;
 }
 
+.site-footer__container a:hover {
+  color: var(--wayako-color1);
+}
+
 .site-footer__widgets {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,6 +342,14 @@ button {
   margin-bottom: 1.5rem;
 }
 
+.site-footer__widgets ul.menu {
+  padding-left: 0;
+}
+
+.site-footer__widgets ul.menu a {
+  font-weight: 500;
+}
+
 .site-footer__copyright {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,25 +378,21 @@ input[type=email] {
   padding: 11px 31px;
 }
 
+input[type=text]:focus-visible,
+input[type=email]:focus-visible {
+  outline: var(--wayako-color1) auto 1px;
+}
+
 textarea {
   border: solid var(--wayako-gray1) 1px;
   border-radius: 1.025rem;
   padding: 11px 31px;
 }
 
-/* Comments */
-/* Flexslider */
-/* Plugins */
-/* CoBlocks */
-.wp-block-coblocks-pricing-table-item__price-wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+textarea:focus-visible {
+  outline: var(--wayako-color1) auto 1px;
 }
 
-/* GDPR Data Request Form */
-/* Contact Form 7 */
 ::-webkit-input-placeholder {
   font-family: "Montserrat", Sans-serif;
   color: #959397;
@@ -413,6 +425,24 @@ textarea {
   line-height: 1.35;
 }
 
+/* Comments */
+/* Flexslider */
+/* Plugins */
+/* CoBlocks */
+.wp-block-coblocks-pricing-table-item__price-wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* Complianz */
+.cmplz-show-banner {
+  cursor: pointer;
+}
+
+/* GDPR Data Request Form */
+/* Contact Form 7 */
 /* Blocks */
 /* Gutenberg */
 .alignfull {

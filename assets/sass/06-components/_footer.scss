@@ -9,6 +9,9 @@
             color: #0F0E0F;
             font-size: 1rem;
             text-decoration: none;
+            &:hover {
+                color: var(--wayako-color1);
+            }
         }
     }
     &__widgets {
@@ -31,6 +34,12 @@
             text-transform: uppercase;
             line-height: 2.125rem;
             margin-bottom: 1.5rem;
+        }
+        ul.menu {
+            padding-left: 0;
+            a {
+                font-weight: 500;
+            }
         }
     }
     &__copyright {

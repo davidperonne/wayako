@@ -38,7 +38,7 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 				'description'     => __( 'Hero', 'wayako' ),
 				'render_template' => get_template_directory() . '/blocks/hero.php',
 				'category'        => 'formatting',
-			//	'icon'            => file_get_contents( get_template_directory() . '/assets/img/o-comdz-icon.svg' ),
+				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
 				'keywords'        => array( __( 'Hero', 'header' ), __( 'Plugin', 'wayako' ) ),
 			)
 		);
