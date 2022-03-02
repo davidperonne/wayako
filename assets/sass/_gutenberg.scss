@@ -21,11 +21,33 @@
 /* Section about */
 
 .about {
-    padding-top: 5.375rem;
-    padding-bottom: 5.375rem;
-    .wp-block-columns {
-        padding-top: 4.375rem;
-        padding-bottom: 4.375rem;
+    padding-top: 9.375rem;
+    padding-bottom: 9.375rem;
+    .wp-block-media-text {
+        background-image: url('../img/dots1.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    figure {
+        position: relative;
+        width: 100%;
+        padding-bottom: 66%;
+        // border-radius: 15rem 2rem 15rem 15rem / 15rem 2rem 15rem 15rem;
+        border-radius: 15rem 2rem 15rem 15rem;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 
