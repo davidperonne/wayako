@@ -587,18 +587,20 @@ textarea:focus-visible {
 }
 
 .block-service__picto {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .block-service__title {
   font-size: 1rem;
   color: var(--wayako-color1);
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .block-service__link {
   display: none;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .block-service:hover {
@@ -617,6 +619,7 @@ textarea:focus-visible {
 .block-service:hover .block-service__link {
   display: block;
   color: white;
+  margin-top: 2rem;
 }
 
 .block-service:hover .block-service__link:hover {

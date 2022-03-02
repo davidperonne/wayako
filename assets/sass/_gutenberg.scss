@@ -56,16 +56,18 @@
     border-radius: 1rem;
     box-shadow: 0 0 1.25rem 0 #eae5ee;
     &__picto {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
     &__title {
         font-size: 1rem;
         color: var(--wayako-color1);
+        margin-top: 1.5rem;
         margin-bottom: 1.5rem;
     }
     &__link {
         display: none;
         text-decoration: none;
+        margin-bottom: 1rem;
     }
     &:hover {
         color: white;
@@ -79,6 +81,7 @@
         .block-service__link {
             display: block;
             color: white;
+            margin-top: 2rem;
             &:hover {
                 text-decoration: underline;
             }
