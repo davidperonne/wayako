@@ -39,23 +39,27 @@ h2 {
 }
 
 /**/
+/*
 .clip-type1 img {
-  -webkit-clip-path: path("M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z");
-          clip-path: path("M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z");
+    clip-path: path('M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z');
 }
 
 .dots1 {
-  background-image: url("../img/dots1.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: contain;
-}
-
+    background-image: url('../img/dots1.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}*/
 /**/
 .sub-title {
   color: var(--wayako-color2);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+/**/
+.wp-block-navigation-item.current-menu-item a {
+  color: var(--wayako-color1);
 }
 
 /* Animations */
@@ -507,14 +511,6 @@ textarea:focus-visible {
 /* Comments */
 /* Flexslider */
 /* Plugins */
-/* CoBlocks */
-.wp-block-coblocks-pricing-table-item__price-wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
 /* Complianz */
 .cmplz-show-banner {
   cursor: pointer;
@@ -539,6 +535,18 @@ textarea:focus-visible {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .alignwide {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .alignwide {
+    max-width: 1400px;
+  }
 }
 
 .row-reverse {
@@ -687,10 +695,13 @@ textarea:focus-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   margin-bottom: 9.375rem;
 }
 
 .block-hero__inner {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

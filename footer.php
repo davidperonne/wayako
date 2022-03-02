@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<footer class="site-footer" id="">
 
-		<div class="site-footer__container container">
+		<div class="site-footer__container container---- alignwide">
 
 			<div class="site-footer__widgets">
 

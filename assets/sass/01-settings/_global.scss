@@ -44,6 +44,8 @@ h2 {
 
 /**/
 
+
+/*
 .clip-type1 img {
     clip-path: path('M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z');
 }
@@ -53,7 +55,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
-}
+}*/
 
 
 /**/
@@ -62,4 +64,13 @@ h2 {
     color: var(--wayako-color2);
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+/**/
+
+.wp-block-navigation-item.current-menu-item {
+    a {
+        color: var(--wayako-color1);
+    }
 }

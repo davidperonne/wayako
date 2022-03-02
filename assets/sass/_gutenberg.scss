@@ -6,11 +6,17 @@
 }
 
 .alignwide {
-    max-width: 1200px;
+    max-width: 1200px; // ???
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+    @media (min-width: 1400px) {
+        max-width: 1400px;
+    }
 }
 
 .row-reverse {
@@ -152,8 +158,11 @@
     background-color: #F6F7FC;
     min-height: 25rem;
     display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     margin-bottom: 9.375rem;
     &__inner {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;

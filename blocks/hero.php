@@ -23,7 +23,7 @@ $block_class .= ! empty( $block['align'] ) ? ' align' . sanitize_key( $block['al
 
 	<?php if ( get_field( 'header_type' ) == 2 ) : ?>
 
-		<div class="container block-hero__inner">
+		<div class="container--- block-hero__inner alignwide">
 
 			<?php if ( $sub_title = get_field( 'sub_title' ) ) : ?>
 				<p class="block-hero__sub-title"><?php echo esc_html( $sub_title ); ?></p>
