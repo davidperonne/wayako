@@ -18,13 +18,26 @@
 }
 
 
-/* Services */
+/* Section about */
+
+.about {
+    padding-top: 5.375rem;
+    padding-bottom: 5.375rem;
+    .wp-block-columns {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+    }
+}
+
+
+/* Section services */
 
 .services {
     background-color: #F6F7FC;
     padding-top: 9.375rem;
     padding-bottom: 9.375rem;
     .wp-block-columns {
+        margin-bottom: 0;
         .wp-block-columns {
             padding-right: 4rem;
         }
@@ -32,7 +45,7 @@
 }
 
 
-/**/
+/* Block service */
 
 .block-service {
     margin-bottom: 2rem;
@@ -108,7 +121,7 @@
 }*/
 
 
-/* Hero */
+/* Block hero */
 
 .block-hero {
     background-color: #F6F7FC;

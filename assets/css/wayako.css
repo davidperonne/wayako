@@ -548,18 +548,33 @@ textarea:focus-visible {
           flex-direction: row-reverse;
 }
 
-/* Services */
+/* Section about */
+.about {
+  padding-top: 5.375rem;
+  padding-bottom: 5.375rem;
+}
+
+.about .wp-block-columns {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+/* Section services */
 .services {
   background-color: #F6F7FC;
   padding-top: 9.375rem;
   padding-bottom: 9.375rem;
 }
 
+.services .wp-block-columns {
+  margin-bottom: 0;
+}
+
 .services .wp-block-columns .wp-block-columns {
   padding-right: 4rem;
 }
 
-/**/
+/* Block service */
 .block-service {
   margin-bottom: 2rem;
   padding: 2rem;
@@ -638,7 +653,7 @@ textarea:focus-visible {
         }
     }
 }*/
-/* Hero */
+/* Block hero */
 .block-hero {
   background-color: #F6F7FC;
   min-height: 25rem;
