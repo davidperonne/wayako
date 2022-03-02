@@ -48,7 +48,7 @@ if ( ! function_exists( 'wayako_scripts' ) ) :
 		wp_add_inline_style( 'wayako-critical-styles', wayako_get_font_face_styles() );
 		if ( false === WP_DEBUG ) {
 			// Only in production.
-			wp_add_inline_style( 'wayako-critical-styles', wayako_get_critical_style() );
+		//	wp_add_inline_style( 'wayako-critical-styles', wayako_get_critical_style() );
 		}
 		wp_enqueue_style( 'wayako-critical-styles' );
 
