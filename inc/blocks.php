@@ -66,7 +66,6 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 			)
 		);
 
-
 		acf_register_block_type(
 			array(
 				'name'            => 'breadcrumb',
@@ -76,6 +75,18 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 				'category'        => 'formatting',
 				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
 				'keywords'        => array( __( 'Fil ariane', 'Breadcrumb' ), __( 'Plugin', 'wayako' ) ),
+			)
+		);
+
+		acf_register_block_type(
+			array(
+				'name'            => 'projects',
+				'title'           => __( 'Projects', 'wayako' ),
+				'description'     => __( 'Projects', 'wayako' ),
+				'render_template' => get_template_directory() . '/blocks/projects.php',
+				'category'        => 'formatting',
+				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
+				'keywords'        => array( __( 'Project', 'Projects' ), __( 'Plugin', 'wayako' ) ),
 			)
 		);
 
