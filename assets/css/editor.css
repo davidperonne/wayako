@@ -155,6 +155,10 @@
 }
 
 /* Block projects */
+.block-projects {
+  margin-top: 4rem;
+}
+
 .block-projects .button-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -253,6 +257,171 @@
 
 .block-projects .grid .grid-item:hover figcaption {
   opacity: 1;
-  background-color: rgba(143, 65, 213, 0.5);
+  background-color: rgba(143, 65, 213, 0.25);
+}
+
+/* Block projects slider */
+.block-projects-slider {
+  padding-left: 25rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.block-projects-slider .splide .splide__slide {
+  width: 33%;
+  padding: 1rem;
+}
+
+.block-projects-slider .splide .splide__slide__title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.block-projects-slider .splide .splide__slide figure {
+  position: relative;
+  width: 100%;
+  padding-bottom: 77%;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.block-projects-slider .splide .splide__slide figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.block-projects-slider .splide .splide__slide figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.block-projects-slider .splide .splide__slide:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.block-projects-slider .splide .splide__slide:hover figcaption {
+  opacity: 1;
+  background-color: rgba(143, 65, 213, 0.25);
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow--prev {
+  left: 1rem;
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow--next {
+  right: 1rem;
+}
+
+.block-projects-slider .splide .splide__arrows svg {
+  stroke: white;
+}
+
+/* Block image box */
+.block-image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-image-box figure {
+  margin-right: 2rem;
+}
+
+/* Block testimonials slider */
+.block-testimonials-slider {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.block-testimonials-slider .splide {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.block-testimonials-slider .splide .splide__slide {
+  width: 33%;
+  padding: 1rem;
+}
+
+.block-testimonials-slider .splide .splide__slide .splide__slide-inner {
+  background-color: #F6F7FC;
+  border-width: 0 0 0 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__testimonial {
+  color: #39353D;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__name {
+  color: #0F0E0F;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__function {
+  color: #7C797E;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows .splide__arrow--prev {
+  left: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows .splide__arrow--next {
+  right: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows svg {
+  stroke: #C3C4C7;
 }
 /*# sourceMappingURL=editor.css.map */

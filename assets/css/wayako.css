@@ -1,9 +1,9 @@
 /* Settings */
 /* Global */
 :root {
-  --wayako-color1: #f94213;
+  --wayako-color1: #ff7d2d;
   --wayako-color2: #DD38B4;
-  --wayako-color3: #d35a3c;
+  --wayako-color3: #ef823e;
   --wayako-gray1: #DADCDE;
   --wayako-gray2: #39353D;
 }
@@ -38,6 +38,12 @@ h1 {
 h2 {
   font-size: 2.25rem;
   margin-bottom: 2.5rem;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 /*
@@ -268,6 +274,10 @@ h3.h4 {
 }
 
 /* Block projects */
+.block-projects {
+  margin-top: 4rem;
+}
+
 .block-projects .button-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,41 +376,175 @@ h3.h4 {
 
 .block-projects .grid .grid-item:hover figcaption {
   opacity: 1;
-  background-color: rgba(143, 65, 213, 0.5);
+  background-color: rgba(143, 65, 213, 0.25);
 }
 
-/* Buttons */
-[type=button],
-[type=reset],
-[type=submit],
-button {
+/* Block projects slider */
+.block-projects-slider {
+  padding-left: 25rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.block-projects-slider .splide .splide__slide {
+  width: 33%;
+  padding: 1rem;
+}
+
+.block-projects-slider .splide .splide__slide__title {
   color: white;
-  background-color: var(--wayako-color1);
-  border: solid var(--wayako-color1) 1px;
-  border-radius: 9999px;
   font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding: 16px 32px 16px 32px;
+  font-weight: 300;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.block-projects-slider .splide .splide__slide figure {
+  position: relative;
+  width: 100%;
+  padding-bottom: 77%;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.block-projects-slider .splide .splide__slide figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
 
-[type=button]:hover,
-[type=reset]:hover,
-[type=submit]:hover,
-button:hover {
-  background-color: var(--wayako-color3);
+.block-projects-slider .splide .splide__slide figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
-[type=button]:focus-visible,
-[type=reset]:focus-visible,
-[type=submit]:focus-visible,
-button:focus-visible {
-  outline: var(--wayako-color1) auto 1px;
+.block-projects-slider .splide .splide__slide:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-/**/
+.block-projects-slider .splide .splide__slide:hover figcaption {
+  opacity: 1;
+  background-color: rgba(143, 65, 213, 0.25);
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow--prev {
+  left: 1rem;
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow--next {
+  right: 1rem;
+}
+
+.block-projects-slider .splide .splide__arrows svg {
+  stroke: white;
+}
+
+/* Block image box */
+.block-image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-image-box figure {
+  margin-right: 2rem;
+}
+
+/* Block testimonials slider */
+.block-testimonials-slider {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.block-testimonials-slider .splide {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.block-testimonials-slider .splide .splide__slide {
+  width: 33%;
+  padding: 1rem;
+}
+
+.block-testimonials-slider .splide .splide__slide .splide__slide-inner {
+  background-color: #F6F7FC;
+  border-width: 0 0 0 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__testimonial {
+  color: #39353D;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__name {
+  color: #0F0E0F;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.block-testimonials-slider .splide .splide__slide .block-testimonials-slider__function {
+  color: #7C797E;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows .splide__arrow--prev {
+  left: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows .splide__arrow--next {
+  right: 0;
+}
+
+.block-testimonials-slider .splide .splide__arrows svg {
+  stroke: #C3C4C7;
+}
+
+/* Buttons */
 .wp-block-button .wp-block-button__link {
   font-size: 1rem;
   font-weight: 500;
@@ -535,9 +679,6 @@ button:focus-visible {
 }
 
 .site-header__main-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -759,6 +900,40 @@ button:focus-visible {
   color: var(--wayako-color1);
 }
 
+/* To top */
+#topbutton {
+  position: fixed;
+  display: none;
+  height: 2.125rem;
+  width: 2.125rem;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 1;
+  background-color: var(--wayako-color2);
+  text-decoration: none;
+  border: solid #FFFFFF 1px;
+  border-radius: .5rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#topbutton:hover {
+  background-color: var(--wayako-color2);
+}
+
+#topbutton:after {
+  content: '';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 352c-8.188 0-16.38-3.125-22.62-9.375L224 173.3l-169.4 169.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25C432.4 348.9 424.2 352 416 352z'/%3E%3C/svg%3E");
+  background-position: center .4375rem;
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 /* Modals */
 /* Forms */
 input[type=text],
@@ -815,8 +990,62 @@ textarea:focus-visible {
   line-height: 1.35;
 }
 
+input[type=submit] {
+  color: white;
+  background-color: var(--wayako-color1);
+  border: solid var(--wayako-color1) 1px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 16px 32px 16px 32px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+input[type=submit]:hover {
+  background-color: var(--wayako-color3);
+}
+
+input[type=submit]:focus-visible {
+  outline: var(--wayako-color1) auto 1px;
+}
+
 /* Comments */
-/* Flexslider */
+/* Splide */
+.splide__arrow {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.splide__arrow--prev {
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .3125rem;
+}
+
+.splide__arrow--next {
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .3125rem;
+}
+
+.splide__arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-width: 8px;
+  height: 2.2rem;
+  vertical-align: middle;
+  width: 2.2rem;
+}
+
 /* Plugins */
 /* Complianz */
 .cmplz-show-banner {
@@ -881,12 +1110,12 @@ textarea:focus-visible {
   background-color: #000000;
 }
 
-.has-gray-color {
-  color: #E9E9E9;
+.has-grey-color {
+  color: #F6F7FC;
 }
 
-.has-gray-background-color {
-  background-color: #E9E9E9;
+.has-grey-background-color {
+  background-color: #F6F7FC;
 }
 
 .has-white-color {
@@ -989,6 +1218,7 @@ textarea:focus-visible {
   background-color: #F6F7FC;
   padding-top: 9.375rem;
   padding-bottom: 9.375rem;
+  margin-bottom: 5rem;
 }
 
 .services .wp-block-columns {
@@ -1006,6 +1236,9 @@ textarea:focus-visible {
   border-radius: 1rem;
   padding: 1.75rem;
   margin-top: 5rem;
+}
+
+.call-to-action.wp-block-columns {
   margin-bottom: 5rem;
 }
 

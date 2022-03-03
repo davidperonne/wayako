@@ -80,3 +80,36 @@
         }
     }
 }
+
+
+/* To top */
+
+#topbutton {
+    position: fixed;
+    display: none;
+    height: 2.125rem;
+    width: 2.125rem;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    z-index: 1;
+    background-color: var(--wayako-color2);
+    text-decoration: none;
+    border: solid #FFFFFF 1px;
+    border-radius: .5rem;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--wayako-color2);
+    }
+    &:after {
+        content: '';
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 352c-8.188 0-16.38-3.125-22.62-9.375L224 173.3l-169.4 169.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25C432.4 348.9 424.2 352 416 352z'/%3E%3C/svg%3E");
+        background-position: center .4375rem;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

@@ -1,9 +1,9 @@
 /* Global */
 
 :root {
-    --wayako-color1: #f94213;
+    --wayako-color1: #ff7d2d;
     --wayako-color2: #DD38B4;
-    --wayako-color3: #d35a3c; // Buttons hover
+    --wayako-color3: #ef823e; // Buttons hover
     --wayako-gray1: #DADCDE;
     --wayako-gray2: #39353D;
 }
@@ -44,6 +44,12 @@ h2 {
 
 h3 {
     // margin-bottom: 2.5rem;
+}
+
+h5,
+.h5 {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 

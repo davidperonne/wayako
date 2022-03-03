@@ -3,7 +3,7 @@
 
 /* Colors variables */
 
-$colors: ( blue-1: #00558F, blue-2: #00476A, green-1: #0A99A7, green-2: #068799, orange: #f94213, black: #000000, gray: #E9E9E9, white: #FFFFFF);
+$colors: ( blue-1: #00558F, blue-2: #00476A, green-1: #0A99A7, green-2: #068799, orange: #f94213, black: #000000, grey: #F6F7FC, white: #FFFFFF);
 
 /* Generate Colors classes */
 
@@ -105,6 +105,7 @@ $color in $colors {
     background-color: #F6F7FC;
     padding-top: 9.375rem;
     padding-bottom: 9.375rem;
+    margin-bottom: 5rem;
     .wp-block-columns {
         margin-bottom: 0;
         .wp-block-columns {
@@ -122,7 +123,9 @@ $color in $colors {
     border-radius: 1rem;
     padding: 1.75rem;
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    &.wp-block-columns {
+        margin-bottom: 5rem;
+    }
     h3 {
         color: rgba(255, 255, 255, .85);
         font-size: 1.5rem;

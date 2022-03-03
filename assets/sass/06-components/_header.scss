@@ -48,7 +48,7 @@
             align-self: flex-end;
         }
         ul {
-            display: flex;
+            //   display: flex;
             flex-direction: column;
             @media (min-width: 768px) {
                 flex-direction: row;
