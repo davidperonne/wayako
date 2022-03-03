@@ -444,6 +444,13 @@ button:hover {
   }
 }
 
+.site-header__main-nav ul.dropdown-menu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* Burger menu */
 .site-header .navbar-toggler {
   display: block;
