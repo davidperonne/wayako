@@ -194,6 +194,7 @@
 
 .block-projects .grid .grid-item {
   width: 33%;
+  padding: 1rem;
 }
 
 .block-projects .grid .grid-item__title {

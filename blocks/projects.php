@@ -81,46 +81,26 @@ $block_class .= ! empty( $block['align'] ) ? ' align' . sanitize_key( $block['al
 		<script type="text/javascript">            
 			jQuery(document).ready(function($) {
 
-				$('.grid').isotope({
-					itemSelector: '.grid-item',
-
-					layoutMode: 'masonry',
-					masonry: {
-						columnWidth: 100
-					},
-					cellsByRow: {
-						columnWidth: 100,
-						rowHeight: 100
-					},
-					masonryHorizontal: {
-						rowHeight: 100
-					},
-					cellsByColumn: {
-						columnWidth: 100,
-						rowHeight: 100
-					}
-				});
-
 				// init Isotope
 				var $grid = $('.grid').isotope({
-				// options
+					itemSelector: '.grid-item',
+					layoutMode: 'fitRows',
 				});
+
 				// filter items on button click
 				$('.filter-button-group').on( 'click', 'button', function() {
 					var filterValue = $(this).attr('data-filter');
 					$grid.isotope({ filter: filterValue });
 				});
 
-
 				// change is-checked class on buttons
 				$('.button-group').each( function( i, buttonGroup ) {
-				var $buttonGroup = $( buttonGroup );
-				$buttonGroup.on( 'click', 'button', function() {
-					$buttonGroup.find('.is-checked').removeClass('is-checked');
-					$(this).addClass('is-checked');
+					var $buttonGroup = $( buttonGroup );
+					$buttonGroup.on( 'click', 'button', function() {
+						$buttonGroup.find('.is-checked').removeClass('is-checked');
+						$(this).addClass('is-checked');
+					});
 				});
-				});
-
 
 			});
 		</script>
