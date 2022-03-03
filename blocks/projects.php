@@ -23,7 +23,7 @@ $block_class .= ! empty( $block['align'] ) ? ' align' . sanitize_key( $block['al
 
 	<div class="button-group filter-button-group">
 
-		<button data-filter="*"><?php echo esc_html__( 'All', 'wayako' ); ?></button>
+		<button data-filter="*" class="is-checked"><?php echo esc_html__( 'All', 'wayako' ); ?></button>
 
 		<?php
 		$portfolio_cat_terms = get_terms(
@@ -67,10 +67,8 @@ $block_class .= ! empty( $block['align'] ) ? ' align' . sanitize_key( $block['al
 					<a class="" href="<?php echo esc_url( get_permalink() ); ?>">
 						<figure>
 							<?php echo get_the_post_thumbnail( get_the_ID(), 'medium_large', array( 'class' => 'img-cover' ) ); ?>
-							<figcaption>
-								<div class="figcaption__inner-container">											
-									<?php the_title( '<h2 class="grid-item__title">', '</h2>' ); ?>
-								</div>
+							<figcaption>										
+								<?php the_title( '<h3 class="grid-item__title">', '</h3>' ); ?>
 							</figcaption>
 						</figure>	
 					</a>
@@ -112,6 +110,17 @@ $block_class .= ! empty( $block['align'] ) ? ' align' . sanitize_key( $block['al
 					var filterValue = $(this).attr('data-filter');
 					$grid.isotope({ filter: filterValue });
 				});
+
+
+				// change is-checked class on buttons
+				$('.button-group').each( function( i, buttonGroup ) {
+				var $buttonGroup = $( buttonGroup );
+				$buttonGroup.on( 'click', 'button', function() {
+					$buttonGroup.find('.is-checked').removeClass('is-checked');
+					$(this).addClass('is-checked');
+				});
+				});
+
 
 			});
 		</script>

@@ -16,6 +16,9 @@ button {
     &:hover {
         background-color: var(--wayako-color3);
     }
+    &:focus-visible {
+        outline: var(--wayako-color1) auto 1px;
+    }
 }
 
 

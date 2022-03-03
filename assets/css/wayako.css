@@ -291,11 +291,11 @@ h3.h4 {
   margin-right: 1rem;
 }
 
-.block-projects .button-group button:hover {
+.block-projects .button-group button:hover, .block-projects .button-group button.is-checked {
   color: var(--wayako-color2);
 }
 
-.block-projects .button-group button:hover:after {
+.block-projects .button-group button:hover:after, .block-projects .button-group button.is-checked:after {
   content: '';
   position: absolute;
   left: 0;
@@ -309,11 +309,20 @@ h3.h4 {
   width: 33%;
 }
 
+.block-projects .grid .grid-item__title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .block-projects .grid .grid-item figure {
   position: relative;
   width: 100%;
-  padding-bottom: 56%;
-  border-radius: 2rem;
+  padding-bottom: 60%;
+  border-radius: 1rem;
   overflow: hidden;
 }
 
@@ -330,11 +339,25 @@ h3.h4 {
 }
 
 .block-projects .grid .grid-item figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.block-projects .grid .grid-item:hover figcaption {
+  opacity: 1;
+  background-color: rgba(143, 65, 213, 0.5);
 }
 
 /* Buttons */
@@ -359,6 +382,13 @@ button {
 [type=submit]:hover,
 button:hover {
   background-color: var(--wayako-color3);
+}
+
+[type=button]:focus-visible,
+[type=reset]:focus-visible,
+[type=submit]:focus-visible,
+button:focus-visible {
+  outline: var(--wayako-color1) auto 1px;
 }
 
 /**/

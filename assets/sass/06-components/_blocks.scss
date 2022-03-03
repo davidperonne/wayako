@@ -146,7 +146,8 @@
             &:not(:last-child) {
                 margin-right: 1rem;
             }
-            &:hover {
+            &:hover,
+            &.is-checked {
                 color: var(--wayako-color2);
                 &:after {
                     content: '';
@@ -163,11 +164,17 @@
     .grid {
         .grid-item {
             width: 33%;
+            &__title {
+                color: white;
+                font-size: 1rem;
+                font-weight: 300;
+                align-self: center;
+            }
             figure {
                 position: relative;
                 width: 100%;
-                padding-bottom: 56%;
-                border-radius: 2rem;
+                padding-bottom: 60%;
+                border-radius: 1rem;
                 overflow: hidden;
                 img {
                     position: absolute;
@@ -180,10 +187,21 @@
                     object-fit: cover;
                 }
                 figcaption {
+                    display: flex;
+                    justify-content: center;
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    opacity: 0;
+                    transition: background-color .3s;
+                }
+            }
+            &:hover {
+                figcaption {
+                    opacity: 1;
+                    background-color: rgba(143, 65, 213, .5);
                 }
             }
         }
