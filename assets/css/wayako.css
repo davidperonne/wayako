@@ -97,6 +97,160 @@ h3.h4 {
 /**/
 /**/
 /* Blocks */
+/* Block service */
+.block-service {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 0 0 0 0;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0 1.25rem 0 #eae5ee;
+          box-shadow: 0 0 1.25rem 0 #eae5ee;
+}
+
+.block-service__picto {
+  margin-bottom: 1rem;
+}
+
+.block-service__title {
+  font-size: 1rem;
+  color: var(--wayako-color1);
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.block-service__link {
+  display: none;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.block-service:hover {
+  color: white;
+  background-color: var(--wayako-color1);
+}
+
+.block-service:hover .block-service__title {
+  color: white;
+}
+
+.block-service:hover .block-service__picto {
+  display: none;
+}
+
+.block-service:hover .block-service__link {
+  display: block;
+  color: white;
+  margin-top: 2rem;
+}
+
+.block-service:hover .block-service__link:hover {
+  text-decoration: underline;
+}
+
+/* Block pricing */
+.block-pricing__inner {
+  margin: 0 0 0 0;
+  padding: 4rem 2rem;
+  border-radius: 16px 16px 16px 16px;
+  -webkit-box-shadow: 0 0 20px 0 #eae5ee;
+          box-shadow: 0 0 20px 0 #eae5ee;
+  text-align: center;
+}
+
+.block-pricing__sub-title {
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
+
+.block-pricing__price {
+  font-size: 3.75rem;
+  line-height: 0.8;
+  font-weight: 700;
+  color: var(--wayako-color2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+.block-pricing__price-currency {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: calc(32em/100);
+}
+
+.block-pricing__price-detail {
+  color: #7C797E;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 40px;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.block-pricing__description {
+  margin-bottom: 2rem;
+}
+
+.block-pricing__description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.block-pricing__description li {
+  font-weight: 300;
+}
+
+/* Block hero */
+.block-hero {
+  background-color: #F6F7FC;
+  min-height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 9.375rem;
+}
+
+.block-hero__inner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 15.5rem;
+}
+
+.block-hero__sub-title {
+  color: var(--wayako-color2);
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 2.125rem;
+  margin-bottom: 0;
+}
+
+.block-hero__title {
+  color: #1A191C;
+  font-size: 4.375rem;
+  font-weight: 600;
+  line-height: 5rem;
+  margin: 1rem 0;
+}
+
 /* Buttons */
 [type=button],
 [type=reset],
@@ -556,17 +710,14 @@ textarea:focus-visible {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  /*  @media (min-width: 1400px) {
+        max-width: 1400px;
+    }*/
 }
 
 @media (min-width: 1200px) {
   .alignwide {
     max-width: 1200px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .alignwide {
-    max-width: 1400px;
   }
 }
 
@@ -577,30 +728,27 @@ textarea:focus-visible {
           flex-direction: row-reverse;
 }
 
-/* Section about */
-.about {
-  padding-top: 9.375rem;
-  padding-bottom: 9.375rem;
-}
-
-.about .wp-block-media-text {
+/* Block wp-block-media-text */
+.wp-block-media-text.alignwide {
+  margin-top: 9.375rem;
+  margin-bottom: 9.375rem;
   background-image: url("../img/dots1.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: left center;
   background-size: contain;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.about figure {
+.wp-block-media-text.alignwide figure {
   position: relative;
   width: 100%;
   padding-bottom: 66%;
-  border-radius: 15rem 2rem 15rem 15rem;
+  border-radius: 0.5rem 15rem 15rem 15rem;
   overflow: hidden;
 }
 
-.about figure img {
+.wp-block-media-text.alignwide figure img {
   position: absolute;
   top: 0;
   left: 0;
@@ -610,6 +758,14 @@ textarea:focus-visible {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.wp-block-media-text.alignwide.has-media-on-the-right {
+  background-position: right center;
+}
+
+.wp-block-media-text.alignwide.has-media-on-the-right figure {
+  border-radius: 15rem 0.5rem 15rem 15rem;
 }
 
 /* Section services */
@@ -627,114 +783,31 @@ textarea:focus-visible {
   padding-right: 4rem;
 }
 
-/* Block service */
-.block-service {
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background-color: #FFF;
-  border-style: solid;
-  border-width: 0 0 0 0;
-  border-radius: 1rem;
-  -webkit-box-shadow: 0 0 1.25rem 0 #eae5ee;
-          box-shadow: 0 0 1.25rem 0 #eae5ee;
-}
-
-.block-service__picto {
-  margin-bottom: 1rem;
-}
-
-.block-service__title {
-  font-size: 1rem;
-  color: var(--wayako-color1);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.block-service__link {
-  display: none;
-  text-decoration: none;
-  margin-bottom: 1rem;
-}
-
-.block-service:hover {
+/* Section call to action */
+.call-to-action {
   color: white;
   background-color: var(--wayako-color1);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
-.block-service:hover .block-service__title {
-  color: white;
-}
-
-.block-service:hover .block-service__picto {
-  display: none;
-}
-
-.block-service:hover .block-service__link {
-  display: block;
-  color: white;
-  margin-top: 2rem;
-}
-
-.block-service:hover .block-service__link:hover {
-  text-decoration: underline;
-}
-
-/* Block pricing */
-.block-pricing__inner {
-  margin: 0 0 0 0;
-  padding: 4rem 2rem;
-  border-radius: 16px 16px 16px 16px;
-  -webkit-box-shadow: 0 0 20px 0 #eae5ee;
-          box-shadow: 0 0 20px 0 #eae5ee;
-  text-align: center;
-}
-
-.block-pricing__sub-title {
-  font-size: 1rem;
-  margin-bottom: 3rem;
-}
-
-.block-pricing__price {
-  font-size: 3.75rem;
-  line-height: 0.8;
-  font-weight: 700;
-  color: var(--wayako-color2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.call-to-action h3 {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.5rem;
+  font-weight: 300;
   margin-bottom: 0;
 }
 
-.block-pricing__price-currency {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: calc(32em/100);
+.call-to-action .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+  color: white;
+  border-color: white;
 }
 
-.block-pricing__price-detail {
-  color: #7C797E;
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 40px;
-  display: block;
-  margin-bottom: 2rem;
-}
-
-.block-pricing__description {
-  margin-bottom: 2rem;
-}
-
-.block-pricing__description ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.block-pricing__description li {
-  font-weight: 300;
+.call-to-action .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover {
+  color: var(--wayako-color1);
+  background-color: white;
 }
 
 /**/
@@ -767,50 +840,6 @@ textarea:focus-visible {
         }
     }
 }*/
-/* Block hero */
-.block-hero {
-  background-color: #F6F7FC;
-  min-height: 25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin-bottom: 9.375rem;
-}
-
-.block-hero__inner {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-right: 15.5rem;
-}
-
-.block-hero__sub-title {
-  color: var(--wayako-color2);
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 2.125rem;
-  margin-bottom: 0;
-}
-
-.block-hero__title {
-  color: #1A191C;
-  font-size: 4.375rem;
-  font-weight: 600;
-  line-height: 5rem;
-  margin: 1rem 0;
-}
-
 .breadcrumb {
   font-size: .85em;
 }

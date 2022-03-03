@@ -1,1 +1,129 @@
 /* Blocks */
+
+
+/* Block service */
+
+.block-service {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #FFF;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.25rem 0 #eae5ee;
+    &__picto {
+        margin-bottom: 1rem;
+    }
+    &__title {
+        font-size: 1rem;
+        color: var(--wayako-color1);
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    &__link {
+        display: none;
+        text-decoration: none;
+        margin-bottom: 1rem;
+    }
+    &:hover {
+        color: white;
+        background-color: var(--wayako-color1);
+        .block-service__title {
+            color: white;
+        }
+        .block-service__picto {
+            display: none;
+        }
+        .block-service__link {
+            display: block;
+            color: white;
+            margin-top: 2rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+/* Block pricing */
+
+.block-pricing {
+    &__inner {
+        margin: 0 0 0 0;
+        padding: 4rem 2rem;
+        border-radius: 16px 16px 16px 16px;
+        box-shadow: 0 0 20px 0 #eae5ee;
+        text-align: center;
+    }
+    &__sub-title {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    &__price {
+        font-size: 3.75rem;
+        line-height: 0.8;
+        font-weight: 700;
+        color: var(--wayako-color2);
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    &__price-currency {
+        align-self: flex-start;
+        font-size: calc(32em/100);
+    }
+    &__price-detail {
+        color: #7C797E;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 40px;
+        display: block;
+        margin-bottom: 2rem;
+    }
+    &__description {
+        margin-bottom: 2rem;
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            font-weight: 300;
+        }
+    }
+}
+
+
+/* Block hero */
+
+.block-hero {
+    background-color: #F6F7FC;
+    min-height: 25rem;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 9.375rem;
+    &__inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 15.5rem;
+    }
+    &__sub-title {
+        color: var(--wayako-color2);
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 2.125rem;
+        margin-bottom: 0;
+    }
+    &__title {
+        color: #1A191C;
+        font-size: 4.375rem;
+        font-weight: 600;
+        line-height: 5rem;
+        margin: 1rem 0;
+    }
+}
