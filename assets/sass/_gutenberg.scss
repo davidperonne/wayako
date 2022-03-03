@@ -1,5 +1,25 @@
 /* Gutenberg */
 
+
+/* Colors variables */
+
+$colors: ( blue-1: #00558F, blue-2: #00476A, green-1: #0A99A7, green-2: #068799, orange: #f94213, black: #000000, gray: #E9E9E9, white: #FFFFFF);
+
+/* Generate Colors classes */
+
+@each $name,
+$color in $colors {
+    .has-#{$name}-color {
+        color: $color;
+    }
+    .has-#{$name}-background-color {
+        background-color: $color;
+    }
+}
+
+
+/**/
+
 .alignfull {
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
@@ -9,8 +29,8 @@
     max-width: 1200px; // ???
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     @media (min-width: 1200px) {
         max-width: 1200px;
     }
@@ -26,36 +46,54 @@
 
 /* Block wp-block-media-text */
 
-.wp-block-media-text.alignwide {
-    margin-top: 9.375rem;
-    margin-bottom: 9.375rem;
-    background-image: url('../img/dots1.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: contain;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    figure {
-        position: relative;
-        width: 100%;
-        padding-bottom: 66%;
-        border-radius: 0.5rem 15rem 15rem 15rem;
-        overflow: hidden;
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    &.has-media-on-the-right {
-        background-position: right center;
+.wp-block-media-text {
+    &.alignwide {
+        margin-top: 9.375rem;
+        margin-bottom: 9.375rem;
+        background-image: url('../img/dots1.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
         figure {
-            border-radius: 15rem 0.5rem 15rem 15rem;
+            position: relative;
+            width: 100%;
+            padding-bottom: 66%;
+            border-radius: 0.5rem 15rem 15rem 15rem;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &:not(.has-media-on-the-right) {
+            .wp-block-media-text__content {
+                padding-right: 0;
+            }
+        }
+        &.has-media-on-the-right {
+            background-position: right center;
+            .wp-block-media-text__content {
+                padding-left: 0;
+            }
+            figure {
+                border-radius: 15rem 0.5rem 15rem 15rem;
+            }
+        }
+        // Used as a header
+        &.is-header {
+            background-image: url('../img/dots1-circles.png');
+            margin-top: 2rem;
+            figure {
+                padding-bottom: 70%;
+            }
         }
     }
 }
@@ -98,6 +136,37 @@
             &:hover {
                 color: var(--wayako-color1);
                 background-color: white;
+            }
+        }
+    }
+}
+
+
+/* Element p as read more link */
+
+.read-more-link {
+    margin-bottom: 2rem;
+    a {
+        color: #0F0E0F;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        &:after {
+            content: '';
+            width: .6875rem;
+            height: 1rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%230F0E0F' d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 1rem;
+        }
+        &:hover {
+            color: var(--wayako-color1);
+            &:after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23f94213' d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/%3E%3C/svg%3E");
             }
         }
     }

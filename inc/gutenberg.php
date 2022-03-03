@@ -13,10 +13,13 @@ function mytheme_setup_theme_supported_features() {
 	add_theme_support(
 		'editor-color-palette',
 		array(
+
+
+			array( 'name' => 'orange', 'slug'  => 'orange', 'color' => '#f94213' ),
+/**/
 			array( 'name' => 'dark-blue', 'slug'  => 'dark-blue', 'color' => '#12294C' ),
 			array( 'name' => 'sea-green', 'slug'  => 'sea-green', 'color' => '#147757' ),
 			array( 'name' => 'yellow', 'slug'  => 'yellow', 'color' => '#FFC334' ),
-			array( 'name' => 'orange', 'slug'  => 'orange', 'color' => '#EF723B' ),
 			array( 'name' => 'red', 'slug'  => 'red', 'color' => '#E2423C' ),
 			array( 'name' => 'lime', 'slug'  => 'lime', 'color' => '#9EC630' ),
 			array( 'name' => 'brown', 'slug'  => 'brown', 'color' => '#855F4B' ),
@@ -97,75 +100,3 @@ function gb_gutenberg_admin_styles() {
 }
 add_action( 'admin_head', 'gb_gutenberg_admin_styles' );
 
-
-/**
- * Disable Editor
- *
- * @package      ClientName
- * @author       Bill Erickson
- * @since        1.0.0
- * @license      GPL-2.0+
-**/
-
-/**
- * Templates and Page IDs without editor
- *
- */
-function ea_disable_editor( $id = false ) {
-
-	$excluded_templates = array(
-		'page-templates/homepage.php',
-		'page-templates/qui-suis-je.php',
-		'page-templates/prestations.php',
-		'page-templates/book.php',
-		'page-templates/contact.php',
-	);
-
-	$excluded_ids = array(
-		736,
-		1348,
-	);
-
-	if ( empty( $id ) )
-		return false;
-
-	$id = intval( $id );
-	$template = get_page_template_slug( $id );
-
-	return in_array( $id, $excluded_ids ) || in_array( $template, $excluded_templates );
-}
-
-/**
- * Disable Gutenberg by template
- *
- */
-function ea_disable_gutenberg( $can_edit, $post_type ) {
-
-	if ( ! ( is_admin() && !empty( $_GET['post'] ) ) )
-		return $can_edit;
-
-	if ( ea_disable_editor( $_GET['post'] ) )
-		$can_edit = false;
-
-	return $can_edit;
-
-}
-add_filter( 'gutenberg_can_edit_post_type', 'ea_disable_gutenberg', 10, 2 );
-add_filter( 'use_block_editor_for_post_type', 'ea_disable_gutenberg', 10, 2 );
-
-/**
- * Disable Classic Editor by template
- *
- */
-function ea_disable_classic_editor() {
-
-	$screen = get_current_screen();
-	if ( 'page' !== $screen->id || ! isset( $_GET['post']) )
-		return;
-
-	if ( ea_disable_editor( $_GET['post'] ) ) {
-		remove_post_type_support( 'page', 'editor' );
-	}
-
-}
-add_action( 'admin_head', 'ea_disable_classic_editor' );

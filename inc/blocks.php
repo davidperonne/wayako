@@ -65,6 +65,21 @@ if ( ! function_exists( 'wayako_register_acf_block_types' ) ) :
 				'keywords'        => array( __( 'Pricing', 'Price' ), __( 'Plugin', 'wayako' ) ),
 			)
 		);
+
+
+		acf_register_block_type(
+			array(
+				'name'            => 'breadcrumb',
+				'title'           => __( 'Breadcrumb', 'wayako' ),
+				'description'     => __( 'Breadcrumb', 'wayako' ),
+				'render_template' => get_template_directory() . '/blocks/breadcrumb.php',
+				'category'        => 'formatting',
+				'icon'            => file_get_contents( get_template_directory() . '/assets/img/picto-w-icon.svg' ),
+				'keywords'        => array( __( 'Fil ariane', 'Breadcrumb' ), __( 'Plugin', 'wayako' ) ),
+			)
+		);
+
+
 	}
 
 endif;

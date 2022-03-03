@@ -10,7 +10,7 @@
 
 body {
   color: var(--wayako-gray2);
-  font-family: 'Montserrat';
+  font-family: "Montserrat", Sans-serif;
   font-size: 1.125rem;
 }
 
@@ -19,15 +19,31 @@ a {
 }
 
 /**/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1A191C;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 4.375rem;
+  line-height: 5rem;
+  margin-bottom: 2.5rem;
+}
+
 h2 {
   font-size: 2.25rem;
   margin-bottom: 2.5rem;
 }
 
+/*
 h3.h4 {
-  color: var(--wayako-color1);
-}
-
+    color: var(--wayako-color1);
+}*/
 /**/
 .nav-link {
   /*  display: block;
@@ -699,6 +715,73 @@ textarea:focus-visible {
 /* Contact Form 7 */
 /* Blocks */
 /* Gutenberg */
+/* Colors variables */
+/* Generate Colors classes */
+.has-blue-1-color {
+  color: #00558F;
+}
+
+.has-blue-1-background-color {
+  background-color: #00558F;
+}
+
+.has-blue-2-color {
+  color: #00476A;
+}
+
+.has-blue-2-background-color {
+  background-color: #00476A;
+}
+
+.has-green-1-color {
+  color: #0A99A7;
+}
+
+.has-green-1-background-color {
+  background-color: #0A99A7;
+}
+
+.has-green-2-color {
+  color: #068799;
+}
+
+.has-green-2-background-color {
+  background-color: #068799;
+}
+
+.has-orange-color {
+  color: #f94213;
+}
+
+.has-orange-background-color {
+  background-color: #f94213;
+}
+
+.has-black-color {
+  color: #000000;
+}
+
+.has-black-background-color {
+  background-color: #000000;
+}
+
+.has-gray-color {
+  color: #E9E9E9;
+}
+
+.has-gray-background-color {
+  background-color: #E9E9E9;
+}
+
+.has-white-color {
+  color: #FFFFFF;
+}
+
+.has-white-background-color {
+  background-color: #FFFFFF;
+}
+
+/**/
 .alignfull {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -708,8 +791,8 @@ textarea:focus-visible {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   /*  @media (min-width: 1400px) {
         max-width: 1400px;
     }*/
@@ -760,12 +843,29 @@ textarea:focus-visible {
      object-fit: cover;
 }
 
+.wp-block-media-text.alignwide:not(.has-media-on-the-right) .wp-block-media-text__content {
+  padding-right: 0;
+}
+
 .wp-block-media-text.alignwide.has-media-on-the-right {
   background-position: right center;
 }
 
+.wp-block-media-text.alignwide.has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0;
+}
+
 .wp-block-media-text.alignwide.has-media-on-the-right figure {
   border-radius: 15rem 0.5rem 15rem 15rem;
+}
+
+.wp-block-media-text.alignwide.is-header {
+  background-image: url("../img/dots1-circles.png");
+  margin-top: 2rem;
+}
+
+.wp-block-media-text.alignwide.is-header figure {
+  padding-bottom: 70%;
 }
 
 /* Section services */
@@ -808,6 +908,39 @@ textarea:focus-visible {
 .call-to-action .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color):hover {
   color: var(--wayako-color1);
   background-color: white;
+}
+
+/* Element p as read more link */
+.read-more-link {
+  margin-bottom: 2rem;
+}
+
+.read-more-link a {
+  color: #0F0E0F;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.read-more-link a:after {
+  content: '';
+  width: .6875rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%230F0E0F' d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 1rem;
+}
+
+.read-more-link a:hover {
+  color: var(--wayako-color1);
+}
+
+.read-more-link a:hover:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23f94213' d='M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z'/%3E%3C/svg%3E");
 }
 
 /**/
