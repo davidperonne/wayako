@@ -190,13 +190,14 @@ if ( ! class_exists( 'Wayako_WP_Bootstrap_Navwalker' ) ) {
 
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && 1 !== $args->depth ) {
-				$atts['href']          = '#';
-			//	$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
+			//	$atts['href']          = '#';
+				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';
 			//	$atts['data-toggle']   = 'dropdown';
 				$atts['data-bs-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
-				$atts['class']         = 'dropdown-toggle nav-link';
+			//	$atts['class']         = 'dropdown-toggle nav-link';
+				$atts['class']         = 'nav-link';
 				$atts['id']            = 'menu-item-dropdown-' . $item->ID;
 			} else {
 				$atts['href'] = ! empty( $item->url ) ? $item->url : '#';

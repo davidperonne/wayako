@@ -71,6 +71,12 @@ h3.h4 {
     &:hover {
         color: var(--wayako-color1);
     }
+    &:focus {
+        color: var(--wayako-color1);
+    }
+    &:focus-visible {
+        outline: var(--wayako-color1) auto 1px;
+    }
 }
 
 

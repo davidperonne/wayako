@@ -25,13 +25,13 @@ defined( 'ABSPATH' ) || exit;
 
 	<a class="skip-link visually-hidden visually-hidden-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
 
-	<header class="site-header">
+	<header class="site-header    navbar-expand-md alignwide">
 
-		<div class="container site-header__inner"> <!-- TODO : flex-row ! -->
+	<?php /*	<div class="container- site-header__inner"> <!-- TODO : flex-row ! --> */ ?>
 
 			<div class="site-header__branding">
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<img class="wayako-logo mt-3 mt-md-0" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
+				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
 				</a>
 			</div>
 
@@ -42,43 +42,23 @@ defined( 'ABSPATH' ) || exit;
 				<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
 			</button>
 
-			<div id="main_nav" class="site-header__menus navbar-collapse collapse">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'main-menu',
+					'container'       => 'nav',
+					'container_class' => 'site-header__main-nav navbar-collapse collapse',
+					'container_id'    => 'main_nav',
+					'menu_class'      => 'main-menu navbar-nav',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 2,
+					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
 
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'top-menu',
-						'container'       => 'nav',
-					//	'container_id'    => 'top-nav',
-						'container_class' => 'site-header__top-nav',
-					//	'menu_id'         => 'top-menu',
-						'menu_class'      => ' nav',
-						'depth'           => 1,
-						'fallback_cb'     => '',
-						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
-
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location'  => 'main-menu',
-						'container'       => 'nav',
-					//	'container_id'    => 'main-nav',
-						'container_class' => 'site-header__main-nav',
-					//	'menu_id'         => 'main-menu',
-						'menu_class'      => 'nav',
-						'depth'           => 2,
-						'fallback_cb'     => '',
-						'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-					)
-				);
-				?>
-
-			</div>		
-
-		</div>
+	<?php /*	</div> */ ?>
 
 	</header>
 
