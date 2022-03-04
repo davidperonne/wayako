@@ -16,43 +16,21 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<?php get_template_part( 'global-templates/hero' ); ?>
+<div class="wrapper" id="content">
 
-<div class="wrapper" id="page-wrapper">
-<?php /*
-	<div class="container" id="content" tabindex="-1">
+	<?php
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'loop-templates/content', 'page' );
 
-		<div class="row">
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
+		}
+	}
+	?>
 
-			<div class="col-md content-area px-4" id="primary">
-
-				<main class="site-main" id="main">
-*/ ?>
-
-					<?php the_content(); ?>
-
-
-					<?php
-				/*	while ( have_posts() ) {
-						the_post();
-						get_template_part( 'loop-templates/content', 'page' );
-
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) {
-							comments_template();
-						}
-					}*/
-					?>
-<?php /*
-				</main><!-- #main -->
-
-			</div>
-
-		</div><!-- .row -->
-
-	</div><!-- #content --> */ ?>
-
-</div><!-- #page-wrapper -->
+</div><!-- #content -->
 
 <?php
 get_footer();

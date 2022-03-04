@@ -27,39 +27,33 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="site-header    navbar-expand-md alignwide">
 
-	<?php /*	<div class="container- site-header__inner"> <!-- TODO : flex-row ! --> */ ?>
+		<div class="site-header__branding">
+			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
+			</a>
+		</div>
 
-			<div class="site-header__branding">
-				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
-				</a>
-			</div>
+		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="icon-bar top-bar"></span>
+			<span class="icon-bar middle-bar"></span>
+			<span class="icon-bar bottom-bar"></span>
+			<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
+		</button>
 
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="icon-bar top-bar"></span>
-				<span class="icon-bar middle-bar"></span>
-				<span class="icon-bar bottom-bar"></span>
-				<span class="visually-hidden"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
-			</button>
-
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'main-menu',
-					'container'       => 'nav',
-					'container_class' => 'site-header__main-nav navbar-collapse collapse',
-					'container_id'    => 'main_nav',
-					'menu_class'      => 'main-menu navbar-nav',
-					'fallback_cb'     => '',
-					'menu_id'         => 'main-menu',
-					'depth'           => 2,
-					'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
-				)
-			);
-			?>
-
-	<?php /*	</div> */ ?>
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'main-menu',
+				'container'       => 'nav',
+				'container_class' => 'site-header__main-nav navbar-collapse collapse',
+				'container_id'    => 'main_nav',
+				'menu_class'      => 'main-menu navbar-nav',
+				'fallback_cb'     => '',
+				'menu_id'         => 'main-menu',
+				'depth'           => 2,
+				'walker'          => new Wayako_WP_Bootstrap_Navwalker(),
+			)
+		);
+		?>
 
 	</header>
-
-

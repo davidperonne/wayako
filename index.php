@@ -17,36 +17,24 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
+<div class="wrapper" id="content">
 
-<div class="wrapper" id="index-wrapper">
+	<?php
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
 
-	<div class="container" id="content" tabindex="-1">
+			get_template_part( 'loop-templates/content', get_post_format() );
+		}
+	} else {
+		get_template_part( 'loop-templates/content', 'none' );
+	}
+	?>
 
-		<div class="row">
+	<!-- The pagination component -->
+	<?php wayako_pagination(); ?>
 
-			<?php
-			if ( have_posts() ) {
-				while ( have_posts() ) {
-					the_post();
-
-					get_template_part( 'loop-templates/content', get_post_format() );
-				}
-			} else {
-				get_template_part( 'loop-templates/content', 'none' );
-			}
-			?>
-
-		</div>
-
-		<!-- The pagination component -->
-		<?php wayako_pagination(); ?>
-
-	</div><!-- #content -->
-
-</div><!-- #index-wrapper -->
+</div><!-- #content -->
 
 <?php
 get_footer();

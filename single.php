@@ -11,28 +11,22 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<?php get_template_part( 'global-templates/hero' ); ?>
+<div class="wrapper" id="content">
 
-<div class="wrapper" id="single-wrapper">
+	<?php
+	while ( have_posts() ) {
+		the_post();
 
-	<div class="container" id="content" tabindex="-1">
+		get_template_part( 'loop-templates/content-single', get_post_type() );
 
-		<?php
-		while ( have_posts() ) {
-			the_post();
-
-			get_template_part( 'loop-templates/content-single', get_post_type() );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) {
+			comments_template();
 		}
-		?>
+	}
+	?>
 
-	</div><!-- #content -->
-
-</div><!-- #single-wrapper -->
+</div><!-- #content -->
 
 <?php
 get_footer();

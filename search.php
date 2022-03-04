@@ -11,59 +11,43 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper" id="search-wrapper">
+<div class="wrapper" id="content">
 
-	<div class="container" id="content" tabindex="-1">
+	<?php if ( have_posts() ) : ?>
 
-		<div class="row">
+		<header class="page-header">
 
-			<div class="col-md content-area" id="primary">
+			<h1 class="page-title">
+				<?php
+				printf(
+					/* translators: %s: query term */
+					esc_html__( 'Search Results for: %s', 'wayako' ),
+					'<span>' . get_search_query() . '</span>'
+				);
+				?>
+			</h1>
 
-				<main class="site-main" id="main">
+		</header><!-- .page-header -->
 
-					<?php if ( have_posts() ) : ?>
+		<?php /* Start the Loop */ ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-						<header class="page-header">
+			get_template_part( 'loop-templates/content', 'search' );
+		endwhile;
+		?>
 
-							<h1 class="page-title">
-								<?php
-								printf(
-									/* translators: %s: query term */
-									esc_html__( 'Search Results for: %s', 'wayako' ),
-									'<span>' . get_search_query() . '</span>'
-								);
-								?>
-							</h1>
+	<?php else : ?>
 
-						</header><!-- .page-header -->
+		<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-						<?php /* Start the Loop */ ?>
-						<?php
-						while ( have_posts() ) :
-							the_post();
+	<?php endif; ?>
 
-							get_template_part( 'loop-templates/content', 'search' );
-						endwhile;
-						?>
+	<!-- The pagination component -->
+	<?php wayako_pagination(); ?>
 
-					<?php else : ?>
-
-						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
-					<?php endif; ?>
-
-				</main><!-- #main -->
-
-				<!-- The pagination component -->
-				<?php wayako_pagination(); ?>
-
-			</div>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #search-wrapper -->
+</div><!-- #content -->
 
 <?php
 get_footer();
