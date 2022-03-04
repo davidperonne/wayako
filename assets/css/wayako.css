@@ -113,6 +113,7 @@ h3.h4 {
   color: var(--wayako-color1);
 }
 
+/* Test wrapper */
 /* Animations */
 /**/
 /* Pages */
@@ -1159,8 +1160,8 @@ input[type=submit]:focus-visible {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   /*  @media (min-width: 1400px) {
         max-width: 1400px;
     }*/

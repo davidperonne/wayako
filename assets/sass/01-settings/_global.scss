@@ -128,3 +128,12 @@ h3.h4 {
         color: var(--wayako-color1);
     }
 }
+
+
+/* Test wrapper */
+
+.wrapper {
+    //  padding-left: 2rem;
+    //  padding-right: 2rem;
+    @media (min-width: 768px) {}
+}
