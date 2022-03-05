@@ -5,10 +5,8 @@
 
 /**/
 
-@import "03-pages/pages";
-@import "03-pages/posts";
-@import "03-pages/single-post";
-@import "03-pages/404";
+//@import "03-generic/normalize";
+//@import "03-generic/reset";
 
 /**/
 
@@ -20,11 +18,15 @@
 @import "06-components/comments";
 @import "06-components/splide";
 
+/* Utilities */
+
+//@import "07-utilities/a11y";
+
 /* Plugins */
 
-@import "07-plugins/complianz";
-@import "07-plugins/gdpr-data-request-form";
-@import "07-plugins/contact-form-7";
+@import "08-plugins/complianz";
+@import "08-plugins/gdpr-data-request-form";
+@import "08-plugins/contact-form-7";
 
 /* Blocks */
 
