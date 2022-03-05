@@ -53,4 +53,4 @@ function my_acf_google_map_api( $api ) {
 	$api['key'] = get_field( 'google_map_api_key', 'options' );
 	return $api;
 }
-add_filter( 'acf/fields/google_map/api', 'my_acf_google_map_api' );
+//add_filter( 'acf/fields/google_map/api', 'my_acf_google_map_api' );

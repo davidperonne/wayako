@@ -8,33 +8,20 @@
 @import "03-pages/pages";
 @import "03-pages/posts";
 @import "03-pages/single-post";
-@import "03-pages/single-book";
-@import "03-pages/home";
-@import "03-pages/qui-suis-je";
-@import "03-pages/prestations";
-@import "03-pages/book";
-@import "03-pages/contact";
 @import "03-pages/404";
 
 /**/
 
-@import "06-components/blocks";
 @import "06-components/buttons";
 @import "06-components/header";
-@import "06-components/phone";
-@import "06-components/social";
-@import "06-components/hero";
 @import "06-components/footer";
 @import "06-components/modals";
 @import "06-components/forms";
 @import "06-components/comments";
 @import "06-components/splide";
-//@import "06-components/flexslider";
 
 /* Plugins */
 
-//@import "07-plugins/coblocks";
-//@import "07-plugins/wpml";
 @import "07-plugins/complianz";
 @import "07-plugins/gdpr-data-request-form";
 @import "07-plugins/contact-form-7";
