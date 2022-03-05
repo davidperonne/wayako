@@ -12,15 +12,7 @@ get_header();
 
 ?>
 
-<div class="wrapper" id="error-404-wrapper">
 
-	<div class="container" id="content" tabindex="-1">
-
-		<div class="row">
-
-			<div class="col-md-12 content-area" id="primary">
-
-				<main class="site-main" id="main">
 
 					<section class="error-404 not-found">
 
@@ -38,15 +30,6 @@ get_header();
 
 					</section><!-- .error-404 -->
 
-				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #error-404-wrapper -->
 
 <?php
 get_footer();

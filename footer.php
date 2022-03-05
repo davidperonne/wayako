@@ -11,6 +11,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
 	<footer class="site-footer" id="">
 
 		<div class="site-footer__container container---- alignwide">

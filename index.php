@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper" id="content">
 
 	<?php
 	if ( have_posts() ) {
@@ -34,7 +33,6 @@ get_header();
 	<!-- The pagination component -->
 	<?php wayako_pagination(); ?>
 
-</div><!-- #content -->
 
 <?php
 get_footer();

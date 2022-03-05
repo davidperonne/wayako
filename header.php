@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<a class="skip-link visually-hidden visually-hidden-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
 
-	<header class="site-header    navbar-expand-md alignwide">
+	<header id="masterhead" class="site-header    navbar-expand-md alignwide">
 
 		<div class="site-header__branding">
 			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
@@ -57,3 +57,9 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 	</header>
+
+
+	
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">

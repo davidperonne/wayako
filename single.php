@@ -11,7 +11,6 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="wrapper" id="content">
 
 	<?php
 	while ( have_posts() ) {
@@ -26,7 +25,6 @@ get_header();
 	}
 	?>
 
-</div><!-- #content -->
 
 <?php
 get_footer();
