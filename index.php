@@ -15,24 +15,17 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-?>
 
+if ( have_posts() ) {
+	while ( have_posts() ) {
+		the_post();
 
-	<?php
-	if ( have_posts() ) {
-		while ( have_posts() ) {
-			the_post();
-
-			get_template_part( 'loop-templates/content', get_post_format() );
-		}
-	} else {
-		get_template_part( 'loop-templates/content', 'none' );
+		get_template_part( 'loop-templates/content', get_post_format() );
 	}
-	?>
+} else {
+	get_template_part( 'loop-templates/content', 'none' );
+}
 
-	<!-- The pagination component -->
-	<?php wayako_pagination(); ?>
+wayako_pagination();
 
-
-<?php
 get_footer();

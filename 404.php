@@ -14,21 +14,21 @@ get_header();
 
 
 
-					<section class="error-404 not-found">
+	<section class="error-404 not-found">
 
-						<header class="page-header">
+		<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wayako' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wayako' ); ?></h1>
 
-						</header><!-- .page-header -->
+		</header><!-- .page-header -->
 
-						<div class="page-content">
+		<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'wayako' ); ?></p>
+			<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'wayako' ); ?></p>
 
-						</div><!-- .page-content -->
+		</div><!-- .page-content -->
 
-					</section><!-- .error-404 -->
+	</section><!-- .error-404 -->
 
 
 <?php
