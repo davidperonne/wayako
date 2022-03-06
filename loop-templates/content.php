@@ -7,15 +7,9 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
-$classes = array(
-	'col-12',
-	'col-lg-6',
-	'px-4',
-);
 ?>
 
-<article <?php post_class( $classes ); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<a href="<?php echo esc_url( get_permalink() ); ?>">
 		<figure>
