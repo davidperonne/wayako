@@ -28,10 +28,4 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</div>
 
-	<footer class="entry-footer alignwide">
-
-		<?php wayako_entry_footer(); ?>
-
-	</footer>
-
 </article>

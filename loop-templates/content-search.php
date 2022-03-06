@@ -38,10 +38,4 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer alignwide">
-
-		<?php wayako_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
 </article><!-- #post-## -->
