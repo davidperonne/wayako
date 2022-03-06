@@ -16,18 +16,13 @@ if ( ! function_exists( 'wayako_scripts' ) ) :
 	function wayako_scripts() {
 		$theme_version = wp_get_theme()->get( 'Version' );
 
-	//	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css', array(), $theme_version );
 		wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/wayako.min.css', array(), $theme_version );
 		wp_enqueue_style( 'wayako-custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), $theme_version );
 
 		wp_enqueue_script( 'jquery' );
 
-	//	wp_enqueue_script( 'bootstrap-scripts', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array(), $theme_version, true );
 		wp_enqueue_script( 'wayako-scripts', get_stylesheet_directory_uri() . '/assets/js/wayako.js', array(), $theme_version, true );
-
-
 		wp_enqueue_script( 'wayako-nav-scripts', get_stylesheet_directory_uri() . '/assets/js/primary-navigation.js', array(), $theme_version, true );
-
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
