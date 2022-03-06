@@ -14,7 +14,7 @@
         "../sass/06-components/_forms.scss",
         "../sass/06-components/_comments.scss",
         "../sass/06-components/_splide.scss",
-        "../sass/07-utilities/a11y.scss",
+        "../sass/07-utilities/_a11y.scss",
         "../sass/08-plugins/_complianz.scss",
         "../sass/08-plugins/_gdpr-data-request-form.scss",
         "../sass/08-plugins/_contact-form-7.scss",
