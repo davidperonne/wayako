@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 
 </div>
 
-<a href="#" id="topbutton" title="<?php esc_html_e( 'To top', 'wayako' ); ?>"><span class="visually-hidden"><?php esc_html_e( 'To top', 'wayako' ); ?></span></a>
+<a href="#" id="topbutton" title="<?php esc_html_e( 'To top', 'wayako' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'To top', 'wayako' ); ?></span></a>
 
 <?php wp_footer(); ?>
 

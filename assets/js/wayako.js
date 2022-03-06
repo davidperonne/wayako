@@ -1,55 +1,20 @@
-//document.addEventListener( 'click', twentytwentyoneCollapseMenuOnClickOutside );
-
-/*
-var navMenu = function(i) {
-    var wrapper = document.body, // this is the element to which a CSS class is added when a mobile nav menu is open
-        mobileButton = document.getElementById('primary-mobile-menu'),
-        navMenuEl = document.getElementById('site-navigation');
-
-    // If there's no nav menu, none of this is necessary.
-    if (!navMenuEl) {
-        return;
-    }
-
-    if (mobileButton) {
-        mobileButton.onclick = function() {
-            wrapper.classList.toggle('primary-navigation-open');
-            wrapper.classList.toggle('lock-scrolling');
-            //    twentytwentyoneToggleAriaExpanded(mobileButton);
-            //   mobileButton.focus();
-        };
-    }
-};
-
-window.addEventListener('load', function() {
-    new navMenu('primary');
+// Show the banner when a html element with class 'cmplz-show-banner' is clicked.
+function addEvent(event, selector, callback, context) {
+    document.addEventListener(event, e => {
+        if (e.target.closest(selector)) {
+            callback(e);
+        }
+    });
+}
+addEvent('click', '.cmplz-show-banner', function() {
+    document.querySelectorAll('.cmplz-manage-consent').forEach(obj => {
+        obj.click();
+    });
 });
-*/
-
-
-
 
 
 
 jQuery(function($) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // Show on hover
     $('ul.main-menu li.dropdown').hover(function() {
