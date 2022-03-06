@@ -1,0 +1,32 @@
+/* Block hero */
+
+.block-hero {
+    background-color: #F6F7FC;
+    min-height: 25rem;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 9.375rem;
+    &__inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 15.5rem;
+    }
+    &__sub-title {
+        color: var(--wayako-color2);
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 2.125rem;
+        margin-bottom: 0;
+    }
+    &__title {
+        color: #1A191C;
+        font-size: 4.375rem;
+        font-weight: 600;
+        line-height: 5rem;
+        margin: 1rem 0;
+    }
+}
