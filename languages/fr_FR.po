@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wayako\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
-"POT-Creation-Date: 2022-03-05 10:36+0100\n"
-"PO-Revision-Date: 2022-03-05 10:36+0100\n"
+"POT-Creation-Date: 2022-03-06 17:56+0100\n"
+"PO-Revision-Date: 2022-03-06 17:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -24,35 +24,35 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:29
+#: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "Oups! Cette page est introuvable."
 
-#: 404.php:35
+#: 404.php:27
 msgid "It looks like nothing was found at this location."
 msgstr "Il semble que rien n’a été trouvé à cet endroit."
 
-#: author.php:28
+#: author.php:27
 msgid "About:"
 msgstr "A propos :"
 
-#: author.php:39 inc/custom-comments.php:39
+#: author.php:38 inc/custom-comments.php:39
 msgid "Website"
 msgstr "Site web"
 
-#: author.php:46
+#: author.php:45
 msgid "Profile"
 msgstr "Profil"
 
-#: author.php:52
+#: author.php:51
 msgid "Posts by"
 msgstr "Postés par"
 
-#: author.php:66
+#: author.php:65
 msgid "Permanent Link:"
 msgstr "Lien permanent :"
 
-#: author.php:70
+#: author.php:69
 msgid "in"
 msgstr "dans"
 
@@ -78,7 +78,7 @@ msgstr "&larr; Commentaires plus anciens"
 msgid "Newer Comments &rarr;"
 msgstr "Commentaires plus récents &rarr;"
 
-#: footer.php:61
+#: footer.php:40
 msgid "To top"
 msgstr "Vers le haut"
 
@@ -86,29 +86,13 @@ msgstr "Vers le haut"
 msgid "Skip to content"
 msgstr "Basculer vers le contenu"
 
-#: header.php:40
-msgid "Menu"
+#: header.php:43 inc/setup.php:50
+msgid "Primary menu"
 msgstr ""
 
-#: inc/acf.php:15 inc/acf.php:16
-msgid "Theme options"
-msgstr "Options du thème"
-
-#: inc/acf.php:26 inc/acf.php:27
-msgid "Global"
-msgstr "Général"
-
-#: inc/acf.php:35 inc/acf.php:36
-msgid "Social networks"
-msgstr "Réseaux sociaux"
-
-#: inc/acf.php:44 inc/acf.php:45
-msgid "Partners"
-msgstr "Partenaires"
-
-#: inc/class-wp-bootstrap-navwalker.php:379
-msgid "Add a menu"
-msgstr "Ajouter un menu"
+#: header.php:50
+msgid "Menu"
+msgstr ""
 
 #: inc/custom-comments.php:33
 msgid "Name"
@@ -178,10 +162,6 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: inc/menus.php:18
-msgid "Cookies"
-msgstr ""
-
 #: inc/pagination.php:53
 msgid "&laquo;"
 msgstr ""
@@ -198,17 +178,17 @@ msgstr ""
 msgid "Top menu"
 msgstr ""
 
-#: inc/setup.php:50
+#: inc/setup.php:51
 #, fuzzy
 #| msgid "Add a menu"
 msgid "Main menu"
 msgstr "Ajouter un menu"
 
-#: inc/setup.php:54
+#: inc/setup.php:53
 msgid "Copyright menu"
 msgstr ""
 
-#: inc/setup.php:55
+#: inc/setup.php:54
 #, fuzzy
 #| msgid "Add a menu"
 msgid "Legal menu"
@@ -303,24 +283,7 @@ msgstr ""
 msgid "Edit"
 msgstr "Modifier %s"
 
-#: page-templates/contact.php:134 page-templates/homepage.php:87
-#: page-templates/prestations.php:122
-msgid "Let's meet up"
-msgstr "Rencontrons-nous"
-
-#: page-templates/homepage.php:40
-msgid "Find out more"
-msgstr "En savoir plus"
-
-#: page-templates/homepage.php:120
-msgid "Let's get acquainted"
-msgstr "Faisons connaissance"
-
-#: page-templates/homepage.php:162
-msgid "To discover"
-msgstr "Découvrir"
-
-#: search.php:24
+#: search.php:23
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour : %s"
@@ -332,6 +295,33 @@ msgstr "Recherche"
 #: searchform.php:16
 msgid "Search &hellip;"
 msgstr "Recherche &hellip;"
+
+#~ msgid "Theme options"
+#~ msgstr "Options du thème"
+
+#~ msgid "Global"
+#~ msgstr "Général"
+
+#~ msgid "Social networks"
+#~ msgstr "Réseaux sociaux"
+
+#~ msgid "Partners"
+#~ msgstr "Partenaires"
+
+#~ msgid "Add a menu"
+#~ msgstr "Ajouter un menu"
+
+#~ msgid "Let's meet up"
+#~ msgstr "Rencontrons-nous"
+
+#~ msgid "Find out more"
+#~ msgstr "En savoir plus"
+
+#~ msgid "Let's get acquainted"
+#~ msgstr "Faisons connaissance"
+
+#~ msgid "To discover"
+#~ msgstr "Découvrir"
 
 #~ msgid "Realization"
 #~ msgstr "Réalisation"

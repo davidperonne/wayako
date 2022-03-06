@@ -535,6 +535,16 @@ button {
   cursor: pointer;
 }
 
+/* Blocks */
+/*
+@import "05-blocks/hero";
+@import "05-blocks/service";
+@import "05-blocks/pricing";
+@import "05-blocks/breadcrumb";
+@import "05-blocks/projects";
+@import "05-blocks/projects-slider";
+@import "05-blocks/image-box";
+@import "05-blocks/testimonials-slider";
 /**/
 /* Buttons */
 .wp-block-button .wp-block-button__link {
@@ -1287,7 +1297,7 @@ input[type=submit]:focus-visible {
 
 /* GDPR Data Request Form */
 /* Contact Form 7 */
-/* Blocks */
+/* Gutenberg */
 /* Gutenberg */
 /* Colors variables */
 /* Generate Colors classes */

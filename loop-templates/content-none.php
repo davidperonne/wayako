@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="no-result">
+<div class="no-result alignwide">
 
 	<p><?php echo esc_html__( 'Aucun résultat à afficher !', 'wayako' ); ?></p>
 

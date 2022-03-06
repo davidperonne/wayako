@@ -44,7 +44,7 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 	</div>
 
-	<footer class="entry-footer mb-3">
+	<footer class="entry-footer alignwide">
 
 		<?php wayako_entry_footer(); ?>
 

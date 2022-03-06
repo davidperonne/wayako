@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer alignwide">
 
 		<?php edit_post_link( __( 'Edit', 'wayako' ), '<span class="edit-link">', '</span>' ); ?>
 
