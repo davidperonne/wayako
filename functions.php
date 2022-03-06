@@ -10,14 +10,14 @@ defined( 'ABSPATH' ) || exit;
 
 $wayako_includes = array(
 	'/setup.php',
-	'/menus.php',
+//	'/menus.php',
 	'/widgets.php',
 	'/enqueue.php',
 	'/template-tags.php',
 	'/pagination.php',
 	'/extras.php',
 	'/custom-comments.php',
-	'/class-wp-bootstrap-navwalker.php',
+//	'/class-wp-bootstrap-navwalker.php',
 	'/editor.php',
 	'/gutenberg.php',
 	'/deprecated.php',

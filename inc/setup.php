@@ -48,10 +48,8 @@ if ( ! function_exists( 'wayako_setup' ) ) {
 			array(
 				'top-menu' => __( 'Top menu', 'wayako' ),
 				'primary' => __( 'Primary menu', 'wayako' ),
-				'main-menu' => __( 'Main menu', 'wayako' ),
-			//	'footer-menu' => __( 'Footer menu', 'wayako' ),
-			//	'footer-menu-1' => __( 'Footer menu 1', 'wayako' ),
-			//	'footer-menu-2' => __( 'Footer menu 2', 'wayako' ),
+				'main-menu' => __( 'Main menu', 'wayako' ), // to remove
+
 				'copyright-menu' => __( 'Copyright menu', 'wayako' ),
 				'legal-menu' => __( 'Legal menu', 'wayako' ),
 			)
