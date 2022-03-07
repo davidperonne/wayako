@@ -25,7 +25,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header alignwide">
 
 		<div class="site-branding site-header__branding">
 			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">

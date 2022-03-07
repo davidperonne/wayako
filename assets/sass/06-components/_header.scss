@@ -200,8 +200,7 @@
 
 /* Burger menu */
 
-.menu-toggle,
-.navbar-toggler {
+.menu-toggle {
     display: block;
     @media (min-width: 768px) {
         display: none;
@@ -241,10 +240,8 @@
     }
 }
 
-.main-navigation.toggled,
-.primary-navigation-open {
-    .menu-toggle,
-    .navbar-toggler {
+.main-navigation.toggled {
+    .menu-toggle {
         .icon-bar {
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 4px);
@@ -291,12 +288,11 @@
     }
 }
 
-.primary-navigation {
+.main-navigation {
     margin-left: auto;
 }
 
-.main-navigation.toggled,
-.primary-navigation-open {
+.main-navigation.toggled {
     .primary-menu-container {
         top: 5rem;
         background-color: white;
