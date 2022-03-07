@@ -10,27 +10,15 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called Wayako, or underscores.
+A custom theme called Wayako.
 
 == Description ==
 
-Hi. I'm a starter theme called Wayako, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-
-== Installation ==
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-
-== Frequently Asked Questions ==
-
-= Does this theme support any plugins? =
-
-_s includes support for WooCommerce and for Infinite Scroll in Jetpack.
+It's a custom theme for my website!
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - March 7 2022 =
 * Initial release
 
 == Credits ==
