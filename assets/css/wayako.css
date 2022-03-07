@@ -845,6 +845,7 @@ button {
 }
 
 /* Burger menu */
+.menu-toggle,
 .navbar-toggler {
   display: block;
   border: none;
@@ -854,17 +855,21 @@ button {
 }
 
 @media (min-width: 768px) {
+  .menu-toggle,
   .navbar-toggler {
     display: none;
   }
 }
 
-.navbar-toggler:focus, .navbar-toggler:focus-visible {
+.menu-toggle:focus, .menu-toggle:focus-visible,
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
   -webkit-box-shadow: unset;
           box-shadow: unset;
   outline: var(--wayako-color1) auto 1px;
 }
 
+.menu-toggle .icon-bar,
 .navbar-toggler .icon-bar {
   background-color: #19273F;
   -webkit-transform: rotate(0deg) translate(0px, 0px);
@@ -877,28 +882,35 @@ button {
   border-radius: 1px;
 }
 
+.menu-toggle .icon-bar + .icon-bar,
 .navbar-toggler .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 
+.menu-toggle .icon-bar + .icon-bar:nth-child(2),
 .navbar-toggler .icon-bar + .icon-bar:nth-child(2) {
   width: 16px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
+.menu-toggle:hover > .icon-bar:nth-child(2),
 .navbar-toggler:hover > .icon-bar:nth-child(2) {
   width: 22px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
+.menu-toggle:active > .icon-bar:nth-child(2),
 .navbar-toggler:active > .icon-bar:nth-child(2) {
   width: 22px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
+.main-navigation.toggled .menu-toggle .icon-bar:nth-child(1),
+.main-navigation.toggled .navbar-toggler .icon-bar:nth-child(1),
+.primary-navigation-open .menu-toggle .icon-bar:nth-child(1),
 .primary-navigation-open .navbar-toggler .icon-bar:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(5px, 4px);
           transform: rotate(45deg) translate(5px, 4px);
@@ -906,12 +918,18 @@ button {
   transition: ease all .2s;
 }
 
+.main-navigation.toggled .menu-toggle .icon-bar:nth-child(2),
+.main-navigation.toggled .navbar-toggler .icon-bar:nth-child(2),
+.primary-navigation-open .menu-toggle .icon-bar:nth-child(2),
 .primary-navigation-open .navbar-toggler .icon-bar:nth-child(2) {
   opacity: 0;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
+.main-navigation.toggled .menu-toggle .icon-bar:nth-child(3),
+.main-navigation.toggled .navbar-toggler .icon-bar:nth-child(3),
+.primary-navigation-open .menu-toggle .icon-bar:nth-child(3),
 .primary-navigation-open .navbar-toggler .icon-bar:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(4px, -4px);
           transform: rotate(-45deg) translate(4px, -4px);
@@ -955,6 +973,7 @@ button {
   margin-left: auto;
 }
 
+.main-navigation.toggled .primary-menu-container,
 .primary-navigation-open .primary-menu-container {
   top: 5rem;
   background-color: white;

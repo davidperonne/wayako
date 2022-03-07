@@ -200,6 +200,7 @@
 
 /* Burger menu */
 
+.menu-toggle,
 .navbar-toggler {
     display: block;
     @media (min-width: 768px) {
@@ -240,7 +241,9 @@
     }
 }
 
+.main-navigation.toggled,
 .primary-navigation-open {
+    .menu-toggle,
     .navbar-toggler {
         .icon-bar {
             &:nth-child(1) {
@@ -292,6 +295,7 @@
     margin-left: auto;
 }
 
+.main-navigation.toggled,
 .primary-navigation-open {
     .primary-menu-container {
         top: 5rem;

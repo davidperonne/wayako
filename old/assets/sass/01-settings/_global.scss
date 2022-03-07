@@ -1,0 +1,150 @@
+/* Global */
+
+:root {
+    //--font-headings:;
+    //--font-base:;
+    /* Font Family */
+    --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+    --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+    /**/
+    --global--line-height-body: 1.7;
+    --global--font-size-base: 1rem;
+    --global--color-primary: #39353D;
+    --global--color-background: white;
+    /* */
+    --wayako-color1: #ff7d2d;
+    --wayako-color2: #DD38B4;
+    --wayako-color3: #ef823e; // Buttons hover
+    --wayako-gray1: #DADCDE;
+    --wayako-gray2: #39353D;
+}
+
+body {
+    color: var(--wayako-gray2);
+    font-family: "Montserrat", Sans-serif;
+    font-size: 1.125rem;
+}
+
+a {
+    color: var(--wayako-color1);
+}
+
+
+/**/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #1A191C;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 4.375rem;
+    line-height: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+}
+
+h3 {
+    // margin-bottom: 2.5rem;
+}
+
+h5,
+.h5 {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/*
+h3.h4 {
+    color: var(--wayako-color1);
+}*/
+
+
+/**/
+
+.nav-link {
+    /*  display: block;
+    padding: 0.5rem 1rem;*/
+    color: #0F0E0F;
+    font-size: 1rem;
+    /*   text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;*/
+    &:hover {
+        color: var(--wayako-color1);
+    }
+    &:focus {
+        color: var(--wayako-color1);
+    }
+    &:focus-visible {
+        outline: var(--wayako-color1) auto 1px;
+    }
+}
+
+
+/**/
+
+
+/*
+.clip-type1 img {
+    clip-path: path('M227,0H602a16,16,0,0,1,16,16V227A227,227,0,0,1,391,454H227A227,227,0,0,1,0,227v0A227,227,0,0,1,227,0Z');
+}
+
+.dots1 {
+    background-image: url('../img/dots1.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}*/
+
+
+/**/
+
+.sub-title {
+    color: var(--wayako-color2);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sub-title-sep {
+    color: #47404E;
+    font-size: .75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:before {
+        content: '';
+        width: 2rem;
+        height: 2px;
+        background-color: var(--wayako-color2);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
+    }
+}
+
+
+/**/
+
+.wp-block-navigation-item.current-menu-item {
+    a {
+        color: var(--wayako-color1);
+    }
+}
+
+
+/* Test wrapper */
+
+.wrapper {
+    //  padding-left: 2rem;
+    //  padding-right: 2rem;
+    @media (min-width: 768px) {}
+}
