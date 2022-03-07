@@ -49,11 +49,7 @@ function wayako_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-		//	'menu-1' => esc_html__( 'Primary', 'wayako' ),
 			'primary' => __( 'Primary menu', 'wayako' ),
-		//	'copyright-menu' => __( 'Copyright menu', 'wayako' ),
-		//	'legal-menu' => __( 'Legal menu', 'wayako' ),
-
 		)
 	);
 
@@ -74,18 +70,6 @@ function wayako_setup() {
 		)
 	);
 
-	// Set up the WordPress core custom background feature.
-	/*add_theme_support(
-		'custom-background',
-		apply_filters(
-			'wayako_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);*/
-
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -104,7 +88,6 @@ function wayako_setup() {
 		)
 	);
 
-
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
 }
@@ -120,7 +103,7 @@ add_action( 'after_setup_theme', 'wayako_setup' );
 function wayako_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'wayako_content_width', 640 );
 }
-////add_action( 'after_setup_theme', 'wayako_content_width', 0 );
+//add_action( 'after_setup_theme', 'wayako_content_width', 0 );
 
 /**
  * Register widget area.
@@ -130,23 +113,11 @@ function wayako_content_width() {
 function wayako_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'wayako' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'wayako' ),
+			'name'          => esc_html__( 'Footer', 'wayako' ),
+			'id'            => 'footer-widget',
+			'description'   => esc_html__( 'Footer sidebar widget area', 'wayako' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-
-	register_sidebar(
-		array(
-			'name'          => __( 'Footer', 'wayako' ),
-			'id'            => 'footer-widget',
-			'description'   => __( 'Footer sidebar widget area', 'wayako' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		)
@@ -154,17 +125,15 @@ function wayako_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Copyright', 'wayako' ),
+			'name'          => esc_html__( 'Copyright', 'wayako' ),
 			'id'            => 'copyright-widget',
-			'description'   => __( 'Copyright sidebar widget area', 'wayako' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
+			'description'   => esc_html__( 'Copyright sidebar widget area', 'wayako' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		)
 	);
-
-
 
 }
 add_action( 'widgets_init', 'wayako_widgets_init' );
@@ -173,10 +142,10 @@ add_action( 'widgets_init', 'wayako_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wayako_scripts() {
-	//wp_enqueue_style( 'wayako-style', get_stylesheet_uri(), array(), _WAYAKO_VERSION );
-	//wp_style_add_data( 'wayako-style', 'rtl', 'replace' );
+	//wp_enqueue_style( 'wayako-style-old', get_stylesheet_uri(), array(), _WAYAKO_VERSION );
+	//wp_style_add_data( 'wayako-style-old', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'wayako-styles-a', get_stylesheet_directory_uri() . '/assets/css/wayako.min.css', array(), _WAYAKO_VERSION );
+	wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/wayako.min.css', array(), _WAYAKO_VERSION );
 	wp_enqueue_style( 'wayako-custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), _WAYAKO_VERSION );
 
 	wp_enqueue_script( 'jquery' );
@@ -191,11 +160,6 @@ function wayako_scripts() {
 add_action( 'wp_enqueue_scripts', 'wayako_scripts' );
 
 /**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -204,11 +168,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Customizer additions.
- */
-//require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
