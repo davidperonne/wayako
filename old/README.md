@@ -1,2 +1,0 @@
-# wayako
-Wayako theme
