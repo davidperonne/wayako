@@ -95,6 +95,39 @@ $color in $colors {
 }
 
 
+/* Buttons */
+
+.wp-block-button {
+    .wp-block-button__link {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 16px 32px 16px 32px;
+        transition: all .3s;
+    }
+    &.is-style-outline {
+        .wp-block-button__link:not(.has-text-color) {
+            color: var(--wayako-color1);
+            border: solid var(--wayako-color1) 1px;
+            &:hover {
+                color: white;
+                background-color: var(--wayako-color1);
+                border: solid var(--wayako-color1) 1px;
+            }
+        }
+    }
+    &.is-style-fill {
+        .wp-block-button__link {
+            background-color: var(--wayako-color1);
+            border: solid var(--wayako-color1) 1px;
+            &:hover {
+                background-color: var(--wayako-color3);
+            }
+        }
+    }
+}
+
+
 /* Section services */
 
 .services {
@@ -181,6 +214,43 @@ $color in $colors {
         font-size: 1rem;
         font-weight: 500;
         text-decoration: none;
+    }
+}
+
+
+/**/
+
+
+/**/
+
+.wp-block-navigation-item.current-menu-item {
+    a {
+        color: var(--wayako-color1);
+    }
+}
+
+
+/**/
+
+.sub-title {
+    color: var(--wayako-color2);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sub-title-sep {
+    color: #47404E;
+    font-size: .75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    &:before {
+        content: '';
+        width: 2rem;
+        height: 2px;
+        background-color: var(--wayako-color2);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 1rem;
     }
 }
 
