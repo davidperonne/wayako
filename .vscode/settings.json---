@@ -1,0 +1,47 @@
+{
+    "editor.autoClosingBrackets": "never",
+    "phpcs.standard": "WordPress",
+    "phpcs.executablePath": "/opt/homebrew/bin/phpcs",
+
+    // The number of spaces a tab is equal to.
+"editor.tabSize": 4,
+
+// Insert spaces when pressing Tab.
+"editor.insertSpaces": true,
+
+// When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+"editor.detectIndentation": true,
+"workbench.colorTheme": "Visual Studio Dark",
+"[swig]": {},
+
+// Git
+"git.enabled": true,
+"git.alwaysShowStagedChangesResourceGroup": true,
+"git.autofetch": true,
+"sync.gist": "7b5c18a172cc70affa10117ebd303226",
+"sync.forceUpload": true,
+"editor.hover.delay": 1000,
+"editor.hover.sticky": false,
+"git.ignoreWindowsGit27Warning": true,
+"liveSassCompile.settings.formats": [
+ 
+    //dist minified
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "/assets/css"
+    },
+    //fichiers source
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/assets/css"
+    }
+],
+"liveSassCompile.settings.excludeList": [
+    "**/vendor/**"
+],
+"security.workspace.trust.untrustedFiles": "open",
+"editor.accessibilitySupport": "off",
+"window.newWindowDimensions": "inherit",
+}

@@ -92,6 +92,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Plugins
 --------------------------------------------------------------*/
 
+@import "plugins/complianz";
+@import "plugins/gdpr-data-request-form";
+@import "plugins/contact-form-7";
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
@@ -112,3 +115,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 
 @import "utilities/alignments";
+
+/* Blocks
+--------------------------------------------- */
+
+@import "blocks/blocks";
