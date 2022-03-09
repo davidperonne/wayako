@@ -1568,6 +1568,45 @@ input[type=submit]:focus-visible {
 }
 
 /*--------------------------------------------------------------
+# Vendor
+--------------------------------------------------------------*/
+/* Splide
+--------------------------------------------- */
+/* Splide */
+.splide__arrow {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.splide__arrow--prev {
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .3125rem;
+}
+
+.splide__arrow--next {
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: .3125rem;
+}
+
+.splide__arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: square;
+  stroke-width: 8px;
+  height: 2.2rem;
+  vertical-align: middle;
+  width: 2.2rem;
+}
+
+/*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 /* Accessibility
@@ -1638,42 +1677,6 @@ input[type=submit]:focus-visible {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
-}
-
-/* Splide
---------------------------------------------- */
-/* Splide */
-.splide__arrow {
-  background: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-}
-
-.splide__arrow--prev {
-  left: 1rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: .3125rem;
-}
-
-.splide__arrow--next {
-  right: 1rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: .3125rem;
-}
-
-.splide__arrow svg {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: square;
-  stroke-width: 8px;
-  height: 2.2rem;
-  vertical-align: middle;
-  width: 2.2rem;
 }
 
 /* Blocks

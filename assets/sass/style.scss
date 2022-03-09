@@ -102,6 +102,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "plugins/jetpack/infinite-scroll";
 
 /*--------------------------------------------------------------
+# Vendor
+--------------------------------------------------------------*/
+
+
+/* Splide
+--------------------------------------------- */
+
+@import "vendor/splide";
+
+/*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
 
@@ -115,11 +125,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 
 @import "utilities/alignments";
-
-/* Splide
---------------------------------------------- */
-
-@import "utilities/splide";
 
 /* Blocks
 --------------------------------------------- */
