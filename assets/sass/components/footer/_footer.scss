@@ -20,7 +20,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 8rem;
-        margin-bottom: 5rem;
+        margin-bottom: 0;
         >.widget:first-child {
             width: 40%;
         }
@@ -56,8 +56,13 @@
         padding-top: 2rem;
         margin-bottom: 2rem;
         border-top: solid var(--wayako-gray1) 1px;
+        p {
+            margin: 0;
+        }
         ul.menu {
-            padding-left: .3125rem;
+            padding-left: 0;
+            margin-left: 0;
+            margin-bottom: 0;
             display: flex;
             flex-direction: row;
             li {
@@ -68,13 +73,16 @@
         >.widget:last-child {
             margin-left: auto;
         }
-        .wp-block-social-links.is-style-logos-only {
-            .wp-social-link-twitter,
-            .wp-social-link-github,
-            .wp-social-link-skype {
-                color: #C3C4C7;
-                &:hover {
-                    color: var(--wayako-color1);
+        .wp-block-social-links {
+            margin-bottom: 0;
+            &.is-style-logos-only {
+                .wp-social-link-twitter,
+                .wp-social-link-github,
+                .wp-social-link-skype {
+                    color: #C3C4C7;
+                    &:hover {
+                        color: var(--wayako-color1);
+                    }
                 }
             }
         }

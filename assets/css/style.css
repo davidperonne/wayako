@@ -1273,7 +1273,7 @@ input[type=submit]:focus-visible {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 8rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
 }
 
 .site-footer__widgets > .widget:first-child {
@@ -1332,8 +1332,14 @@ input[type=submit]:focus-visible {
   border-top: solid var(--wayako-gray1) 1px;
 }
 
+.site-footer__copyright p {
+  margin: 0;
+}
+
 .site-footer__copyright ul.menu {
-  padding-left: .3125rem;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1350,6 +1356,10 @@ input[type=submit]:focus-visible {
 
 .site-footer__copyright > .widget:last-child {
   margin-left: auto;
+}
+
+.site-footer__copyright .wp-block-social-links {
+  margin-bottom: 0;
 }
 
 .site-footer__copyright .wp-block-social-links.is-style-logos-only .wp-social-link-twitter,
@@ -1790,15 +1800,33 @@ input[type=submit]:focus-visible {
 }
 
 /* Block wp-block-media-text */
+.wp-block-media-text {
+  position: relative;
+}
+
 .wp-block-media-text.alignwide {
-  margin-top: 9.375rem;
-  margin-bottom: 9.375rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  /*  background-image: url('../img/dots1.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 23rem;*/
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.wp-block-media-text.alignwide:before {
+  content: '';
+  position: absolute;
+  top: 50%;
   background-image: url("../img/dots1.png");
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: contain;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  background-size: 100%;
+  width: 20rem;
+  height: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .wp-block-media-text.alignwide figure {
@@ -1821,12 +1849,20 @@ input[type=submit]:focus-visible {
      object-fit: cover;
 }
 
+.wp-block-media-text.alignwide:not(.has-media-on-the-right):before {
+  left: -5rem;
+}
+
 .wp-block-media-text.alignwide:not(.has-media-on-the-right) .wp-block-media-text__content {
   padding-right: 0;
 }
 
 .wp-block-media-text.alignwide.has-media-on-the-right {
   background-position: right center;
+}
+
+.wp-block-media-text.alignwide.has-media-on-the-right:before {
+  right: -5rem;
 }
 
 .wp-block-media-text.alignwide.has-media-on-the-right .wp-block-media-text__content {
@@ -1844,6 +1880,10 @@ input[type=submit]:focus-visible {
 
 .wp-block-media-text.alignwide.is-header figure {
   padding-bottom: 70%;
+}
+
+.wp-block-media-text.has-landscape-ratio figure {
+  padding-bottom: 120%;
 }
 
 /* Buttons */
@@ -1909,6 +1949,7 @@ input[type=submit]:focus-visible {
   color: rgba(255, 255, 255, 0.85);
   font-size: 1.5rem;
   font-weight: 300;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1997,6 +2038,14 @@ input[type=submit]:focus-visible {
   margin-right: 1rem;
 }
 
+/* Section features */
+.bg-features {
+  background-image: url("../img/bg-features.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Custom blocks */
 /* Block hero */
 .block-hero {
@@ -2008,6 +2057,12 @@ input[type=submit]:focus-visible {
   padding-top: 5rem;
   padding-bottom: 5rem;
   margin-bottom: 9.375rem;
+  /**/
+  background-image: url("../img/bg-features.png");
+  background-image: url("../img/bg-header0.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .block-hero__inner {
@@ -2150,6 +2205,13 @@ input[type=submit]:focus-visible {
 
 .block-pricing__description li {
   font-weight: 300;
+}
+
+.block-pricing.is-top .block-pricing__inner {
+  background-image: url("../img/bg-price.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 130%;
 }
 
 /* Block breadcrumb */
@@ -2422,5 +2484,18 @@ input[type=submit]:focus-visible {
 
 .block-testimonials-slider .splide .splide__arrows svg {
   stroke: #C3C4C7;
+}
+
+/* Block logos slider */
+.block-logos-slider {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #F6F7FC;
+}
+
+.block-logos-slider .splide .splide__slide .splide__slide-inner {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

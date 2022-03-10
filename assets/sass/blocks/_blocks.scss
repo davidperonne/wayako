@@ -43,15 +43,28 @@ $color in $colors {
 /* Block wp-block-media-text */
 
 .wp-block-media-text {
+    position: relative;
     &.alignwide {
-        margin-top: 9.375rem;
-        margin-bottom: 9.375rem;
-        background-image: url('../img/dots1.png');
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        /*  background-image: url('../img/dots1.png');
         background-repeat: no-repeat;
         background-position: left center;
-        background-size: contain;
+        background-size: 23rem;*/
         padding-top: 5rem;
         padding-bottom: 5rem;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            background-image: url('../img/dots1.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 100%;
+            width: 20rem;
+            height: 100%;
+            transform: translateY(-50%);
+        }
         figure {
             position: relative;
             width: 100%;
@@ -70,12 +83,18 @@ $color in $colors {
             }
         }
         &:not(.has-media-on-the-right) {
+            &:before {
+                left: -5rem;
+            }
             .wp-block-media-text__content {
                 padding-right: 0;
             }
         }
         &.has-media-on-the-right {
             background-position: right center;
+            &:before {
+                right: -5rem;
+            }
             .wp-block-media-text__content {
                 padding-left: 0;
             }
@@ -90,6 +109,11 @@ $color in $colors {
             figure {
                 padding-bottom: 70%;
             }
+        }
+    }
+    &.has-landscape-ratio {
+        figure {
+            padding-bottom: 120%;
         }
     }
 }
@@ -159,6 +183,7 @@ $color in $colors {
         color: rgba(255, 255, 255, .85);
         font-size: 1.5rem;
         font-weight: 300;
+        margin-top: 0;
         margin-bottom: 0;
     }
     .wp-block-button.is-style-outline {
@@ -255,6 +280,16 @@ $color in $colors {
 }
 
 
+/* Section features */
+
+.bg-features {
+    background-image: url('../img/bg-features.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* Custom blocks */
 
 @import "custom/hero";
@@ -265,3 +300,4 @@ $color in $colors {
 @import "custom/projects-slider";
 @import "custom/image-box";
 @import "custom/testimonials-slider";
+@import "custom/logos-slider";

@@ -44,4 +44,12 @@
             font-weight: 300;
         }
     }
+    &.is-top {
+        .block-pricing__inner {
+            background-image: url('../img/bg-price.png');
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 130%;
+        }
+    }
 }
