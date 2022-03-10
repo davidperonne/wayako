@@ -1835,6 +1835,7 @@ input[type=submit]:focus-visible {
   padding-bottom: 66%;
   border-radius: 0.5rem 15rem 15rem 15rem;
   overflow: hidden;
+  z-index: 1;
 }
 
 .wp-block-media-text.alignwide figure img {
@@ -1871,11 +1872,28 @@ input[type=submit]:focus-visible {
 
 .wp-block-media-text.alignwide.has-media-on-the-right figure {
   border-radius: 15rem 0.5rem 15rem 15rem;
+  z-index: 1;
 }
 
 .wp-block-media-text.alignwide.is-header {
-  background-image: url("../img/dots1-circles.png");
   margin-top: 2rem;
+  /**/
+}
+
+.wp-block-media-text.alignwide.is-header:after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  right: -3rem;
+  background-image: url("../img/circles.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100%;
+  width: 25rem;
+  height: 35rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
 }
 
 .wp-block-media-text.alignwide.is-header figure {
@@ -2044,6 +2062,13 @@ input[type=submit]:focus-visible {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/**/
+.is-signature {
+  font-size: 3.125rem;
+  font-weight: 400;
+  font-family: 'Mrs Saint Delafield';
 }
 
 /* Custom blocks */

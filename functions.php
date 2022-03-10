@@ -271,7 +271,16 @@ if ( ! function_exists( 'wayako_get_font_face_styles' ) ) :
 			src: url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-600.woff2' ) . "') format('woff2'),
 				url('" . get_theme_file_uri( 'assets/fonts/montserrat-v23-latin-600.woff' ) . "') format('woff');
 			font-display: swap;
-		}		
+		}	
+		@font-face{
+			font-family: 'Mrs Saint Delafield';
+			font-weight: 400;
+			font-style: normal;
+			font-stretch: normal;
+			src: url('" . get_theme_file_uri( 'assets/fonts/mrs-saint-delafield-v11-latin-regular.woff2' ) . "') format('woff2'),
+				url('" . get_theme_file_uri( 'assets/fonts/mrs-saint-delafield-v11-latin-regular.woff' ) . "') format('woff');
+			font-display: swap;
+		}	
 		";
 	}
 

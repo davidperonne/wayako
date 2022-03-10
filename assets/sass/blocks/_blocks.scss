@@ -71,6 +71,7 @@ $color in $colors {
             padding-bottom: 66%;
             border-radius: 0.5rem 15rem 15rem 15rem;
             overflow: hidden;
+            z-index: 1;
             img {
                 position: absolute;
                 top: 0;
@@ -100,12 +101,28 @@ $color in $colors {
             }
             figure {
                 border-radius: 15rem 0.5rem 15rem 15rem;
+                z-index: 1;
             }
         }
         // Used as a header
         &.is-header {
-            background-image: url('../img/dots1-circles.png');
+            //  background-image: url('../img/dots1-circles.png');
             margin-top: 2rem;
+            /**/
+            &:after {
+                content: '';
+                position: absolute;
+                top: 60%;
+                right: -3rem;
+                background-image: url('../img/circles.png');
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 100%;
+                width: 25rem;
+                height: 35rem;
+                transform: translateY(-50%);
+                z-index: 0;
+            }
             figure {
                 padding-bottom: 70%;
             }
@@ -287,6 +304,15 @@ $color in $colors {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+/**/
+
+.is-signature {
+    font-size: 3.125rem;
+    font-weight: 400;
+    font-family: 'Mrs Saint Delafield';
 }
 
 
