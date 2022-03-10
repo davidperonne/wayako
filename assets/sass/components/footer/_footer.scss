@@ -84,9 +84,14 @@
 
 /* To top */
 
-#topbutton {
+.scrollToTopBtn {
     position: fixed;
-    display: none;
+    display: block;
+    padding: 8px 4px;
+    cursor: pointer;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.3s;
     height: 2.125rem;
     width: 2.125rem;
     right: 0.9rem;
@@ -111,5 +116,9 @@
         bottom: 0;
         left: 0;
         right: 0;
+    }
+    &.showScrollBtn {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

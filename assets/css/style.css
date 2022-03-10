@@ -1365,9 +1365,18 @@ input[type=submit]:focus-visible {
 }
 
 /* To top */
-#topbutton {
+.scrollToTopBtn {
   position: fixed;
-  display: none;
+  display: block;
+  padding: 8px 4px;
+  cursor: pointer;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: transform 0.5s, opacity 0.3s;
+  transition: transform 0.5s, opacity 0.3s, -webkit-transform 0.5s;
   height: 2.125rem;
   width: 2.125rem;
   right: 0.9rem;
@@ -1381,11 +1390,11 @@ input[type=submit]:focus-visible {
   transition: all .3s ease-in-out;
 }
 
-#topbutton:hover {
+.scrollToTopBtn:hover {
   background-color: var(--wayako-color2);
 }
 
-#topbutton:after {
+.scrollToTopBtn:after {
   content: '';
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M416 352c-8.188 0-16.38-3.125-22.62-9.375L224 173.3l-169.4 169.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l192-192c12.5-12.5 32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25C432.4 348.9 424.2 352 416 352z'/%3E%3C/svg%3E");
   background-position: center .4375rem;
@@ -1396,6 +1405,12 @@ input[type=submit]:focus-visible {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.scrollToTopBtn.showScrollBtn {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 /* Posts and pages

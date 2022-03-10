@@ -94,6 +94,7 @@ function wayako_setup() {
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
 
+
 }
 add_action( 'after_setup_theme', 'wayako_setup' );
 
@@ -152,7 +153,7 @@ function wayako_scripts() {
 	wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), _WAYAKO_VERSION );
 	wp_enqueue_style( 'wayako-custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), _WAYAKO_VERSION );
 
-	wp_enqueue_script( 'jquery' );
+	//wp_enqueue_script( 'jquery' );
 
 	wp_enqueue_script( 'wayako-scripts', get_template_directory_uri() . '/assets/js/wayako.js', array(), _WAYAKO_VERSION, true );
 	wp_enqueue_script( 'wayako-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _WAYAKO_VERSION, true );

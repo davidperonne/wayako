@@ -39,7 +39,7 @@
 
 </div><!-- #page -->
 
-<a href="#" id="topbutton" title="<?php esc_html_e( 'To top', 'wayako' ); ?>"><span class="screen-reader-text"><?php esc_html_e( 'To top', 'wayako' ); ?></span></a>
+<button class="scrollToTopBtn"><span class="screen-reader-text"><?php esc_html_e( 'To top', 'wayako' ); ?></span></button>
 
 <?php wp_footer(); ?>
 
