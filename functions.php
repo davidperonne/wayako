@@ -164,6 +164,15 @@ function wayako_scripts() {
 
 
 
+	if ( is_tax( 'portfolio_cat' ) ) {
+
+		wp_enqueue_script( 'isotope-scripts', get_template_directory_uri() . '/vendor/isotope/isotope.pkgd.min.js', array(), _WAYAKO_VERSION, true );
+	}
+
+
+
+
+
 
 	// Load critical styles in production.
 	wp_register_style( 'wayako-critical-styles', '' );
