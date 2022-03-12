@@ -1747,6 +1747,18 @@ input[type=submit]:focus-visible {
   width: 2.2rem;
 }
 
+.splide__arrow svg {
+  stroke: white;
+}
+
+.splide__arrow:hover {
+  background-color: white;
+}
+
+.splide__arrow:hover svg {
+  stroke: var(--wayako-color2);
+}
+
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
@@ -2426,18 +2438,6 @@ input[type=submit]:focus-visible {
 
 .block-projects-slider .splide .splide__arrows .splide__arrow--next {
   right: 0.5rem;
-}
-
-.block-projects-slider .splide .splide__arrows .splide__arrow svg {
-  stroke: white;
-}
-
-.block-projects-slider .splide .splide__arrows .splide__arrow:hover {
-  background-color: white;
-}
-
-.block-projects-slider .splide .splide__arrows .splide__arrow:hover svg {
-  stroke: var(--wayako-color2);
 }
 
 /* Block image box */

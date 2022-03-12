@@ -16,17 +16,6 @@
             .splide__arrow--next {
                 right: 0.5rem;
             }
-            .splide__arrow {
-                svg {
-                    stroke: white;
-                }
-                &:hover {
-                    background-color: white;
-                    svg {
-                        stroke: var(--wayako-color2);
-                    }
-                }
-            }
         }
     }
 }
