@@ -55,15 +55,14 @@ get_header();
 						?>
 
 						<div class="grid-item <?php echo esc_html( $items ); ?>">
-							<a class="" href="<?php echo esc_url( get_permalink() ); ?>">
+							<a class="card" href="<?php echo esc_url( get_permalink() ); ?>">
 								<figure>
 									<?php echo get_the_post_thumbnail( get_the_ID(), 'medium_large', array( 'class' => 'img-cover' ) ); ?>
 									<figcaption>										
 										<?php the_title( '<h3 class="grid-item__title">', '</h3>' ); ?>
+										<?php the_excerpt(); ?>
 									</figcaption>
 								</figure>
-								
-								<?php //the_title( '<h3 class="grid-item__title">', '</h3>' ); ?>	
 							</a>
 						</div>
 

@@ -8,59 +8,6 @@
         .splide__slide {
             width: 33%;
             padding: 1rem;
-            figure {
-                position: relative;
-                width: 100%;
-                padding-bottom: 77%;
-                border-radius: 1rem;
-                margin-bottom: 0;
-                overflow: hidden;
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    transition: all .3s;
-                }
-                figcaption {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    opacity: 0;
-                    padding: 2rem;
-                    transition: background-color .3s;
-                    h3 {
-                        color: white;
-                        font-weight: 400;
-                        margin-top: 0;
-                        margin-bottom: 1rem;
-                    }
-                    p {
-                        color: white;
-                        font-weight: 300;
-                        margin-top: 0;
-                        margin-bottom: 0;
-                    }
-                }
-            }
-            &:hover {
-                img {
-                    transform: scale(1.05);
-                }
-                figcaption {
-                    opacity: 1;
-                    background-color: rgba(143, 65, 213, .25);
-                }
-            }
         }
         .splide__arrows {
             .splide__arrow--prev {
