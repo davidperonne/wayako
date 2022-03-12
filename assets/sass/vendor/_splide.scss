@@ -7,18 +7,22 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
+    width: 3em;
+    height: 3em;
 }
 
 .splide__arrow--prev {
     left: 1rem;
     transform: translateY(-50%);
-    padding: .3125rem;
+    padding: .75rem;
+    opacity: 1;
 }
 
 .splide__arrow--next {
     right: 1rem;
     transform: translateY(-50%);
-    padding: .3125rem;
+    padding: .75rem;
+    opacity: 1;
 }
 
 .splide__arrow svg {

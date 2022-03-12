@@ -746,6 +746,43 @@ input[type=submit]:focus-visible {
 # Layouts
 --------------------------------------------------------------*/
 /* tax-portfolio_cat */
+.tax-portfolio_cat header {
+  direction: ltr;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50%;
+      grid-template-columns: 1fr 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.tax-portfolio_cat header.has-media-on-the-right .wp-block-media-text__media {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.tax-portfolio_cat header.has-media-on-the-right .wp-block-media-text__content {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.tax-portfolio_cat header .wp-block-media-text__content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  direction: ltr;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  padding: 0 8%;
+  word-break: break-word;
+}
+
 .tax-portfolio_cat .grid .grid-item {
   width: 33%;
   padding: 1rem;
@@ -753,6 +790,15 @@ input[type=submit]:focus-visible {
 
 .tax-portfolio_cat .grid .grid-item a {
   text-decoration: none;
+}
+
+.tax-portfolio_cat .grid .grid-item__title {
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .tax-portfolio_cat .grid .grid-item figure {
@@ -1665,20 +1711,24 @@ input[type=submit]:focus-visible {
   cursor: pointer;
   position: absolute;
   top: 50%;
+  width: 3em;
+  height: 3em;
 }
 
 .splide__arrow--prev {
   left: 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  padding: .3125rem;
+  padding: .75rem;
+  opacity: 1;
 }
 
 .splide__arrow--next {
   right: 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  padding: .3125rem;
+  padding: .75rem;
+  opacity: 1;
 }
 
 .splide__arrow svg {
@@ -2077,6 +2127,7 @@ input[type=submit]:focus-visible {
 /**/
 .breadcrumb {
   font-size: .85em;
+  padding-left: 0;
 }
 
 .breadcrumb a {
@@ -2347,15 +2398,6 @@ input[type=submit]:focus-visible {
   padding: 1rem;
 }
 
-.block-projects .grid .grid-item__title {
-  color: white;
-  font-size: 1rem;
-  font-weight: 300;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
 .block-projects .grid .grid-item figure {
   position: relative;
   width: 100%;
@@ -2383,6 +2425,10 @@ input[type=submit]:focus-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2392,16 +2438,31 @@ input[type=submit]:focus-visible {
   right: 0;
   bottom: 0;
   opacity: 0;
+  padding: 2rem;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
 }
 
-.block-projects .grid .grid-item:hover img {
+.block-projects .grid .grid-item figure figcaption h3 {
+  color: white;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.block-projects .grid .grid-item figure figcaption p {
+  color: white;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.block-projects .grid .grid-item a:hover img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
 
-.block-projects .grid .grid-item:hover figcaption {
+.block-projects .grid .grid-item a:hover figcaption {
   opacity: 1;
   background-color: rgba(143, 65, 213, 0.25);
 }
@@ -2416,15 +2477,6 @@ input[type=submit]:focus-visible {
 .block-projects-slider .splide .splide__slide {
   width: 33%;
   padding: 1rem;
-}
-
-.block-projects-slider .splide .splide__slide__title {
-  color: white;
-  font-size: 1rem;
-  font-weight: 300;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .block-projects-slider .splide .splide__slide figure {
@@ -2454,6 +2506,10 @@ input[type=submit]:focus-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2463,8 +2519,23 @@ input[type=submit]:focus-visible {
   right: 0;
   bottom: 0;
   opacity: 0;
+  padding: 2rem;
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
+}
+
+.block-projects-slider .splide .splide__slide figure figcaption h3 {
+  color: white;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.block-projects-slider .splide .splide__slide figure figcaption p {
+  color: white;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .block-projects-slider .splide .splide__slide:hover img {
@@ -2478,15 +2549,21 @@ input[type=submit]:focus-visible {
 }
 
 .block-projects-slider .splide .splide__arrows .splide__arrow--prev {
-  left: 1rem;
+  left: 0.5rem;
 }
 
 .block-projects-slider .splide .splide__arrows .splide__arrow--next {
-  right: 1rem;
+  right: 0.5rem;
 }
 
-.block-projects-slider .splide .splide__arrows svg {
+.block-projects-slider .splide .splide__arrows .splide__arrow--prev svg,
+.block-projects-slider .splide .splide__arrows .splide__arrow--next svg {
   stroke: white;
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow--prev:hover svg,
+.block-projects-slider .splide .splide__arrows .splide__arrow--next:hover svg {
+  stroke: var(--wayako-color2);
 }
 
 /* Block image box */

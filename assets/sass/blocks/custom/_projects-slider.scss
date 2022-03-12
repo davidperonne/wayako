@@ -8,12 +8,6 @@
         .splide__slide {
             width: 33%;
             padding: 1rem;
-            &__title {
-                color: white;
-                font-size: 1rem;
-                font-weight: 300;
-                align-self: center;
-            }
             figure {
                 position: relative;
                 width: 100%;
@@ -34,6 +28,7 @@
                 }
                 figcaption {
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     position: absolute;
                     top: 0;
@@ -41,7 +36,20 @@
                     right: 0;
                     bottom: 0;
                     opacity: 0;
+                    padding: 2rem;
                     transition: background-color .3s;
+                    h3 {
+                        color: white;
+                        font-weight: 400;
+                        margin-top: 0;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        color: white;
+                        font-weight: 300;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
                 }
             }
             &:hover {
@@ -56,13 +64,21 @@
         }
         .splide__arrows {
             .splide__arrow--prev {
-                left: 1rem;
+                left: 0.5rem;
             }
             .splide__arrow--next {
-                right: 1rem;
+                right: 0.5rem;
             }
-            svg {
-                stroke: white;
+            .splide__arrow--prev,
+            .splide__arrow--next {
+                svg {
+                    stroke: white;
+                }
+                &:hover {
+                    svg {
+                        stroke: var(--wayako-color2);
+                    }
+                }
             }
         }
     }
