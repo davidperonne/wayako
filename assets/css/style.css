@@ -2556,13 +2556,15 @@ input[type=submit]:focus-visible {
   right: 0.5rem;
 }
 
-.block-projects-slider .splide .splide__arrows .splide__arrow--prev svg,
-.block-projects-slider .splide .splide__arrows .splide__arrow--next svg {
+.block-projects-slider .splide .splide__arrows .splide__arrow svg {
   stroke: white;
 }
 
-.block-projects-slider .splide .splide__arrows .splide__arrow--prev:hover svg,
-.block-projects-slider .splide .splide__arrows .splide__arrow--next:hover svg {
+.block-projects-slider .splide .splide__arrows .splide__arrow:hover {
+  background-color: white;
+}
+
+.block-projects-slider .splide .splide__arrows .splide__arrow:hover svg {
   stroke: var(--wayako-color2);
 }
 
