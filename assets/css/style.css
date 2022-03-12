@@ -608,8 +608,8 @@ table {
   bottom: 0;
   opacity: 0;
   padding: 2rem;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .card figure figcaption h3 {
@@ -624,11 +624,6 @@ table {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.card:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .card:hover figcaption {
@@ -2388,6 +2383,10 @@ input[type=submit]:focus-visible {
 
 .block-projects .button-group button:not(:last-child) {
   margin-right: 1rem;
+}
+
+.block-projects .button-group button:hover {
+  cursor: pointer;
 }
 
 .block-projects .button-group button:hover, .block-projects .button-group button.is-checked {
