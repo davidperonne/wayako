@@ -317,6 +317,17 @@ $color in $colors {
 }
 
 
+/* Sticky */
+
+@media screen and (min-width: 768px) {
+    .wp-block-media-text__media.is-sticky,
+    .wp-block-column.is-sticky {
+        position: sticky;
+        top: 60px;
+    }
+}
+
+
 /* Custom blocks */
 
 @import "custom/hero";

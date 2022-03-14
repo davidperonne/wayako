@@ -2200,6 +2200,16 @@ input[type=submit]:focus-visible {
   font-family: 'Mrs Saint Delafield';
 }
 
+/* Sticky */
+@media screen and (min-width: 768px) {
+  .wp-block-media-text__media.is-sticky,
+  .wp-block-column.is-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+  }
+}
+
 /* Custom blocks */
 /* Block hero */
 .block-hero {
