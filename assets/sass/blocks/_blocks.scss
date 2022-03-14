@@ -35,8 +35,16 @@ $color in $colors {
     }
 }
 
-.row-reverse {
+.wp-block-columns:not(.is-not-stacked-on-mobile).row-reverse {
     flex-direction: row-reverse;
+    @media (min-width: 782px) {
+        &>.wp-block-column:last-child {
+            margin-left: 0;
+        }
+        &>.wp-block-column:first-child {
+            margin-left: var(--wp--style--block-gap, 2em);
+        }
+    }
 }
 
 
@@ -177,9 +185,9 @@ $color in $colors {
     padding-bottom: 9.375rem;
     margin-bottom: 5rem;
     .wp-block-columns {
-        margin-bottom: 0;
+        //  margin-bottom: 0;
         .wp-block-columns {
-            padding-right: 4rem;
+            //  padding-right: 4rem;
         }
     }
 }
