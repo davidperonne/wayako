@@ -21,24 +21,14 @@
 
 		<div class="site-footer__container alignwide">
 
-			<div class="site-footer__widgets">
-
-				<?php dynamic_sidebar( 'footer-widget' ); ?>
-
-			</div>
-
-			<div class="site-footer__copyright">
-
-				<?php dynamic_sidebar( 'copyright-widget' ); ?>
-
-			</div>
+			<?php dynamic_sidebar( 'footer-widget' ); ?>
 
 		</div>
 
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
-
+ 
 <button class="scrollToTopBtn"><span class="screen-reader-text"><?php esc_html_e( 'To top', 'wayako' ); ?></span></button>
 
 <?php wp_footer(); ?>

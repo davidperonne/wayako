@@ -15,27 +15,21 @@
             }
         }
     }
-    &__widgets {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 8rem;
-        margin-bottom: 0;
-        >.widget:first-child {
-            width: 40%;
-        }
-        .widget {
-            display: flex;
-            flex-direction: column;
-        }
-        .footer-title {
-            color: var(--wayako-color2);
-            font-size: 1.25rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            line-height: 2.125rem;
-            margin-bottom: 1.5rem;
-        }
+    .wp-block-separator {
+        border-top: unset;
+        border-bottom: unset;
+        background-color: var(--wayako-gray1);
+    }
+    .footer-title {
+        color: var(--wayako-color2);
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 2.125rem;
+        margin-bottom: 1.5rem;
+    }
+    .menu-footer-menu-1-container,
+    .menu-footer-menu-2-container {
         ul.menu {
             padding-left: 0;
             li {
@@ -48,16 +42,24 @@
             }
         }
     }
-    &__copyright {
+    /**/
+    .wp-block-columns.is-copyright {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding-top: 2rem;
-        margin-bottom: 2rem;
-        border-top: solid var(--wayako-gray1) 1px;
+        margin-bottom: 0;
+        .wp-block-column {
+            display: flex;
+            &:last-child {
+                justify-content: flex-end;
+            }
+        }
         p {
             margin: 0;
+        }
+        .widget_nav_menu {
+            margin-bottom: 0;
         }
         ul.menu {
             padding-left: 0;
@@ -74,6 +76,7 @@
             margin-left: auto;
         }
         .wp-block-social-links {
+            justify-content: flex-end;
             margin-bottom: 0;
             &.is-style-logos-only {
                 .wp-social-link-twitter,
