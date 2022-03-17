@@ -88,12 +88,100 @@ function wayako_setup() {
 		)
 	);
 
+
+	// Custom background color.
+	add_theme_support(
+		'custom-background',
+		array(
+			'default-color' => 'd1e4dd',
+		)
+	);
+
+	// Editor color palette.
+	$black     = '#000000';
+	$dark_gray = '#28303D';
+	$gray      = '#39414D';
+	$green     = '#D1E4DD';
+	$blue      = '#D1DFE4';
+	$purple    = '#D1D1E4';
+	$red       = '#E4D1D1';
+	$cerise       = '#DD38B4'; // ok
+	$orange    = '#ff7d2d'; // ok
+	$yellow    = '#EEEADD';
+	$white     = '#FFFFFF';
+	$white_lilac = '#F6F7FC'; // ok
+
+	add_theme_support(
+		'editor-color-palette',
+		array(
+			array(
+				'name'  => esc_html__( 'Black', 'wayako' ),
+				'slug'  => 'black',
+				'color' => $black,
+			),
+			array(
+				'name'  => esc_html__( 'Dark gray', 'wayako' ),
+				'slug'  => 'dark-gray',
+				'color' => $dark_gray,
+			),
+			array(
+				'name'  => esc_html__( 'Gray', 'wayako' ),
+				'slug'  => 'gray',
+				'color' => $gray,
+			),
+			array(
+				'name'  => esc_html__( 'Green', 'wayako' ),
+				'slug'  => 'green',
+				'color' => $green,
+			),
+			array(
+				'name'  => esc_html__( 'Blue', 'wayako' ),
+				'slug'  => 'blue',
+				'color' => $blue,
+			),
+			array(
+				'name'  => esc_html__( 'Purple', 'wayako' ),
+				'slug'  => 'purple',
+				'color' => $purple,
+			),
+			array(
+				'name'  => esc_html__( 'Red', 'wayako' ),
+				'slug'  => 'red',
+				'color' => $red,
+			),
+			array(
+				'name'  => esc_html__( 'Cerise', 'wayako' ), // ok
+				'slug'  => 'cerise',
+				'color' => $cerise,
+			),
+			array(
+				'name'  => esc_html__( 'Orange', 'wayako' ), // ok
+				'slug'  => 'orange',
+				'color' => $orange,
+			),
+			array(
+				'name'  => esc_html__( 'Yellow', 'wayako' ),
+				'slug'  => 'yellow',
+				'color' => $yellow,
+			),
+			array(
+				'name'  => esc_html__( 'White', 'wayako' ),
+				'slug'  => 'white',
+				'color' => $white,
+			),
+			array(
+				'name'  => esc_html__( 'White Lilac', 'wayako' ), // ok
+				'slug'  => 'white-lilac',
+				'color' => $white_lilac,
+			),
+		)
+	);
+
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
 
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
-
 
 }
 add_action( 'after_setup_theme', 'wayako_setup' );

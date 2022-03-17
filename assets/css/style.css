@@ -1835,6 +1835,14 @@ input[type=submit]:focus-visible {
 /* Gutenberg native blocks */
 /* Colors variables */
 /* Generate Colors classes */
+.has-cerise-color {
+  color: #DD38B4;
+}
+
+.has-cerise-background-color {
+  background-color: #DD38B4;
+}
+
 .has-blue-1-color {
   color: #00558F;
 }
@@ -1868,11 +1876,11 @@ input[type=submit]:focus-visible {
 }
 
 .has-orange-color {
-  color: #f94213;
+  color: #ff7d2d;
 }
 
 .has-orange-background-color {
-  background-color: #f94213;
+  background-color: #ff7d2d;
 }
 
 .has-black-color {
@@ -1897,6 +1905,14 @@ input[type=submit]:focus-visible {
 
 .has-white-background-color {
   background-color: #FFFFFF;
+}
+
+.has-white-lilac-color {
+  color: #F6F7FC;
+}
+
+.has-white-lilac-background-color {
+  background-color: #F6F7FC;
 }
 
 /**/
