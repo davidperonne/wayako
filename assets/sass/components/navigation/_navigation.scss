@@ -1,4 +1,18 @@
 .main-navigation {
+    // Desktop
+    &:not(.toggled) {
+        //...
+    }
+    // Mobile
+    &.toggled {
+        //...
+    }
+}
+
+
+/**/
+
+.main-navigation:not(.toggled) {
     display: block;
     width: 100%;
     ul {
@@ -27,7 +41,7 @@
             a {
                 width: 200px;
             }
-            :hover>a,
+             :hover>a,
             .focus>a {}
             a:hover,
             a.focus {}
@@ -301,6 +315,7 @@
     border: none;
     background: transparent !important;
     padding: 1rem 1rem;
+    margin-left: auto;
     margin-right: 15px;
     &:focus,
     &:focus-visible {
