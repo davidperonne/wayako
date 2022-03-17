@@ -1,0 +1,61 @@
+/* Burger menu */
+
+.menu-toggle {
+    display: block;
+    @media (min-width: 768px) {
+        display: none;
+    }
+    border: none;
+    background: transparent !important;
+    padding: 1rem 1rem;
+    margin-left: auto;
+    margin-right: 15px;
+    &:focus,
+    &:focus-visible {
+        box-shadow: unset;
+        outline: var(--wayako-color1) auto 1px;
+    }
+    .icon-bar {
+        background-color: #19273F;
+        transform: rotate(0deg) translate(0px, 0px);
+        transition: ease all .2s;
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        +.icon-bar {
+            margin-top: 4px;
+            &:nth-child(2) {
+                width: 16px;
+                transition: ease all .2s;
+            }
+        }
+    }
+    &:hover>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+    }
+    &:active>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+    }
+}
+
+.main-navigation.toggled {
+    .menu-toggle {
+        .icon-bar {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 4px);
+                transition: ease all .2s;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transition: ease all .2s;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(4px, -4px);
+                transition: ease all .2s;
+            }
+        }
+    }
+}
