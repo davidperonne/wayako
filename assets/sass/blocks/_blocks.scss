@@ -35,14 +35,17 @@ $color in $colors {
     }
 }
 
-.wp-block-columns:not(.is-not-stacked-on-mobile).row-reverse {
-    flex-direction: row-reverse;
-    @media (min-width: 782px) {
-        &>.wp-block-column:last-child {
-            margin-left: 0;
-        }
-        &>.wp-block-column:first-child {
-            margin-left: var(--wp--style--block-gap, 2em);
+.wp-block-columns:not(.is-not-stacked-on-mobile) {
+    &.row-reverse {
+        flex-direction: row-reverse;
+        // Small tablet
+        @media (min-width: 600px) {
+            &>.wp-block-column:last-child {
+                margin-left: 0;
+            }
+            &>.wp-block-column:first-child {
+                margin-left: var(--wp--style--block-gap, 2em);
+            }
         }
     }
 }
@@ -184,12 +187,6 @@ $color in $colors {
     padding-top: 9.375rem;
     padding-bottom: 9.375rem;
     margin-bottom: 5rem;
-    .wp-block-columns {
-        //  margin-bottom: 0;
-        .wp-block-columns {
-            //  padding-right: 4rem;
-        }
-    }
 }
 
 
@@ -316,7 +313,7 @@ $color in $colors {
 }
 
 
-/**/
+/* is signature */
 
 .is-signature {
     font-size: 3.125rem;
@@ -325,7 +322,7 @@ $color in $colors {
 }
 
 
-/* Sticky */
+/* is sticky */
 
 @media screen and (min-width: 768px) {
     .wp-block-media-text__media.is-sticky,
