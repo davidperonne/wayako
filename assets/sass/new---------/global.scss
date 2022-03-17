@@ -1,0 +1,43 @@
+@charset 'utf-8';
+// Generic or settings
+@import "generic/normalize";
+@import "generic/reset";
+@import "generic/clearings";
+// Helpers
+@import 'helpers/animations';
+// Variables
+@import 'variables/colors';
+@import 'variables/font-family';
+@import 'variables/font-size';
+// Style components
+//@import 'components/components';
+// Accessibility
+@import 'base/accessibility';
+// Navigation
+@import 'navigation/burger';
+@import 'navigation/nav-mobile';
+@import 'navigation/nav-desktop';
+// Structure
+@import 'layout/general';
+@import 'layout/print';
+@import 'layout/typography';
+@import 'layout/site-header';
+@import 'layout/site-footer';
+@import 'layout/forms';
+@import 'layout/blog';
+// Global features
+@import 'features/to-top';
+//@import 'features/gallery';
+//@import 'features/lazyload';
+@import 'features/pagination';
+@import 'features/splide';
+// Views
+@import 'views/search';
+@import 'views/404';
+@import 'views/comments';
+// Gutenberg layout outside blocks
+//@import 'gutenberg/layout';
+// Gutenberg blocks
+//@import 'gutenberg/blocks';
+// Gutenberg formatting
+//@import 'gutenberg/formatting';
