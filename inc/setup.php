@@ -170,11 +170,54 @@ function wayako_setup() {
 		)
 	);
 
+
+		
+	add_theme_support( 'disable-custom-colors' );
+
+
+	add_theme_support( 'editor-font-sizes', array(
+		array(
+			'name' => esc_attr__( 'Small', 'themeLangDomain' ),
+			'size' => 12,
+			'slug' => 'small'
+		),
+		array(
+			'name' => esc_attr__( 'Regular', 'themeLangDomain' ),
+			'size' => 16,
+			'slug' => 'regular'
+		),
+		array(
+			'name' => esc_attr__( 'Large', 'themeLangDomain' ),
+			'size' => 36,
+			'slug' => 'large'
+		),
+		array(
+			'name' => esc_attr__( 'Huge', 'themeLangDomain' ),
+			'size' => 50,
+			'slug' => 'huge'
+		)
+	) );
+
+	// Disable custom font sizes.
+	add_theme_support( 'disable-custom-font-sizes' );
+
 	// Add support for responsive embedded content.
 	add_theme_support( 'responsive-embeds' );
 
 	// Add support for full and wide align images.
 	add_theme_support( 'align-wide' );
+
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+	//add_theme_support( 'dark-editor-style' );
+
+	// Enqueue editor styles.
+	add_editor_style( trailingslashit( get_template_directory_uri() ) . 'assets/css/editor-styles.css' );
+
+	// Add support padding controls
+	add_theme_support( 'custom-spacing' );
+
+	add_theme_support( 'wp-block-styles' );
 
 }
 add_action( 'after_setup_theme', 'wayako_setup' );

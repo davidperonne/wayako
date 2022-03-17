@@ -28,3 +28,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+
+
+
+// For speed ???
+//add_filter( 'should_load_separate_core_block_assets', '__return_true' );
