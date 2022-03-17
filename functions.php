@@ -233,6 +233,14 @@ function wayako_scripts() {
 	wp_enqueue_script( 'wayako-scripts', get_template_directory_uri() . '/assets/js/wayako.js', array(), _WAYAKO_VERSION, true );
 	wp_enqueue_script( 'wayako-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _WAYAKO_VERSION, true );
 
+
+
+//	wp_enqueue_script( 'gsap-scripts', get_template_directory_uri() . '/vendor/gsap3/gsap.min.js', array(), _WAYAKO_VERSION, false );
+//	wp_enqueue_script( 'scrollmagic-scripts', get_template_directory_uri() . '/vendor/scrollmagic/ScrollMagic.min.js', array(), _WAYAKO_VERSION, false );
+//	wp_enqueue_script( 'animation-gsap-scripts', get_template_directory_uri() . '/vendor/scrollmagic/plugins/animation.gsap.min.js', array(), _WAYAKO_VERSION, false );
+//	wp_enqueue_script( 'debug-addIndicators-scripts', get_template_directory_uri() . '/vendor/scrollmagic/plugins/debug.addIndicators.min.js', array(), _WAYAKO_VERSION, false );
+
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

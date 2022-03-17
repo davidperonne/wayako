@@ -23,35 +23,12 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wayako' ); ?></a>
 
 	<header id="masthead" class="site-header alignwide">
 
-		<div class="site-branding site-header__branding">
-			<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-				<img class="wayako-logo" src="<?php echo get_stylesheet_directory_uri() . '/assets/img/wayako-logo-2x.png'; ?>" alt="Wayako" width="200" height="60" />
-			</a>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">			
-			<button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
-				<span class="icon-bar top-bar"></span>
-				<span class="icon-bar middle-bar"></span>
-				<span class="icon-bar bottom-bar"></span>
-				<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'wayako' ); ?></span>
-			</button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'      => 'menu-wrapper main-menu',
-					'container_class' => 'primary-menu-container site-header__main-nav',
-					'fallback_cb'     => false,
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<?php get_template_part( 'template-parts/header/branding' ); ?>
+		<?php get_template_part( 'template-parts/header/navigation' ); ?>
 
 	</header><!-- #masthead -->
 
