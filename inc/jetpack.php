@@ -2,8 +2,6 @@
 /**
  * Jetpack Compatibility File
  *
- * @link https://jetpack.com/
- *
  * @package Wayako
  */
 

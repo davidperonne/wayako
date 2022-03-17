@@ -2,8 +2,6 @@
 /**
  * WooCommerce Compatibility File
  *
- * @link https://woocommerce.com/
- *
  * @package Wayako
  */
 
