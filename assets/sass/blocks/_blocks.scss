@@ -58,10 +58,6 @@ $color in $colors {
     &.alignwide {
         margin-top: 5rem;
         margin-bottom: 5rem;
-        /*  background-image: url('../img/dots1.png');
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 23rem;*/
         padding-top: 5rem;
         padding-bottom: 5rem;
         &:before {
@@ -117,9 +113,7 @@ $color in $colors {
         }
         // Used as a header
         &.is-header {
-            //  background-image: url('../img/dots1-circles.png');
             margin-top: 2rem;
-            /**/
             &:after {
                 content: '';
                 position: absolute;
@@ -177,16 +171,6 @@ $color in $colors {
             }
         }
     }
-}
-
-
-/* Section services */
-
-.services {
-    background-color: #F6F7FC;
-    padding-top: 9.375rem;
-    padding-bottom: 9.375rem;
-    margin-bottom: 5rem;
 }
 
 

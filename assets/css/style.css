@@ -1942,10 +1942,6 @@ input[type=submit]:focus-visible {
 .wp-block-media-text.alignwide {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  /*  background-image: url('../img/dots1.png');
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-size: 23rem;*/
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -2012,7 +2008,6 @@ input[type=submit]:focus-visible {
 
 .wp-block-media-text.alignwide.is-header {
   margin-top: 2rem;
-  /**/
 }
 
 .wp-block-media-text.alignwide.is-header:after {
@@ -2067,14 +2062,6 @@ input[type=submit]:focus-visible {
 
 .wp-block-button.is-style-fill .wp-block-button__link:hover {
   background-color: var(--wayako-color3);
-}
-
-/* Section services */
-.services {
-  background-color: #F6F7FC;
-  padding-top: 9.375rem;
-  padding-bottom: 9.375rem;
-  margin-bottom: 5rem;
 }
 
 /* Section call to action */
