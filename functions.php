@@ -7,10 +7,7 @@
  * @package Wayako
  */
 
-if ( ! defined( '_WAYAKO_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_WAYAKO_VERSION', '1.0.0' );
-}
+define( 'WAYAKO_VERSION', '1.0.0' );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -187,21 +184,9 @@ function wayako_setup() {
 add_action( 'after_setup_theme', 'wayako_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Widgets
  *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function wayako_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'wayako_content_width', 640 );
-}
-//add_action( 'after_setup_theme', 'wayako_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * @return void
  */
 function wayako_widgets_init() {
 	register_sidebar(
@@ -222,80 +207,31 @@ add_action( 'widgets_init', 'wayako_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wayako_scripts() {
-	//wp_enqueue_style( 'wayako-style-old', get_stylesheet_uri(), array(), _WAYAKO_VERSION );
-	//wp_style_add_data( 'wayako-style-old', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), _WAYAKO_VERSION );
-	wp_enqueue_style( 'wayako-custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), _WAYAKO_VERSION );
+	wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), WAYAKO_VERSION );
+	wp_enqueue_style( 'wayako-custom-styles', get_stylesheet_directory_uri() . '/assets/css/custom.css', array(), WAYAKO_VERSION );
 
 	//wp_enqueue_script( 'jquery' );
 
-	wp_enqueue_script( 'wayako-scripts', get_template_directory_uri() . '/assets/js/wayako.js', array(), _WAYAKO_VERSION, true );
-	wp_enqueue_script( 'wayako-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _WAYAKO_VERSION, true );
-
-
-
-//	wp_enqueue_script( 'gsap-scripts', get_template_directory_uri() . '/vendor/gsap3/gsap.min.js', array(), _WAYAKO_VERSION, false );
-//	wp_enqueue_script( 'scrollmagic-scripts', get_template_directory_uri() . '/vendor/scrollmagic/ScrollMagic.min.js', array(), _WAYAKO_VERSION, false );
-//	wp_enqueue_script( 'animation-gsap-scripts', get_template_directory_uri() . '/vendor/scrollmagic/plugins/animation.gsap.min.js', array(), _WAYAKO_VERSION, false );
-//	wp_enqueue_script( 'debug-addIndicators-scripts', get_template_directory_uri() . '/vendor/scrollmagic/plugins/debug.addIndicators.min.js', array(), _WAYAKO_VERSION, false );
-
+	wp_enqueue_script( 'wayako-scripts', get_template_directory_uri() . '/assets/js/wayako.js', array(), WAYAKO_VERSION, true );
+	wp_enqueue_script( 'wayako-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), WAYAKO_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-
-
 	if ( is_tax( 'portfolio_cat' ) ) {
 
-		wp_enqueue_script( 'isotope-scripts', get_template_directory_uri() . '/vendor/isotope/isotope.pkgd.min.js', array(), _WAYAKO_VERSION, true );
+		wp_enqueue_script( 'isotope-scripts', get_template_directory_uri() . '/vendor/isotope/isotope.pkgd.min.js', array(), WAYAKO_VERSION, true );
 	}
 
-
-
-
-
-
-	// Load critical styles in production.
+	// Load critical styles.
 	wp_register_style( 'wayako-critical-styles', '' );
 	wp_add_inline_style( 'wayako-critical-styles', wayako_get_font_face_styles() );
-	if ( false === WP_DEBUG ) {
-		// Only in production.
-	//	wp_add_inline_style( 'wayako-critical-styles', wayako_get_critical_style() );
-	}
 	wp_enqueue_style( 'wayako-critical-styles' );
-
 
 }
 add_action( 'wp_enqueue_scripts', 'wayako_scripts' );
-
-
-
-
-
-
-
-
-
-
-
-if ( ! function_exists( 'wayako_get_critical_style' ) ) :
-
-	/**
-	 * Load critical css file content function.
-	 *
-	 * @return void
-	 */
-	function wayako_get_critical_style() {
-
-		ob_start();
-		include_once get_template_directory() . '/assets/css/critical-style.min.css';
-		return ob_get_clean();
-	}
-
-endif;
-
 
 if ( ! function_exists( 'wayako_editor_styles' ) ) :
 
@@ -306,8 +242,7 @@ if ( ! function_exists( 'wayako_editor_styles' ) ) :
 	 */
 	function wayako_editor_styles() {
 
-		$theme_version = wp_get_theme()->get( 'Version' );
-		wp_enqueue_style( 'wayako-editor-styles', get_stylesheet_directory_uri() . '/assets/css/editor.min.css', array(), $theme_version );
+		wp_enqueue_style( 'wayako-editor-styles', get_template_directory_uri() . '/assets/css/editor.min.css', array(), WAYAKO_VERSION );
 
 		// Add styles inline.
 		wp_add_inline_style( 'wp-block-library', wayako_get_font_face_styles() );

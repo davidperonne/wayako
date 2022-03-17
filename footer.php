@@ -11,11 +11,8 @@
 
 ?>
 
-<?php /*
-			</main><!-- #main -->
-		</div><!-- #primary -->
+		</main><!-- #main -->
 	</div><!-- #content -->
-	*/ ?>
 
 	<footer id="colophon" class="site-footer">
 
@@ -28,7 +25,7 @@
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
- 
+
 <button class="scrollToTopBtn"><span class="screen-reader-text"><?php esc_html_e( 'To top', 'wayako' ); ?></span></button>
 
 <?php wp_footer(); ?>

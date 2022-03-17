@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'wayako_woocommerce_setup' );
  * @return void
  */
 function wayako_woocommerce_scripts() {
-	wp_enqueue_style( 'wayako-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _WAYAKO_VERSION );
+	wp_enqueue_style( 'wayako-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), WAYAKO_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {

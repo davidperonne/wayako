@@ -13,20 +13,12 @@
  */
 
 get_header();
-?>
 
-	<main id="content" class="site-main">
+while ( have_posts() ) :
+	the_post();
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+	get_template_part( 'template-parts/content', 'page' );
 
-			get_template_part( 'template-parts/content', 'page' );
+endwhile;
 
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
 get_footer();
