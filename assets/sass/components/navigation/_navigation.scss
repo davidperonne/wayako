@@ -69,13 +69,13 @@
 
 /* Small menu. */
 
-.menu-toggle,
+.nav-toggle,
 .main-navigation.toggled ul {
     display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-    .menu-toggle {
+    .nav-toggle {
         display: none;
     }
     .main-navigation ul {
@@ -307,7 +307,7 @@
 
 /* Burger menu */
 
-.menu-toggle {
+.nav-toggle {
     display: block;
     @media (min-width: 768px) {
         display: none;
@@ -349,7 +349,7 @@
 }
 
 .main-navigation.toggled {
-    .menu-toggle {
+    .nav-toggle {
         .icon-bar {
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 4px);

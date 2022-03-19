@@ -1,0 +1,15 @@
+/* Colors variables */
+
+$colors: ( cerise: #DD38B4, blue-1: #00558F, blue-2: #00476A, green-1: #0A99A7, green-2: #068799, orange: #ff7d2d, black: #000000, grey: #F6F7FC, white: #FFFFFF, white-lilac: #F6F7FC);
+
+/* Generate Colors classes */
+
+@each $name,
+$color in $colors {
+    .has-#{$name}-color {
+        color: $color;
+    }
+    .has-#{$name}-background-color {
+        background-color: $color;
+    }
+}

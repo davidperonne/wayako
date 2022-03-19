@@ -849,13 +849,13 @@ input[type=submit]:focus-visible {
 }
 
 /* Small menu. */
-.menu-toggle,
+.nav-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  .menu-toggle {
+  .nav-toggle {
     display: none;
   }
   .main-navigation ul {
@@ -1166,7 +1166,7 @@ input[type=submit]:focus-visible {
 }
 
 /* Burger menu */
-.menu-toggle {
+.nav-toggle {
   display: block;
   border: none;
   background: transparent !important;
@@ -1176,18 +1176,18 @@ input[type=submit]:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .menu-toggle {
+  .nav-toggle {
     display: none;
   }
 }
 
-.menu-toggle:focus, .menu-toggle:focus-visible {
+.nav-toggle:focus, .nav-toggle:focus-visible {
   -webkit-box-shadow: unset;
           box-shadow: unset;
   outline: var(--wayako-color1) auto 1px;
 }
 
-.menu-toggle .icon-bar {
+.nav-toggle .icon-bar {
   background-color: #19273F;
   -webkit-transform: rotate(0deg) translate(0px, 0px);
           transform: rotate(0deg) translate(0px, 0px);
@@ -1199,42 +1199,42 @@ input[type=submit]:focus-visible {
   border-radius: 1px;
 }
 
-.menu-toggle .icon-bar + .icon-bar {
+.nav-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 
-.menu-toggle .icon-bar + .icon-bar:nth-child(2) {
+.nav-toggle .icon-bar + .icon-bar:nth-child(2) {
   width: 16px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
-.menu-toggle:hover > .icon-bar:nth-child(2) {
+.nav-toggle:hover > .icon-bar:nth-child(2) {
   width: 22px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
-.menu-toggle:active > .icon-bar:nth-child(2) {
+.nav-toggle:active > .icon-bar:nth-child(2) {
   width: 22px;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
-.main-navigation.toggled .menu-toggle .icon-bar:nth-child(1) {
+.main-navigation.toggled .nav-toggle .icon-bar:nth-child(1) {
   -webkit-transform: rotate(45deg) translate(5px, 4px);
           transform: rotate(45deg) translate(5px, 4px);
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
-.main-navigation.toggled .menu-toggle .icon-bar:nth-child(2) {
+.main-navigation.toggled .nav-toggle .icon-bar:nth-child(2) {
   opacity: 0;
   -webkit-transition: ease all .2s;
   transition: ease all .2s;
 }
 
-.main-navigation.toggled .menu-toggle .icon-bar:nth-child(3) {
+.main-navigation.toggled .nav-toggle .icon-bar:nth-child(3) {
   -webkit-transform: rotate(-45deg) translate(4px, -4px);
           transform: rotate(-45deg) translate(4px, -4px);
   -webkit-transition: ease all .2s;

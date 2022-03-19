@@ -1,0 +1,35 @@
+/* tax-portfolio_cat */
+
+.tax-portfolio_cat {
+    header {
+        // position: relative;
+        direction: ltr;
+        display: grid;
+        grid-template-columns: 1fr 50%;
+        grid-template-rows: auto;
+        &.has-media-on-the-right {
+            .wp-block-media-text__media {
+                grid-column: 2;
+                grid-row: 1;
+            }
+            .wp-block-media-text__content {
+                grid-column: 1;
+                grid-row: 1;
+            }
+        }
+        .wp-block-media-text__content {
+            align-self: center;
+            direction: ltr;
+            grid-column: 2;
+            grid-row: 1;
+            padding: 0 8%;
+            word-break: break-word;
+        }
+    }
+    .grid {
+        .grid-item {
+            width: 33%;
+            padding: 1rem;
+        }
+    }
+}

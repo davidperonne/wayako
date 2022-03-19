@@ -11,6 +11,17 @@
 @import 'variables/font-size';
 // Style components
 //@import 'components/components';
+
+/* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
+
+//@import "04-elements/blockquote";
+@import "04-elements/forms";
+@import "04-elements/media";
+@import "04-elements/misc";
+@import "04-elements/links";
+
+/**/
+
 // Accessibility
 @import 'base/accessibility';
 // Navigation
@@ -25,19 +36,31 @@
 @import 'layout/site-footer';
 @import 'layout/forms';
 @import 'layout/blog';
+@import 'layout/portfolio-cat';
 // Global features
 @import 'features/to-top';
 //@import 'features/gallery';
 //@import 'features/lazyload';
 @import 'features/pagination';
+@import 'features/isotope';
 @import 'features/splide';
 // Views
 @import 'views/search';
 @import 'views/404';
 @import 'views/comments';
+// Gutenberg variables
+@import 'gutenberg/variables/colors';
 // Gutenberg layout outside blocks
 //@import 'gutenberg/layout';
 // Gutenberg blocks
-//@import 'gutenberg/blocks';
+@import 'gutenberg/blocks/button';
+@import 'gutenberg/blocks/columns';
+@import 'gutenberg/blocks/latest-posts';
+@import 'gutenberg/blocks/media-text';
 // Gutenberg formatting
-//@import 'gutenberg/formatting';
+@import 'gutenberg/formatting';
+// Plugins
+@import "plugins/complianz";
+@import "plugins/gdpr-data-request-form";
+@import "plugins/contact-form-7";
+@import "plugins/jetpack/infinite-scroll";
