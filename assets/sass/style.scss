@@ -1,20 +1,142 @@
-// Import variables and mixins.
-@import "abstracts/abstracts";
+@charset 'utf-8';
+
+/**/
+
+@import "01-settings/file-header";
+
+/* Categories 01 to 03 are the basics. */
+
+@import "01-settings/fonts";
+@import "01-settings/global";
+//@import "02-tools/mixins";
+//@import "02-tools/functions";
+@import "03-generic/normalize";
+//@import "03-generic/breakpoints";
+@import "03-generic/vertical-margins";
+@import "03-generic/reset";
+@import "03-generic/clearings";
+
+/* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
+
+//@import "04-elements/blockquote";
+@import "04-elements/buttons";
+@import "04-elements/forms";
+//@import "04-elements/media";
+//@import "04-elements/misc";
+//@import "04-elements/links";
+
+/* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
+
+//@import "05-blocks/blocks";
+@import "05-blocks/gutenberg";
+// todo...
+// Gutenberg variables
+@import 'gutenberg/variables/colors';
+// Gutenberg layout outside blocks
+//@import 'gutenberg/layout';
+// Gutenberg blocks
+@import 'gutenberg/blocks/button';
+@import 'gutenberg/blocks/columns';
+@import 'gutenberg/blocks/latest-posts';
+@import 'gutenberg/blocks/media-text';
+// Gutenberg formatting
+@import 'gutenberg/formatting';
+
+/* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
+
+@import "06-components/header";
+@import "06-components/footer";
+//@import "06-components/single";
+@import "06-components/posts-and-pages";
+//@import "06-components/entry";
+//@import "06-components/archives";
+@import "06-components/404";
+@import "06-components/search";
+@import "06-components/comments";
+@import "06-components/navigation";
+//@import "06-components/footer-navigation";
+@import "06-components/pagination";
+@import "06-components/widgets";
+
+/* Category 07 is for any utility classes that are not assigned to a specific component. */
+
+@import "07-utilities/accessibility";
+@import "07-utilities/color-palette";
+//@import "07-utilities/measure";
+//@import "07-utilities/ie";
+
+/* Plugins */
+
+@import "08-plugins/complianz";
+@import "08-plugins/gdpr-data-request-form";
+@import "08-plugins/contact-form-7";
+//@import "08-plugins/jetpack/infinite-scroll";
+//@import "08-plugins/woocommerce/woocommerce";
+
+/**/
+
+// Generic or settings
 @import "generic/normalize";
-@import "generic/box-sizing";
-@import "base/base";
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-@import "layouts/portfolio-cat";
-@import "components/components";
+@import "generic/reset";
+@import "generic/clearings";
+// Helpers
+@import 'helpers/animations';
+// Variables
+@import 'variables/colors';
+@import 'variables/font-family';
+@import 'variables/font-size';
+// Style components
+//@import 'components/components';
+
+/* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
+
+//@import "04-elements/blockquote";
+@import "04-elements/forms";
+@import "04-elements/media";
+@import "04-elements/misc";
+@import "04-elements/links";
+
+/**/
+
+// Accessibility
+@import 'base/accessibility';
+// Navigation
+@import 'navigation/burger';
+@import 'navigation/nav-mobile';
+@import 'navigation/nav-desktop';
+// Structure
+@import 'layout/general';
+@import 'layout/print';
+@import 'layout/typography';
+@import 'layout/site-header';
+@import 'layout/site-footer';
+@import 'layout/forms';
+@import 'layout/blog';
+@import 'layout/portfolio-cat';
+// Global features
+@import 'features/to-top';
+//@import 'features/gallery';
+//@import 'features/lazyload';
+@import 'features/pagination';
+@import 'features/isotope';
+@import 'features/splide';
+// Views
+@import 'views/search';
+@import 'views/404';
+@import 'views/comments';
+// Gutenberg variables
+@import 'gutenberg/variables/colors';
+// Gutenberg layout outside blocks
+//@import 'gutenberg/layout';
+// Gutenberg blocks
+@import 'gutenberg/blocks/button';
+@import 'gutenberg/blocks/columns';
+@import 'gutenberg/blocks/latest-posts';
+@import 'gutenberg/blocks/media-text';
+// Gutenberg formatting
+@import 'gutenberg/formatting';
+// Plugins
 @import "plugins/complianz";
 @import "plugins/gdpr-data-request-form";
 @import "plugins/contact-form-7";
 @import "plugins/jetpack/infinite-scroll";
-@import "vendor/splide";
-
-/* Utilities */
-
-@import "utilities/accessibility";
-@import "utilities/alignments";
-@import "blocks/blocks";
