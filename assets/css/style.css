@@ -693,8 +693,14 @@ input[type=submit]:focus-visible {
   font-weight: 500;
   letter-spacing: 1px;
   padding: 16px 32px 16px 32px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+  -webkit-transform: translate3d(0, -3px, 0);
+          transform: translate3d(0, -3px, 0);
+  -webkit-box-shadow: 0 15px 30px -10px rgba(3, 37, 162, 0.55);
+          box-shadow: 0 15px 30px -10px rgba(3, 37, 162, 0.55);
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
