@@ -38,6 +38,19 @@ textarea {
 }
 
 /**/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #404040;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/**/
 h1,
 h2,
 h3,
@@ -602,6 +615,75 @@ input[type=submit]:hover {
 
 input[type=submit]:focus-visible {
   outline: var(--wayako-color1) auto 1px;
+}
+
+/* .card */
+.card {
+  text-decoration: none;
+}
+
+.card figure {
+  position: relative;
+  width: 100%;
+  padding-bottom: 70%;
+  border-radius: 1rem;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.card figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.card figure figcaption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  padding: 2rem;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+}
+
+.card figure figcaption h3 {
+  color: white;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.card figure figcaption p {
+  color: white;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card:hover figcaption {
+  opacity: 1;
+  background-color: rgba(255, 125, 45, 0.75);
 }
 
 /* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
