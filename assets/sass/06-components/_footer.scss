@@ -16,9 +16,11 @@
         }
     }
     .wp-block-separator {
-        border-top: unset;
-        border-bottom: unset;
+        //  border-top: unset;
+        //   border-bottom: unset;
         background-color: var(--wayako-gray1);
+        border-color: var(--wayako-gray1);
+        opacity: 1;
     }
     .footer-title {
         color: var(--wayako-color2);
@@ -48,6 +50,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-top: 1.5rem;
         margin-bottom: 0;
         .wp-block-column {
             display: flex;

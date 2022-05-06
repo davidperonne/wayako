@@ -101,3 +101,11 @@ if (document.querySelector('.fade-down')) {
 
     fadeDownTriggers.forEach(addScrollClass);
 }
+
+
+if (document.querySelector('.is-style-header')) {
+
+    const fadeMediaTextTriggers = document.querySelectorAll(".is-style-header");
+
+    fadeMediaTextTriggers.forEach(addScrollClass);
+}

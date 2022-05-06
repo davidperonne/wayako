@@ -29,3 +29,22 @@
 .fade-left {
     transform: translateX(100%);
 }
+
+
+/* media-text header animation */
+
+.wp-block-media-text {
+    &.is-style-header {
+        figure {
+            opacity: 0;
+            transition: all 1.25s ease-out;
+            transform: translateX(100%);
+        }
+        &.visible {
+            figure {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+}

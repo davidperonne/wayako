@@ -18,8 +18,8 @@
   content: '';
   position: absolute;
   top: 50%;
-  background-image: url("../img/dots1.png");
-  background-repeat: no-repeat;
+  background-image: url("../img/dots2.png");
+  background-repeat: repeat-y;
   background-position: left center;
   background-size: 100%;
   width: 20rem;
@@ -32,7 +32,7 @@
   position: relative;
   width: 100%;
   padding-bottom: 66%;
-  border-radius: 0.5rem 15rem 15rem 15rem;
+  border-radius: 0.5rem 18rem 18rem 18rem;
   overflow: hidden;
   z-index: 1;
 }
@@ -70,12 +70,20 @@
 }
 
 .wp-block-media-text.alignwide.has-media-on-the-right figure {
-  border-radius: 15rem 0.5rem 15rem 15rem;
+  border-radius: 18rem 0.5rem 18rem 18rem;
   z-index: 1;
 }
 
 .wp-block-media-text.alignwide.is-style-header {
   margin-top: 2rem;
+}
+
+.wp-block-media-text.alignwide.is-style-header h1 {
+  margin-bottom: 1.5rem;
+}
+
+.wp-block-media-text.alignwide.is-style-header .sub-title {
+  font-weight: 500;
 }
 
 .wp-block-media-text.alignwide.is-style-header:after {
