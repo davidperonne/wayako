@@ -50,3 +50,54 @@ function scrollToTop() {
 }
 
 /**/
+
+
+
+
+
+/* ScrollTrigger */
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+
+// Animations
+function addScrollClass(element, index) {
+
+    ScrollTrigger.create({
+        trigger: element,
+        start: "top 80%",
+        toggleClass: "visible",
+        once: true,
+        //markers: true
+    });
+}
+
+
+if (document.querySelector('.fade-right')) {
+
+    const fadeRightTriggers = document.querySelectorAll(".fade-right");
+
+    fadeRightTriggers.forEach(addScrollClass);
+}
+
+if (document.querySelector('.fade-left')) {
+
+    const fadeLeftTriggers = document.querySelectorAll(".fade-left");
+
+    fadeLeftTriggers.forEach(addScrollClass);
+}
+
+if (document.querySelector('.fade-up')) {
+
+    const fadeUpTriggers = document.querySelectorAll(".fade-up");
+
+    fadeUpTriggers.forEach(addScrollClass);
+}
+
+if (document.querySelector('.fade-down')) {
+
+    const fadeDownTriggers = document.querySelectorAll(".fade-down");
+
+    fadeDownTriggers.forEach(addScrollClass);
+}

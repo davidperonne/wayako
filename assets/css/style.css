@@ -1894,6 +1894,44 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
   outline: 0;
 }
 
+/* Animations */
+/* ScrollTrigger */
+.fade-up,
+.fade-right,
+.fade-left {
+  opacity: 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.fade-up.visible,
+.fade-right.visible,
+.fade-left.visible {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.fade-up {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.fade-down {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.fade-right {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.fade-left {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
 /* Plugins */
 /* Complianz */
 .cmplz-show-banner {

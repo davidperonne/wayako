@@ -1,0 +1,31 @@
+/* Animations */
+
+
+/* ScrollTrigger */
+
+.fade-up,
+.fade-right,
+.fade-left {
+    opacity: 0;
+    transition: all 0.5s linear;
+    &.visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fade-up {
+    transform: translateY(100%);
+}
+
+.fade-down {
+    transform: translateY(-100%);
+}
+
+.fade-right {
+    transform: translateX(-100%);
+}
+
+.fade-left {
+    transform: translateX(100%);
+}

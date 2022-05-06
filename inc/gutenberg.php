@@ -40,3 +40,12 @@ register_block_style(
 );
 // CSS class on media-text block: .is-style-header
 
+/* Register a block style for button block */
+register_block_style(
+	'core/button',
+	array(
+		'name'  => 'play-button',
+		'label' => esc_html__( 'Play button', 'wayako' ),
+	)
+);
+// CSS class on button block: .is-style-play-button
