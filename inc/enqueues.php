@@ -9,6 +9,7 @@
  * Enqueue scripts and styles.
  */
 function wayako_scripts() {
+
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style( 'wayako-styles', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array(), $theme_version );
@@ -48,6 +49,8 @@ if ( ! function_exists( 'wayako_editor_styles' ) ) :
 	 * @return void
 	 */
 	function wayako_editor_styles() {
+
+		$theme_version = wp_get_theme()->get( 'Version' );
 
 		wp_enqueue_style( 'wayako-editor-styles', get_template_directory_uri() . '/assets/css/editor.min.css', array(), $theme_version );
 
