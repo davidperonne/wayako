@@ -1,4 +1,4 @@
-//register a block variation
+//register a block variation ( buttons as test ! )
 wp.blocks.registerBlockVariation(
     'core/buttons', {
         name: 'wide-button',

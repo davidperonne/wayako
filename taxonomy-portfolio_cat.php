@@ -13,7 +13,7 @@ get_header();
 
 <div class="alignwide">
 
-	<header class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-header">
+	<header class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-style-header">
 		<figure class="wp-block-media-text__media">
 			<img loading="lazy" width="1024" height="683" src="https://www.wayako.local/wp-content/uploads/2022/02/beautiful-curly-young-woman-photographer-using-lap-P9WZ8WF-1024x683-1.jpg" alt="" class="wp-image-149 size-full" srcset="https://www.wayako.local/wp-content/uploads/2022/02/beautiful-curly-young-woman-photographer-using-lap-P9WZ8WF-1024x683-1.jpg 1024w, https://www.wayako.local/wp-content/uploads/2022/02/beautiful-curly-young-woman-photographer-using-lap-P9WZ8WF-1024x683-1-300x200.jpg 300w, https://www.wayako.local/wp-content/uploads/2022/02/beautiful-curly-young-woman-photographer-using-lap-P9WZ8WF-1024x683-1-768x512.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px">
 		</figure>

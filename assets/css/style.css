@@ -969,11 +969,11 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
   z-index: 1;
 }
 
-.wp-block-media-text.alignwide.is-header {
+.wp-block-media-text.alignwide.is-style-header {
   margin-top: 2rem;
 }
 
-.wp-block-media-text.alignwide.is-header:after {
+.wp-block-media-text.alignwide.is-style-header:after {
   content: '';
   position: absolute;
   top: 60%;
@@ -989,7 +989,7 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
   z-index: 0;
 }
 
-.wp-block-media-text.alignwide.is-header figure {
+.wp-block-media-text.alignwide.is-style-header figure {
   padding-bottom: 70%;
 }
 

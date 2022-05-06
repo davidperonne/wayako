@@ -30,7 +30,7 @@ wp.blocks.registerBlockStyle( 'core/media-text', {
 
 /* BLOCK STYLES (php) */
 
- /* Register a block style for media-text block */
+/* Register a block style for media-text block */
 register_block_style(
 	'core/media-text',
 	array(
@@ -38,5 +38,5 @@ register_block_style(
 		'label' => esc_html__( 'Header', 'wayako' ),
 	)
 );
-// CSS class on Madia text block: .is-style-header
+// CSS class on media-text block: .is-style-header
 
