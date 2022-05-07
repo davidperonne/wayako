@@ -23,15 +23,18 @@ function wayako_scripts() {
 	wp_enqueue_script( 'gsap-scripts', get_template_directory_uri() . '/vendor/gsap3/gsap.min.js', array(), $theme_version, false );
 	wp_enqueue_script( 'gsap-scrolltrigger-scripts', get_template_directory_uri() . '/vendor/gsap3/ScrollTrigger.min.js', array(), $theme_version, false );
 
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_tax( 'portfolio_cat' ) ) {
-
 		wp_enqueue_script( 'isotope-scripts', get_template_directory_uri() . '/vendor/isotope/isotope.pkgd.min.js', array(), $theme_version, true );
 	}
+
+/*	if ( is_single() && 'portfolio' == get_post_type() ) {
+		wp_enqueue_style( 'glightbox-styles', get_template_directory_uri() . '/vendor/glightbox/css/glightbox.min.css', array(), $theme_version );
+		wp_enqueue_script( 'glightbox-scripts', get_template_directory_uri() . '/vendor/glightbox/js/glightbox.min.js', array(), $theme_version, true );
+	}*/
 
 	// Load critical styles.
 	wp_register_style( 'wayako-critical-styles', '' );

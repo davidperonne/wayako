@@ -109,3 +109,30 @@ if (document.querySelector('.is-style-header')) {
 
     fadeMediaTextTriggers.forEach(addScrollClass);
 }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+
+    /* GLightbox Image pure js */
+    /*
+        (function() {
+            // const glightboxImage = document.querySelector('.glightbox-image');
+            const glightboxImage = document.querySelector('.glightbox-image');
+
+            if (!glightboxImage) {
+                return;
+            }
+
+            const lightboxImage = GLightbox({
+                selector: ".glightbox-image",
+                touchNavigation: true
+            });
+
+        }());*/
+
+
+});
