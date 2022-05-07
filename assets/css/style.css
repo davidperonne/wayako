@@ -648,6 +648,8 @@ input[type=submit]:focus-visible {
   border-radius: 1rem;
   margin-bottom: 0;
   overflow: hidden;
+  -webkit-box-shadow: 0 0 20px 0 #eeeeee;
+          box-shadow: 0 0 20px 0 #eeeeee;
 }
 
 .card figure img {
