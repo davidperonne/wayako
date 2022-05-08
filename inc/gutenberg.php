@@ -49,3 +49,38 @@ register_block_style(
 	)
 );
 // CSS class on button block: .is-style-play-button
+
+
+
+if ( ! function_exists( 'hd_testimonials_register_testimonials_block_styles' ) ) :
+
+	/**
+	 * Register some default block editor styles for this block.
+	 *
+	 * @return void
+	 */
+	function hd_testimonials_register_testimonials_block_styles() {
+
+		// CSS class on media-text block: .is-style-header.
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'play-button',
+				'label' => esc_html__( 'Play button', 'wayako' ),
+			)
+		);
+
+		// CSS class on button block: .is-style-play-button.
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'play-button',
+				'label' => esc_html__( 'Play button', 'wayako' ),
+			)
+		);
+
+	}
+
+endif;
+// Is not init ?????
+//add_action( 'init', 'hd_testimonials_register_testimonials_block_styles' );
