@@ -38,6 +38,45 @@ if ( class_exists( 'WooCommerce' ) ) {
 //add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 
+// Debug log.
+if ( ! function_exists( 'write_log' ) ) {
+
+	function write_log( $log ) {
+		if ( true === WP_DEBUG ) {
+			if ( is_array( $log ) || is_object( $log ) ) {
+				error_log( print_r( $log, true ) );
+			} else {
+				error_log( $log );
+			}
+		}
+	}
+
+}
 
 
+add_filter( 'seopress_pro_breadcrumbs_crumbs', 'wayako_sp_pro_breadcrumbs_crumbs' );
+
+/**
+ * Add element to breadcrumb when is singular portfolio.
+ *
+ * @param [type] $crumbs
+ * @return void
+ */
+function wayako_sp_pro_breadcrumbs_crumbs( $crumbs ) {
+
+	if ( is_singular( 'portfolio' ) ) :
+
+		$breadcrumbs = array(
+			array(
+				'Portfolio',
+				site_url( '/portfolio/' ),
+			),
+		);
+
+		array_splice( $crumbs, 1, -2, $breadcrumbs );
+
+	endif;
+
+	return $crumbs;
+}
 
