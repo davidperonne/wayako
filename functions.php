@@ -17,28 +17,37 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/gutenberg.php';
 
 /**
+ * Load Wayako Core compatibility file.
+ */
+if ( defined( 'WAYAKO_CORE_VERSION' ) ) {
+	require get_template_directory() . '/inc/plugins/wayako-core.php';
+}
+
+/**
+ * Load SeoPress Pro compatibility file.
+ */
+if ( defined( 'SEOPRESS_PRO_VERSION' ) ) {
+	require get_template_directory() . '/inc/plugins/seopress-pro.php';
+}
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require get_template_directory() . '/inc/plugins/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+	require get_template_directory() . '/inc/plugins/woocommerce.php';
 }
 
 
 
 
-
-// For speed ???
-//add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-
-
-// Debug log.
+// Debug log. ----> Wayako Core
 if ( ! function_exists( 'write_log' ) ) {
 
 	function write_log( $log ) {
@@ -51,32 +60,5 @@ if ( ! function_exists( 'write_log' ) ) {
 		}
 	}
 
-}
-
-
-add_filter( 'seopress_pro_breadcrumbs_crumbs', 'wayako_sp_pro_breadcrumbs_crumbs' );
-
-/**
- * Add element to breadcrumb when is singular portfolio.
- *
- * @param [type] $crumbs
- * @return void
- */
-function wayako_sp_pro_breadcrumbs_crumbs( $crumbs ) {
-
-	if ( is_singular( 'portfolio' ) ) :
-
-		$breadcrumbs = array(
-			array(
-				'Portfolio',
-				site_url( '/portfolio/' ),
-			),
-		);
-
-		array_splice( $crumbs, 1, -2, $breadcrumbs );
-
-	endif;
-
-	return $crumbs;
 }
 
