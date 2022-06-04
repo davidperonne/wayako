@@ -7,16 +7,10 @@
 
 get_header();
 
-if ( 'post' === get_post_type() && is_single() ) :
-
-	get_template_part( 'global-templates/hero' );
-
-endif;
-
 while ( have_posts() ) :
 	the_post();
 
-	get_template_part( 'template-parts/content', get_post_type() );
+	get_template_part( 'template-parts/content', 'portfolio' );
 
 	the_post_navigation(
 		array(
