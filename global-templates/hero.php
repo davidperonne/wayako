@@ -16,23 +16,17 @@ defined( 'ABSPATH' ) || exit;
 
 		<p class="hero__sub-title"><?php //echo esc_html( $sub_title ); ?></p>
 
-		<h1 class="hero__title entry-title"><?php echo get_the_title(); ?></h1>
-
-
-
 		<?php
 
 		if ( is_front_page() && is_home() ) :
 
 			// Default homepage.
-			the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
+			//the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
 
 		elseif ( is_front_page() ) :
 
 			// Static homepage.
-			//the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
-
-			echo '<h1 id="entry-title" class="entry-title"> ' . get_bloginfo('title') . ' <span>' . get_the_title() . '</span></h1>';
+			//echo '<h1 id="entry-title" class="entry-title"> ' . get_bloginfo('title') . ' <span>' . get_the_title() . '</span></h1>';
 
 		elseif ( is_home() ) :
 
@@ -42,18 +36,18 @@ defined( 'ABSPATH' ) || exit;
 		elseif ( 'post' === get_post_type() && is_single() ) :
 
 			// Blog single page.
-			echo '<div id="entry-title" class="h1 entry-title">' . esc_html__( 'Nouvelles', 'wayako' ) . '</div>';
+			the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
 
 		elseif ( is_category() ) :
 
 			// Blog category page.
-			the_archive_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
-			the_archive_description( '<div class="archive-description">', '</div>' );
+		//	the_archive_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
+		//	the_archive_description( '<div class="archive-description">', '</div>' );
 
 		else :
 
 			// Everything else.
-			the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
+		//	the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
 
 		endif;
 		?>

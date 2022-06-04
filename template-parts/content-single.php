@@ -9,6 +9,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'alignwide' ); ?>>
 
+	<?php wayako_post_thumbnail(); ?>
+
 	<div class="entry-content">
 		<?php
 		the_content(
@@ -38,4 +40,5 @@
 	<footer class="entry-footer">
 		<?php wayako_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -5,6 +5,9 @@
  * @package Wayako
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
@@ -15,58 +18,89 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments-area alignwide" id="comments">
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
+	<?php if ( have_comments() ) : ?>
+
 		<h2 class="comments-title">
+
 			<?php
-			$wayako_comment_count = get_comments_number();
-			if ( '1' === $wayako_comment_count ) {
+			$comments_number = get_comments_number();
+			if ( 1 === (int) $comments_number ) {
 				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wayako' ),
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+					esc_html__( '%s comment', 'wayako' ),
+					$comments_number
 				);
 			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wayako_comment_count, 'comments title', 'wayako' ) ),
-					number_format_i18n( $wayako_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+				printf(
+					esc_html__( '%s comments', 'wayako' ),
+					$comments_number
 				);
 			}
 			?>
+
 		</h2><!-- .comments-title -->
 
-		<?php the_comments_navigation(); ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
+
+			<nav class="comment-navigation" id="comment-nav-above">
+
+				<h1 class="visually-hidden"><?php esc_html_e( 'Comment navigation', 'wayako' ); ?></h1>
+
+				<?php if ( get_previous_comments_link() ) { ?>
+					<div class="nav-previous">
+						<?php previous_comments_link( __( '&larr; Older Comments', 'wayako' ) ); ?>
+					</div>
+				<?php } ?>
+
+				<?php	if ( get_next_comments_link() ) { ?>
+					<div class="nav-next">
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'wayako' ) ); ?>
+					</div>
+				<?php } ?>
+
+			</nav><!-- #comment-nav-above -->
+
+		<?php endif; // Check for comment navigation. ?>
 
 		<ol class="comment-list">
+
 			<?php
 			wp_list_comments(
 				array(
 					'style'      => 'ol',
 					'short_ping' => true,
+					'callback'   => 'wayako_comments'
 				)
 			);
 			?>
+
 		</ol><!-- .comment-list -->
 
-		<?php
-		the_comments_navigation();
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wayako' ); ?></p>
-			<?php
-		endif;
+			<nav class="comment-navigation" id="comment-nav-below">
 
-	endif; // Check for have_comments().
+				<h1 class="visually-hidden"><?php esc_html_e( 'Comment navigation', 'wayako' ); ?></h1>
 
-	comment_form();
-	?>
+				<?php if ( get_previous_comments_link() ) { ?>
+					<div class="nav-previous">
+						<?php previous_comments_link( __( '&larr; Older Comments', 'wayako' ) ); ?>
+					</div>
+				<?php } ?>
+
+				<?php if ( get_next_comments_link() ) { ?>
+					<div class="nav-next">
+						<?php next_comments_link( __( 'Newer Comments &rarr;', 'wayako' ) ); ?>
+					</div>
+				<?php } ?>
+
+			</nav><!-- #comment-nav-below -->
+
+		<?php endif; // Check for comment navigation. ?>
+
+	<?php endif; // End of if have_comments(). ?>
+
+	<?php comment_form(); // Render comments form. ?>
 
 </div><!-- #comments -->

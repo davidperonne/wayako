@@ -1,0 +1,66 @@
+/* Posts */
+
+.blog,
+.archive {
+    .post-content {
+        padding: 100px 0;
+    }
+    .grid {
+        display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+        margin-bottom: 2rem;
+        @media (min-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 62px rgba(0, 0, 0, 0.09);
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+    .post-thumbnail {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .3s;
+        }
+        .meta {
+            /*   position: absolute;
+            bottom: 30px;
+            left: 40px;*/
+        }
+    }
+    .entry-content {
+        /* padding: 40px;
+        background-color: #fff;*/
+        .entry-title {
+            //   transition: .3s;
+        }
+        a:hover {
+            .entry-title {
+                // color: var(--color-primary-hover);
+            }
+        }
+    }
+}
