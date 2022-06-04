@@ -14,8 +14,8 @@ while ( have_posts() ) :
 
 	the_post_navigation(
 		array(
-			'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'wayako' ) . '</span> <span class="nav-title">%title</span>',
-			'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'wayako' ) . '</span> <span class="nav-title">%title</span>',
+			'prev_text' => '<span class="nav-subtitle">' . esc_html__( ' < ', 'wayako' ) . '</span> <span class="nav-title">%title</span>',
+			'next_text' => '<span class="nav-subtitle"><span class="nav-title">%title</span>' . esc_html__( ' > ', 'wayako' ) . '</span>',
 		)
 	);
 

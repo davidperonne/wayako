@@ -1,0 +1,12 @@
+/* Pagination */
+
+.site-main .post-navigation {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    max-width: calc(100vw - calc(2 * 2rem));
+    @media (min-width: 1200px) {
+        //   max-width: 1200px;
+        max-width: 1140px;
+    }
+}

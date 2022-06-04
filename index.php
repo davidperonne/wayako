@@ -7,6 +7,16 @@
 
 get_header();
 
+
+if ( is_home() ) :
+
+	get_template_part( 'global-templates/hero' );
+
+endif;
+
+
+
+
 if ( have_posts() ) :
 
 	while ( have_posts() ) :
@@ -16,7 +26,7 @@ if ( have_posts() ) :
 
 	endwhile;
 
-	the_posts_navigation();
+	wayako_pagination();
 
 else :
 

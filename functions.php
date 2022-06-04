@@ -15,6 +15,7 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/enqueues.php';
+require get_template_directory() . '/inc/pagination.php';
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/gutenberg.php';
