@@ -1,0 +1,12 @@
+/* A classer */
+
+.wp-block-tag-cloud {
+    .tag-cloud-link {
+        color: #0f0e0f;
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+            color: var(--wayako-color1);
+        }
+    }
+}

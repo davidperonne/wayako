@@ -1,10 +1,13 @@
-/* a revoir */
-
-
 /* Forms */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
 
 input[type=text],
 input[type=email] {
+    width: 100%;
     border: solid var(--wayako-gray1) 1px;
     border-radius: 1.025rem;
     padding: 11px 31px;
@@ -14,6 +17,7 @@ input[type=email] {
 }
 
 textarea {
+    width: 100%;
     border: solid var(--wayako-gray1) 1px;
     border-radius: 1.025rem;
     padding: 11px 31px;
@@ -64,6 +68,7 @@ input[type=submit] {
     letter-spacing: 1px;
     padding: 16px 32px 16px 32px;
     transition: all .3s;
+    cursor: pointer;
     &:hover {
         background-color: var(--wayako-color3);
     }

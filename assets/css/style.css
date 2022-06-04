@@ -559,10 +559,15 @@ input[type="submit"] {
   padding: 0.6em 1em 0.4em;
 }
 
-/* a revoir */
 /* Forms */
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
 input[type=text],
 input[type=email] {
+  width: 100%;
   border: solid var(--wayako-gray1) 1px;
   border-radius: 1.025rem;
   padding: 11px 31px;
@@ -574,6 +579,7 @@ input[type=email]:focus-visible {
 }
 
 textarea {
+  width: 100%;
   border: solid var(--wayako-gray1) 1px;
   border-radius: 1.025rem;
   padding: 11px 31px;
@@ -626,6 +632,7 @@ input[type=submit] {
   padding: 16px 32px 16px 32px;
   -webkit-transition: all .3s;
   transition: all .3s;
+  cursor: pointer;
 }
 
 input[type=submit]:hover {
@@ -1885,6 +1892,18 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
           transform: translateY(0);
 }
 
+/**/
+/* A classer */
+.wp-block-tag-cloud .tag-cloud-link {
+  color: #0f0e0f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.wp-block-tag-cloud .tag-cloud-link:hover {
+  color: var(--wayako-color1);
+}
+
 /* Category 07 is for any utility classes that are not assigned to a specific component. */
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -1991,6 +2010,53 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
 
 /* GDPR Data Request Form */
 /* Contact Form 7 */
+.wpcf7 .required-text {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.wpcf7 .required {
+  color: var(--wayako-color1);
+}
+
+.wpcf7 .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .wpcf7 .form-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+.wpcf7 .form-group {
+  margin-bottom: 1rem;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+  font-size: 14px;
+  padding-left: 1.5rem;
+}
+
+.wpcf7 .notice-rgpd {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
 .wpcf7-not-valid-tip {
   font-size: .875rem;
 }

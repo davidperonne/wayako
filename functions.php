@@ -9,6 +9,9 @@
 
 define( 'WAYAKO_VERSION', '1.0.0' );
 
+// Remove <p> Tag From Contact Form 7.
+add_filter( 'wpcf7_autop_or_not', '__return_false' );
+
 require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/enqueues.php';

@@ -1,5 +1,36 @@
 /* Contact Form 7 */
 
+.wpcf7 {
+    .required-text {
+        font-size: 14px;
+        font-style: italic;
+    }
+    .required {
+        color: var(--wayako-color1);
+    }
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media (min-width: 992px) {
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+    }
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    .wpcf7-not-valid-tip {
+        font-size: 14px;
+        padding-left: 1.5rem;
+    }
+    .notice-rgpd {
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+}
+
 .wpcf7-not-valid-tip {
     font-size: .875rem;
 }
