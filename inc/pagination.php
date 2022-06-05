@@ -59,7 +59,7 @@ if ( ! function_exists( 'wayako_pagination' ) ) {
 
 /**/
 
-/*
+
 if ( ! function_exists( 'wayako_nav' ) ) {
 
 	/**
@@ -67,10 +67,10 @@ if ( ! function_exists( 'wayako_nav' ) ) {
 	 *
 	 * @return void
 	 */
-/*	function wayako_nav() {
+	function wayako_nav() {
 		?>
 
-		<nav class="prev-next-navigation">
+		<nav class="prev-next-navigation alignwide">
 			<h2 class="screen-reader-text">Navigation</h2>
 			<div class="nav-links">
 
@@ -97,4 +97,4 @@ if ( ! function_exists( 'wayako_nav' ) ) {
 
 		<?php
 	}
-}*/
+}

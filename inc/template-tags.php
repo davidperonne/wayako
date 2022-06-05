@@ -124,7 +124,7 @@ if ( ! function_exists( 'wayako_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
+			<div class="post-thumbnail alignwide">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 

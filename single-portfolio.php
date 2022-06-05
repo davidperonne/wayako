@@ -50,6 +50,7 @@ while ( have_posts() ) :
 
 	//get_template_part( 'template-parts/content', 'portfolio' );
 
+	// remplacer par wayako_nav()
 	the_post_navigation(
 		array(
 			'prev_text' => '<span class="nav-subtitle"><span class="post-navigation__prev--label">' . esc_html__( 'Previous', 'wayako' ) . '</span> <span class="nav-title">%title</span></span>',
