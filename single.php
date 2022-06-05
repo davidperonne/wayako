@@ -7,17 +7,18 @@
 
 get_header();
 
-if ( 'post' === get_post_type() && is_single() ) :
+//if ( 'post' === get_post_type() && is_single() ) :
 
 	get_template_part( 'global-templates/hero' );
 
-endif;
+//endif;
 
 while ( have_posts() ) :
 	the_post();
 
 	get_template_part( 'template-parts/content', 'single' );
 
+	//wayako_nav(); // TODO
 	the_post_navigation(
 		array(
 			'prev_text' => '<span class="nav-subtitle"><span class="post-navigation__prev--label">' . esc_html__( 'Previous', 'wayako' ) . '</span> <span class="nav-title">%title</span></span>',

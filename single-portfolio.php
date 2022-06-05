@@ -7,10 +7,48 @@
 
 get_header();
 
+//if ( 'post' === get_post_type() && is_single() ) :
+
+	get_template_part( 'global-templates/hero' );
+
+//endif;
+
 while ( have_posts() ) :
 	the_post();
+	?>
 
-	get_template_part( 'template-parts/content', 'portfolio' );
+
+
+	<div class="entry-content alignwide">
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wayako' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
+
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wayako' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
+
+
+	<?php
+
+	//get_template_part( 'template-parts/content', 'portfolio' );
 
 	the_post_navigation(
 		array(

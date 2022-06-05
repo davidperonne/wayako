@@ -36,6 +36,15 @@ defined( 'ABSPATH' ) || exit;
 		elseif ( 'post' === get_post_type() && is_single() ) :
 
 			// Blog single page.
+			echo '<p class="hero__sub-title">date...</p>';
+
+			the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
+
+		elseif ( 'portfolio' === get_post_type() && is_single() ) :
+
+			// Portfolio single page.
+			echo '<p class="hero__sub-title">Cat / Cat...</p>';
+
 			the_title( '<h1 id="entry-title" class="entry-title">', '</h1>' );
 
 		elseif ( is_category() ) :
