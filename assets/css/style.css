@@ -516,7 +516,7 @@ h6,
 
 h1 {
   font-size: 4.375rem;
-  line-height: 5rem;
+  line-height: 1.2;
   margin-bottom: 2.5rem;
 }
 
@@ -2230,8 +2230,8 @@ ul.wp-block-latest-posts .wp-block-latest-posts__post-date {
 /* media-text header animation */
 .wp-block-media-text.is-style-header figure {
   opacity: 0;
-  -webkit-transition: all 1.25s ease-out;
-  transition: all 1.25s ease-out;
+  -webkit-transition: all 0.9s ease-out;
+  transition: all 0.9s ease-out;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
