@@ -26,5 +26,7 @@
 
 <?php wp_footer(); ?>
 
+<?php //$test = 'test'; die( '<pre>' . print_r( $test ) . '</pre>'); ?>
+
 </body>
 </html>

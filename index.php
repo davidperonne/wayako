@@ -32,7 +32,7 @@ if ( have_posts() ) :
 	</div>
 
 	<?php
-	wayako_pagination();
+	wayako_pagination(); // PHP8
 
 else :
 

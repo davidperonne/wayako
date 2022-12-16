@@ -17,8 +17,8 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     margin: 2cm;
   }
   .entry .entry-header,
-  .entry,
-  .single .site-main > article > .entry-footer {
+.entry,
+.single .site-main > article > .entry-footer {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -40,26 +40,26 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     color: #000 !important;
   }
   h1,
-  .entry-title,
-  .singular .entry-title,
-  .page-title {
+.entry-title,
+.singular .entry-title,
+.page-title {
     font-size: 22pt;
     font-weight: bold;
   }
   h2,
-  h3,
-  h4,
-  .has-regular-font-size,
-  .has-large-font-size,
-  h2.author-title,
-  p.author-bio,
-  .comments-title,
-  .archive-description {
+h3,
+h4,
+.has-regular-font-size,
+.has-large-font-size,
+h2.author-title,
+p.author-bio,
+.comments-title,
+.archive-description {
     font-size: 14pt;
     margin-top: 25px;
   }
   .comment-meta,
-  .comment-meta .comment-author .fn {
+.comment-meta .comment-author .fn {
     font-size: 13pt;
   }
   /* Page breaks */
@@ -70,11 +70,11 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     page-break-inside: avoid;
   }
   h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     page-break-after: avoid;
     page-break-inside: avoid;
   }
@@ -83,25 +83,25 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     page-break-after: avoid;
   }
   table,
-  pre,
-  figure {
+pre,
+figure {
     page-break-inside: avoid;
   }
   ul,
-  ol,
-  dl {
+ol,
+dl {
     page-break-before: avoid;
   }
   /* Links */
   a:link,
-  a:visited,
-  a {
+a:visited,
+a {
     background: transparent;
     font-weight: bold;
     text-decoration: underline;
     text-align: left;
   }
-  a[href^="http"]:after {
+  a[href^=http]:after {
     content: " < " attr(href) "> ";
   }
   a:after > img {
@@ -119,36 +119,35 @@ Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272
     font-size: 14pt;
   }
   .cat-links a:after,
-  .tags-links a:after,
-  .byline a:after,
-  .comment-metadata a:after,
-  .wp-block-calendar a:after,
-  .wp-block-tag-cloud a:after,
-  .page-links a:after {
+.tags-links a:after,
+.byline a:after,
+.comment-metadata a:after,
+.wp-block-calendar a:after,
+.wp-block-tag-cloud a:after,
+.page-links a:after {
     content: "";
   }
   /* Visibility */
   .primary-navigation,
-  .site-title + .primary-navigation,
-  .footer-navigation,
-  .entry-footer,
-  .post-navigation,
-  .navigation.pagination,
-  .widget-area,
-  .edit-link,
-  .more-link,
-  .comment-reply,
-  .reply,
-  .comment .comment-metadata .edit-link,
-  .comment-respond,
-  #dark-mode-toggler {
+.site-title + .primary-navigation,
+.footer-navigation,
+.entry-footer,
+.post-navigation,
+.navigation.pagination,
+.widget-area,
+.edit-link,
+.more-link,
+.comment-reply,
+.reply,
+.comment .comment-metadata .edit-link,
+.comment-respond,
+#dark-mode-toggler {
     display: none !important;
   }
   .entry .entry-content .wp-block-button .wp-block-button__link,
-  .entry .entry-content .button,
-  .entry .entry-content .wp-block-file__button {
+.entry .entry-content .button,
+.entry .entry-content .wp-block-file__button {
     color: #000;
     background: none;
   }
-}
-/*# sourceMappingURL=print.css.map */
+}/*# sourceMappingURL=print.css.map */

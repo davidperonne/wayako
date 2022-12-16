@@ -6,16 +6,14 @@
 .wp-block-media-text {
   position: relative;
 }
-
 .wp-block-media-text.alignwide {
   margin-top: 5rem;
   margin-bottom: 5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-
 .wp-block-media-text.alignwide:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   background-image: url("../img/dots2.png");
@@ -24,10 +22,8 @@
   background-size: 100%;
   width: 20rem;
   height: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-
 .wp-block-media-text.alignwide figure {
   position: relative;
   width: 100%;
@@ -36,7 +32,6 @@
   overflow: hidden;
   z-index: 1;
 }
-
 .wp-block-media-text.alignwide figure img {
   position: absolute;
   top: 0;
@@ -48,46 +43,36 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .wp-block-media-text.alignwide:not(.has-media-on-the-right):before {
   left: -5rem;
 }
-
 .wp-block-media-text.alignwide:not(.has-media-on-the-right) .wp-block-media-text__content {
   padding-right: 0;
 }
-
 .wp-block-media-text.alignwide.has-media-on-the-right {
   background-position: right center;
 }
-
 .wp-block-media-text.alignwide.has-media-on-the-right:before {
   right: -5rem;
 }
-
 .wp-block-media-text.alignwide.has-media-on-the-right .wp-block-media-text__content {
   padding-left: 0;
 }
-
 .wp-block-media-text.alignwide.has-media-on-the-right figure {
   border-radius: 18rem 0.5rem 18rem 18rem;
   z-index: 1;
 }
-
 .wp-block-media-text.alignwide.is-style-header {
   margin-top: 2rem;
 }
-
 .wp-block-media-text.alignwide.is-style-header h1 {
   margin-bottom: 1.5rem;
 }
-
 .wp-block-media-text.alignwide.is-style-header .sub-title {
   font-weight: 500;
 }
-
 .wp-block-media-text.alignwide.is-style-header:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 60%;
   right: -3rem;
@@ -97,16 +82,12 @@
   background-size: 100%;
   width: 25rem;
   height: 35rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   z-index: 0;
 }
-
 .wp-block-media-text.alignwide.is-style-header figure {
   padding-bottom: 70%;
 }
-
 .wp-block-media-text.has-landscape-ratio figure {
   padding-bottom: 120%;
-}
-/*# sourceMappingURL=editor-styles.css.map */
+}/*# sourceMappingURL=editor-styles.css.map */
